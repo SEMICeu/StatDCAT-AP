@@ -1,0 +1,701 @@
+@prefix adms: <http://www.w3.org/ns/adms#> .
+@prefix cpsv: <http://purl.org/vocab/cpsv#> .
+@prefix cv: <http://data.europa.eu/m8g/> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix oa: <http://www.w3.org/ns/oa#> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix qb: <http://purl.org/linked-data/cube#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <http://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix spdx: <http://spdx.org/rdf/terms#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+
+
+<http://data.europa.eu/m8g/statdcat-ap>
+  a owl:Ontology, adms:Asset ;
+  dct:title "DCAT Application Profile for description of statistical datasets"@en ;
+  dct:description "The StatDCAT Application aims at providing a commonly-agreed dissemination vocabulary for statistical open data. StatDCAT-AP defines a certain number of additions to the DCAT-AP model that can be used to describe datasets in any format, for example, those published in Statistical Data and metadata eXchange (SDMX), a standard for the exchange of statistical data."@en ;
+  dct:created "2016-12-22"^^xsd:date ;
+  vann:preferredNamespacePrefix "statdcat" ;
+  foaf:homepage <https://joinup.ec.europa.eu/asset/stat_dcat_application_profile/home> ;
+  dct:publisher <http://publications.europa.eu/resource/authority/corporate-body/DIGIT> ;
+  dct:creator <http://publications.europa.eu/resource/authority/corporate-body/DIGIT> ;
+  dct:type <http://purl.org/adms/assettype/Ontology> ;
+  dct:status <http://purl.org/adms/status/Completed> .
+
+#---------------------------->
+#----- Catalogue Class ------>
+#---------------------------->
+
+#-- Class definition -->
+
+<http://www.w3.org/ns/dcat#Catalog> a rdfs:Class ;
+  rdfs:label "Catalogue"@en ;
+  vann:usageNote "Mandatory class. A catalogue or repository that hosts the Datasets being described."@en ;
+  rdfs:isDefinedBy "http://www.w3.org/TR/2013/WD-vocab-dcat-20130312/#class-catalog" .
+
+#-- Properties definition -->
+
+<http://www.w3.org/ns/dcat#dataset> a rdf:Property ;
+  rdfs:label "dataset"@en ;
+  vann:usageNote "Mandatory property. Cardinality [1..n]. This property links the Catalogue with a Dataset that is part of the Catalogue."@en .
+
+<http://purl.org/dc/terms/description> a rdf:Property ;
+  rdfs:label "description"@en ;
+  vann:usageNote "Mandatory property. Cardinality [1..n]. This property contains a free-text account of the Catalogue. This property can be repeated for parallel language versions of the description."@en .
+  
+<http://purl.org/dc/terms/publisher> a rdf:Property ;
+  rdfs:label "publisher"@en ;
+  vann:usageNote "Mandatory property. Cardinality [1..1]. This property refers to an entity (organisation) responsible for making the Catalogue available."@en .
+
+<http://purl.org/dc/terms/title> a rdf:Property ;
+  rdfs:label "title"@en ;
+  vann:usageNote "Mandatory property. Cardinality [1..n]. This property contains a name given to the Catalogue. This property can be repeated for parallel language versions of the name."@en .
+  
+<http://xmlns.com/foaf/0.1/homepage> a rdf:Property ;
+  rdfs:label "homepage"@en ;
+  vann:usageNote "Recommended property. Cardinality [0..1]. This property refers to a web page that acts as the main page for the Catalogue."@en .
+  
+<http://purl.org/dc/terms/language> a rdf:Property ;
+  rdfs:label "language"@en ;
+  vann:usageNote "Recommended property. Cardinality [0..n]. This property refers to a language used in the textual metadata describing titles, descriptions, etc. of the Datasets in the Catalogue. This property can be repeated if the metadata is provided in multiple languages."@en .
+  
+<http://purl.org/dc/terms/license> a rdf:Property ;
+  rdfs:label "licence"@en ;
+  vann:usageNote "Recommended property. Cardinality [0..1]. This property refers to the licence under which the Catalogue can be used or reused."@en .
+  
+<http://purl.org/dc/terms/issued> a rdf:Property ;
+  rdfs:label "release date"@en ;
+  vann:usageNote "Recommended property. Cardinality [0..1]. This property contains the date of formal issuance (e.g., publication) of the Catalogue. This property should be defined as rdfs:Lideral typed as xsd:date or xsd:dateTime."@en .
+  
+<http://www.w3.org/ns/dcat#themeTaxonomy> a rdf:Property ;
+  rdfs:label "themes"@en ;
+  vann:usageNote "Recommended property. Cardinality [0..n]. This property refers to a knowledge organisation system used to classify the Catalogue's Datasets."@en .
+  
+<http://purl.org/dc/terms/modified> a rdf:Property ;
+  rdfs:label "update/modification date"@en ;
+  vann:usageNote "Recommended property. Cardinality [0..1]. This property contains the most recent date on which the Catalogue was modified. This property should be defined as rdfs:Lideral typed as xsd:date or xsd:dateTime."@en .
+  
+<http://purl.org/dc/terms/hasPart> a rdf:Property ;
+  rdfs:label "has part"@en ;
+  vann:usageNote "Optional property. Cardinality [0..n]. This property refers to a related Catalogue that is part of the described Catalogue."@en .
+  
+<http://purl.org/dc/terms/isPartOf> a rdf:Property ;
+  rdfs:label "is part of"@en ;
+  vann:usageNote "Optional property. Cardinality [0..1]. This property refers to a related Catalogue in which the described Catalogue is physically or logically included."@en .
+  
+<http://www.w3.org/ns/dcat#record> a rdf:Property ;
+  rdfs:label "record"@en ;
+  vann:usageNote "Optional property. Cardinality [0..n]. This property refers to a Catalogue Record that is part of the Catalogue."@en .
+  
+<http://purl.org/dc/terms/rights> a rdf:Property ;
+  rdfs:label "rights"@en ;
+  vann:usageNote "Optional property. Cardinality [0..1]. This property refers to a statement that specifies rights associated with the Catalogue."@en .
+  
+<http://purl.org/dc/terms/spatial> a rdf:Property ;
+  rdfs:label "spatial"@en ;
+  vann:usageNote "Optional property. Cardinality [0..n]. This property refers to a geographical area covered by the Catalogue."@en .
+  
+#------------------------------------>
+#----- Catalogue Record Class ------>
+#------------------------------------>
+
+#-- Class definition -->
+
+<http://www.w3.org/ns/dcat#CatalogRecord> a rdfs:Class ;
+  rdfs:label "Catalogue Record"@en ;
+  vann:usageNote "Optional class. A description of a Dataset’s entry in the Catalogue."@en ;
+  rdfs:isDefinedBy "http://www.w3.org/TR/2013/WD-vocab-dcat-20130312/#class-catalog-record" .
+
+#-- Properties definition -->
+
+<http://xmlns.com/foaf/0.1/primaryTopic> a rdf:Property ;
+  rdfs:label "primary topic"@en ;
+  vann:usageNote "Mandatory property. Cardinality [1..1]. This property links the Catalogue Record to the Dataset described in the record."@en .
+  
+<http://purl.org/dc/terms/modified> a rdf:Property ;
+  rdfs:label "update/modification date"@en ;
+  vann:usageNote "Mandatory property. Cardinality [1..1]. This property contains the most recent date on which the Catalogue entry was changed or modified. This property should be defined as rdfs:Lideral typed as xsd:date or xsd:dateTime."@en .
+  
+<http://purl.org/dc/terms/conformsTo> a rdf:Property ;
+  rdfs:label "application profile"@en ;
+  vann:usageNote "Recommended property. Cardinality [0..1]. This property refers to an Application Profile that the Dataset’s metadata conforms to."@en .
+  
+<http://www.w3.org/ns/adms#status> a rdf:Property ;
+  rdfs:label "change type"@en ;
+  vann:usageNote "Recommended property. Cardinality [0..1]. This property refers to the type of the latest revision of a Dataset's entry in the Catalogue. It MUST take one of the values :created, :updated or :deleted depending on whether this latest revision is a result of a creation, update or deletion."@en .
+  
+<http://purl.org/dc/terms/issued> a rdf:Property ;
+  rdfs:label "listing date"@en ;
+  vann:usageNote "Recommended property. Cardinality [0..1]. This property contains the date on which the description of the Dataset was included in the Catalogue. This property should be defined as rdfs:Lideral typed as xsd:date or xsd:dateTime."@en .
+  
+<http://purl.org/dc/terms/description> a rdf:Property ;
+  rdfs:label "description"@en ;
+  vann:usageNote "Optional property. Cardinality [0..n]. This property contains a free-text account of the record. This property can be repeated for parallel language versions of the description."@en .
+  
+<http://purl.org/dc/terms/language> a rdf:Property ;
+  rdfs:label "language"@en ;
+  vann:usageNote "Optional property. Cardinality [0..n]. This property refers to a language used in the textual metadata describing titles, descriptions, etc. of the Dataset. This property can be repeated if the metadata is provided in multiple languages."@en .
+  
+<http://purl.org/dc/terms/source> a rdf:Property ;
+  rdfs:label "source metadata"@en ;
+  vann:usageNote "Optional property. Cardinality [0..1]. This property refers to the original metadata that was used in creating metadata for the Dataset."@en .
+  
+<http://purl.org/dc/terms/title> a rdf:Property ;
+  rdfs:label "title"@en ;
+  vann:usageNote "Optional property. Cardinality [0..n]. This property contains a name given to the Catalogue Record. This property can be repeated for parallel language versions of the name."@en .
+  
+#-------------------------->
+#----- Dataset Class ------>
+#-------------------------->
+
+#-- Class definition -->
+
+<http://www.w3.org/ns/dcat#Dataset> a rdfs:Class ;
+  rdfs:label "Dataset"@en ;
+  vann:usageNote "Mandatory class. A conceptual entity that represents the information published."@en ;
+  rdfs:isDefinedBy "http://www.w3.org/TR/2013/WD-vocab-dcat-20130312/#class-dataset" .
+
+#-- Properties definition -->
+
+<http://purl.org/dc/terms/description> a rdf:Property ;
+  rdfs:label "description"@en ;
+  vann:usageNote "Mandatory property. Cardinality [1..n]. This property contains a free-text account of the Dataset. This property can be repeated for parallel language versions of the description."@en .
+
+<http://purl.org/dc/terms/title> a rdf:Property ;
+  rdfs:label "title"@en ;
+  vann:usageNote "Mandatory property. Cardinality [1..n]. This property contains a name given to the Dataset. This property can be repeated for parallel language versions of the name."@en .
+  
+<http://www.w3.org/ns/dcat#contactPoint> a rdf:Property ;
+  rdfs:label "contact point"@en ;
+  vann:usageNote "Recommended property. Cardinality [0..n]. This property contains contact information that can be used for sending comments about the Dataset."@en .
+  
+<http://www.w3.org/ns/dcat#distribution> a rdf:Property ;
+  rdfs:label "dataset distribution"@en ;
+  vann:usageNote "Recommended property. Cardinality [0..n]. This property links the Dataset to an available Distribution."@en .
+  
+<http://www.w3.org/ns/dcat#keyword> a rdf:Property ;
+  rdfs:label "keyword/tag"@en ;
+  vann:usageNote "Recommended property. Cardinality [0..n]. This property contains a keyword or tag describing the Dataset."@en .
+  
+<http://purl.org/dc/terms/publisher> a rdf:Property ;
+  rdfs:label "publisher"@en ;
+  vann:usageNote "Recommended property. Cardinality [0..1]. This property refers to an entity (organisation) responsible for making the Dataset available."@en .
+  
+<http://www.w3.org/ns/dcat#theme> a rdf:Property ;
+  rdfs:label "theme/category"@en ;
+  vann:usageNote "Recommended property. Cardinality [0..n]. This property refers to a category of the Dataset. A Dataset may be associated with multiple themes. Subproperty of dct:subject."@en .
+  
+<http://purl.org/dc/terms/accessRights> a rdf:Property ;
+  rdfs:label "access rights"@en ;
+  vann:usageNote "Optional property. Cardinality [0..1]. This property specifies whether the Dataset is open data, has access restrictions or is not public. "@en .
+
+<http://purl.org/dc/terms/conformsTo> a rdf:Property ;
+  rdfs:label "conforms to"@en ;
+  vann:usageNote "Optional property. Cardinality [0..n]. This property refers to an implementing rule or other specification."@en .
+  
+<http://xmlns.com/foaf/0.1/page> a rdf:Property ;
+  rdfs:label "documentation"@en ;
+  vann:usageNote "Optional property. Cardinality [0..n]. This property refers to a page or document about this Dataset."@en .
+  
+<http://purl.org/dc/terms/accrualPeriodicity> a rdf:Property ;
+  rdfs:label "frequency"@en ;
+  vann:usageNote "Optional property. Cardinality [0..1]. This property refers to the frequency at which the Dataset is updated."@en .
+  
+<http://purl.org/dc/terms/hasVersion> a rdf:Property ;
+  rdfs:label "has version"@en ;
+  vann:usageNote "Optional property. Cardinality [0..n]. This property refers to a related Dataset that is a version, edition, or adaptation of the described Dataset."@en .
+  
+<http://purl.org/dc/terms/identifier> a rdf:Property ;
+  rdfs:label "identifier"@en ;
+  vann:usageNote "Optional property. Cardinality [0..n]. This property contains the main identifier for the Dataset, e.g. the URI or other unique identifier in the context of the Catalogue."@en .
+  
+<http://purl.org/dc/terms/isVersionOf> a rdf:Property ;
+  rdfs:label "is version of"@en ;
+  vann:usageNote "Optional property. Cardinality [0..n]. This property refers to a related Dataset of which the described Dataset is a version, edition, or adaptation."@en .
+  
+<http://www.w3.org/ns/dcat#landingPage> a rdf:Property ;
+  rdfs:label "landing page"@en ;
+  vann:usageNote "Optional property. Cardinality [0..n]. This property refers to a web page that provides access to the Dataset, its Distributions and/or additional information. It is intended to point to a landing page at the original data provider, not to a page on a site of a third party, such as an aggregator."@en .
+  
+<http://purl.org/dc/terms/language> a rdf:Property ;
+  rdfs:label "language"@en ;
+  vann:usageNote "Optional property. Cardinality [0..n]. This property refers to a language of the Dataset. This property can be repeated if there are multiple languages in the Dataset."@en .
+  
+<http://www.w3.org/ns/adms#identifier> a rdf:Property ;
+  rdfs:label "other identifier"@en ;
+  vann:usageNote "Optional property. Cardinality [0..n]. This property refers to a secondary identifier of the Dataset, such as MAST/ADS, DataCite , DOI , EZID  or W3ID."@en .
+  
+<http://purl.org/dc/terms/provenance> a rdf:Property ;
+  rdfs:label "provenance"@en ;
+  vann:usageNote "Optional property. Cardinality [0..n]. This property contains a statement about the lineage of a Dataset."@en .
+
+<http://purl.org/dc/terms/relation> a rdf:Property ;
+  rdfs:label "related resource"@en ;
+  vann:usageNote "Optional property. Cardinality [0..n]. This property refers to a related resource."@en .
+  
+<http://purl.org/dc/terms/issued> a rdf:Property ;
+  rdfs:label "release date"@en ;
+  vann:usageNote "Optional property. Cardinality [0..1]. This property contains the date of formal issuance (e.g., publication) of the Dataset. This property should be defined as rdfs:Lideral typed as xsd:date or xsd:dateTime."@en .
+  
+<http://www.w3.org/ns/adms#sample> a rdf:Property ;
+  rdfs:label "sample"@en ;
+  vann:usageNote "Optional property. Cardinality [0..n]. This property refers to a sample distribution of the dataset."@en .
+  
+<http://purl.org/dc/terms/source> a rdf:Property ;
+  rdfs:label "source"@en ;
+  vann:usageNote "Optional property. Cardinality [0..n]. This property refers to a related Dataset from which the described Dataset is derived."@en .
+  
+<http://purl.org/dc/terms/spatial> a rdf:Property ;
+  rdfs:label "spatial/ geographical coverage"@en ;
+  vann:usageNote "Optional property. Cardinality [0..n]. This property refers to a geographic region covered by the Dataset."@en .
+  
+<http://purl.org/dc/terms/temporal> a rdf:Property ;
+  rdfs:label "temporal coverage"@en ;
+  vann:usageNote "Optional property. Cardinality [0..n]. This property refers to a temporal period covered by the Dataset."@en .
+  
+<http://purl.org/dc/terms/type> a rdf:Property ;
+  rdfs:label "type"@en ;
+  vann:usageNote "Optional property. Cardinality [0..1]. This property refers to the type of the Dataset. A controlled vocabulary for the values has not been established."@en .
+  
+<http://purl.org/dc/terms/modified> a rdf:Property ;
+  rdfs:label "update/modification date"@en ;
+  vann:usageNote "Optional property. Cardinality [0..1]. This property contains the most recent date on which the Dataset was changed or modified. This property should be defined as rdfs:Lideral typed as xsd:date or xsd:dateTime."@en .
+  
+<http://www.w3.org/2002/07/owl#versionInfo> a rdf:Property ;
+  rdfs:label "version"@en ;
+  vann:usageNote "Optional property. Cardinality [0..1]. This property contains a version number or other version designation of the Dataset."@en .
+  
+<http://www.w3.org/ns/adms#versioNotes> a rdf:Property ;
+  rdfs:label "version notes"@en ;
+  vann:usageNote "Optional property. Cardinality [0..n]. This property contains a description of the differences between this version and a previous version of the Dataset. This property can be repeated for parallel language versions of the version notes."@en .
+  
+<http://data.europa.eu/m8g/attribute> a rdf:Property ;
+  rdfs:label "attribute"@en ;
+  vann:usageNote "Aditional optional property. Cardinality [0..n]. This property links to a component used to qualify and interpret observed values, e.g. units of measure, any scaling factors and metadata such as the status of the observation (e.g. estimated, provisional). Attribute is a ‘conceptual’ entity that applies to all distribution formats, e.g. in case a dataset is provided both in SDMX and in Data Cube."@en ;
+  rdfs:range qb:AttributeProperty .
+  
+<http://data.europa.eu/m8g/dimension> a rdf:Property ;
+  rdfs:label "dimension"@en ;
+  vann:usageNote "Aditional optional property. Cardinality [0..n]. This property links to a component that identifies observations, e.g. the time to which the observation applies, or a geographic region which the observation covers. Dimension is a ‘conceptual’ entity that applies to all distribution formats, e.g. in case a dataset is provided both in SDMX and in Data Cube."@en ;
+  rdfs:range qb:DimensionProperty .
+  
+<http://data.europa.eu/m8g/numSeries> a rdf:Property ;
+  rdfs:label "number of data series"@en ;
+  vann:usageNote "Aditional optional property. Cardinality [0..n]. This property contains the number of data series contained in the Dataset. This property should be defined as rdfs:Lideral typed as xsd:date or xsd:dateTime."@en ;
+  rdfs:range rdfs:Literal .
+  
+<http://www.w3.org/ns/dqv#hasQualityAnnotation> a rdf:Property ;
+  rdfs:label "quality annotation"@en ;
+  vann:usageNote "Aditional optional property. Cardinality [0..n]. This property links to a statement related to quality of the Dataset, including rating, quality certificate, feedback that can be associated to the Dataset."@en .
+  
+<http://data.europa.eu/m8g/statUnitMeasure> a rdf:Property ;
+  rdfs:label "unit of measurement"@en ;
+  vann:usageNote "Aditional optional property. Cardinality [0..n]. This property links to a unit of measurement of the observations in the dataset, for example Euro, square kilometre, purchasing power standard (PPS), full-time equivalent, percentage. Unit of measurement is a ‘conceptual’ entity that applies to all distribution formats, e.g. in the case when a dataset is provided both in SDMX and in Data Cube."@en ;
+  rdfs:range skos:Concept .
+  
+#------------------------------->
+#----- Distribution Class ------>
+#------------------------------->
+
+#-- Class definition -->
+
+<http://www.w3.org/ns/dcat#Distribution> a rdfs:Class ;
+  rdfs:label "Distribution"@en ;
+  vann:usageNote "Recommended class. A physical embodiment of the Dataset in a particular format, including visualisations of the data."@en ;
+  rdfs:isDefinedBy "http://www.w3.org/TR/2013/WD-vocab-dcat-20130312/#class-distribution" .
+
+#-- Properties definition -->
+
+<http://www.w3.org/ns/dcat#accessURL> a rdf:Property ;
+  rdfs:label "access URL"@en ;
+  vann:usageNote "Mandatory property. Cardinality [1..n]. This property contains a URL that gives access to a Distribution of the Dataset. The resource at the access URL may contain information about how to get the Dataset."@en .
+  
+<http://purl.org/dc/terms/description> a rdf:Property ;
+  rdfs:label "description"@en ;
+  vann:usageNote "Recommended property. Cardinality [0..n]. This property contains a free-text account of the Distribution. This property can be repeated for parallel language versions of the description."@en .
+
+<http://purl.org/dc/terms/format> a rdf:Property ;
+  rdfs:label "format"@en ;
+  vann:usageNote "Recommended property. Cardinality [0..1]. This property refers to the file format of the Distribution."@en .
+  
+<http://purl.org/dc/terms/license> a rdf:Property ;
+  rdfs:label "licence"@en ;
+  vann:usageNote "Recommended property. Cardinality [0..1]. This property refers to the licence under which the Distribution is made available."@en .
+  
+<http://www.w3.org/ns/dcat#byteSize> a rdf:Property ;
+  rdfs:label "byte size"@en ;
+  vann:usageNote "Optional property. Cardinality [0..1]. This property contains the size of a Distribution in bytes. This property should be defined as rdfs:Lideral typed as xsd:date or xsd:dateTime."@en .
+  
+<http://spdx.org/rdf/terms#Checksum> a rdf:Property ;
+  rdfs:label "checksum"@en ;
+  vann:usageNote "Optional property. Cardinality [0..1]. This property provides a mechanism that can be used to verify that the contents of a distribution have not changed."@en .
+  
+<http://xmlns.com/foaf/0.1/page> a rdf:Property ;
+  rdfs:label "documentation"@en ;
+  vann:usageNote "Optional property. Cardinality [0..n]. This property refers to a page or document about this Distribution."@en .
+  
+<http://www.w3.org/ns/dcat#downloadURL> a rdf:Property ;
+  rdfs:label "download URL"@en ;
+  vann:usageNote "Optional property. Cardinality [0..n]. This property contains a URL that is a direct link to a downloadable file in a given format."@en .
+  
+<http://purl.org/dc/terms/language> a rdf:Property ;
+  rdfs:label "language"@en ;
+  vann:usageNote "Optional property. Cardinality [0..n]. This property refers to a language used in the Distribution. This property can be repeated if the metadata is provided in multiple languages."@en .
+  
+<http://purl.org/dc/terms/conformsTo> a rdf:Property ;
+  rdfs:label "linked schemas"@en ;
+  vann:usageNote "Optional property. Cardinality [0..n]. This property refers to an established schema to which the described Distribution conforms."@en .
+  
+<http://www.w3.org/ns/dcat#mediaType> a rdf:Property ;
+  rdfs:label "media type"@en ;
+  vann:usageNote "Optional property. Cardinality [0..1]. This property refers to the media type of the Distribution as defined in the official register of media types managed by Internet Assigned Numbers Authority (IANA). Subproperty of dct:format."@en .
+  
+<http://purl.org/dc/terms/issued> a rdf:Property ;
+  rdfs:label "release date"@en ;
+  vann:usageNote "Optional property. Cardinality [0..1]. This property contains the date of formal issuance (e.g., publication) of the Distribution. This property should be defined as rdfs:Lideral typed as xsd:date or xsd:dateTime."@en .
+  
+<http://purl.org/dc/terms/rights> a rdf:Property ;
+  rdfs:label "rights"@en ;
+  vann:usageNote "Optional property. Cardinality [0..1]. This property refers to a statement that specifies rights associated with the Distribution."@en .
+  
+<http://www.w3.org/ns/adms#status> a rdf:Property ;
+  rdfs:label "status"@en ;
+  vann:usageNote "Optional property. Cardinality [0..1]. This property refers to the maturity of the Distribution."@en .
+  
+<http://purl.org/dc/terms/title> a rdf:Property ;
+  rdfs:label "title"@en ;
+  vann:usageNote "Optional property. Cardinality [0..n]. This property contains a name given to the Distribution. This property can be repeated for parallel language versions of the description."@en .
+  
+<http://purl.org/dc/terms/modified> a rdf:Property ;
+  rdfs:label "update/modification date"@en ;
+  vann:usageNote "Optional property. Cardinality [0..1]. This property contains the most recent date on which the Distribution was changed or modified. This property should be defined as rdfs:Lideral typed as xsd:date or xsd:dateTime."@en .
+  
+<http://purl.org/dc/terms/type> a rdf:Property ;
+  rdfs:label "type"@en ;
+  vann:usageNote "Aditional optional property. Cardinality [0..1]. This property links to a type of the Distribution, e.g. that it is a visualisation."@en .
+ 
+#------------------------>
+#----- Agent Class ------>
+#------------------------>
+
+#-- Class definition -->
+
+<http://xmlns.com/foaf/0.1/Agent> a rdfs:Class ;
+  rdfs:label "Distribution"@en ;
+  vann:usageNote "Mandatory class. An entity that is associated with Catalogues and/or Datasets. If the Agent is an organisation, the use of the Organization Ontology  is recommended."@en ;
+  rdfs:isDefinedBy "http://xmlns.com/foaf/spec/#term_Agent" .
+
+#-- Properties definition -->
+
+<http://xmlns.com/foaf/0.1/name> a rdf:Property ;
+  rdfs:label "name"@en ;
+  vann:usageNote "Mandatory property. Cardinality [1..n]. This property contains a name of the agent. This property can be repeated for different versions of the name (e.g. the name in different languages)"@en .
+  
+<http://purl.org/dc/terms/type> a rdf:Property ;
+  rdfs:label "type"@en ;
+  vann:usageNote "Recommended property. Cardinality [0..1]. This property refers to a type of the agent that makes the Catalogue or Dataset available."@en .
+  
+#---------------------------------->
+#----- Category Scheme Class ------>
+#---------------------------------->
+
+#-- Class definition -->
+
+<http://www.w3.org/2004/02/skos/core#ConceptScheme> a rdfs:Class ;
+  rdfs:label "Category Scheme"@en ;
+  vann:usageNote "Recommended class. A concept collection (e.g. controlled vocabulary) in which the Category is defined."@en ;
+  rdfs:isDefinedBy "http://www.w3.org/TR/2013/WD-vocab-dcat-20130312/#class-category-and-category-scheme" .
+
+#-- Properties definition -->
+
+<http://purl.org/dc/terms/title> a rdf:Property ;
+  rdfs:label "title"@en ;
+  vann:usageNote "Mandatory property. Cardinality [1..n]. This property contains a name of the category scheme. May be repeated for different versions of the name."@en .
+
+#--------------------------->
+#----- Category Class ------>
+#--------------------------->
+
+#-- Class definition -->
+
+<http://www.w3.org/2004/02/skos/core#Concept> a rdfs:Class ;
+  rdfs:label "Category"@en ;
+  vann:usageNote "Recommended class. A subject of a Dataset."@en ;
+  rdfs:isDefinedBy "http://www.w3.org/TR/2013/WD-vocab-dcat-20130312/#class-category-and-category-scheme" .
+
+#-- Properties definition -->
+
+<http://www.w3.org/2004/02/skos/core#prefLabel> a rdf:Property ;
+  rdfs:label "preferred label"@en ;
+  vann:usageNote "Optional property. Cardinality [1..n]. This property contains a preferred label of the category. This property can be repeated for parallel language versions of the label."@en .
+
+#--------------------------->
+#----- Checksum Class ------>
+#--------------------------->
+
+#-- Class definition -->
+
+<http://www.w3.org/ns/org#Organization> a rdfs:Class ;
+  rdfs:label "Checksum"@en ;
+  vann:usageNote "Optional class. A value that allows the contents of a file to be authenticated. This class allows the results of a variety of checksum and cryptographic message digest algorithms to be represented."@en ;
+  rdfs:isDefinedBy "http://spdx.org/rdf/terms#Checksum" .
+
+#-- Properties definition -->
+
+<http://spdx.org/rdf/terms#algorithm> a rdf:Property ;
+  rdfs:label "algorithm"@en ;
+  vann:usageNote "Mandatory property. Cardinality [1..1]. This property identifies the algorithm used to produce the subject Checksum. Currently, Secure Hash Algorithm 1 (SHA-1) is the only supported algorithm. It is anticipated that other algorithms will be supported at a later time."@en .
+  
+<http://spdx.org/rdf/terms#checksumValue> a rdf:Property ;
+  rdfs:label "checksum value"@en ;
+  vann:usageNote "Optional property. Cardinality [1.1]. This property provides a lower case hexadecimal encoded digest value produced using a specific algorithm. This property should be defined as rdfs:Lideral typed as xsd:hexBinary."@en .
+  
+#----------------------------->
+#----- Identifier Class ------>
+#----------------------------->
+
+#-- Class definition -->
+
+<http://www.w3.org/ns/adms#Identifier> a rdfs:Class ;
+  rdfs:label "Identifier"@en ;
+  vann:usageNote "Optional class. An identifier in a particular context, consisting of the string that is the identifier; an optional identifier for the identifier scheme; an optional identifier for the version of the identifier scheme; an optional identifier for the agency that manages the identifier scheme."@en ;
+  rdfs:isDefinedBy "https://www.w3.org/TR/vocab-adms/#adms-identifier" .
+
+#-- Properties definition -->
+
+<http://www.w3.org/2004/02/skos/core#notation> a rdf:Property ;
+  rdfs:label "notation"@en ;
+  vann:usageNote "Optional property. Cardinality [0..1]. This property contains a string that is an identifier in the context of the identifier scheme referenced by its datatype. This property should be defined as rdfs:Literal typed with the URI of one of the members of the DataCite Resource Identifier Scheme."@en .
+  
+#----------------------------------->
+#----- Licence Document Class ------>
+#----------------------------------->
+
+#-- Class definition -->
+
+<http://purl.org/dc/terms/LicenseDocument> a rdfs:Class ;
+  rdfs:label "Licence Document"@en ;
+  vann:usageNote "Recommended class. A legal document giving official permission to do something with a resource."@en ;
+  rdfs:isDefinedBy "http://dublincore.org/documents/2012/06/14/dcmi-terms/?v=terms#LicenseDocument" .
+
+#-- Properties definition -->
+
+<http://purl.org/dc/terms/type> a rdf:Property ;
+  rdfs:label "licence type"@en ;
+  vann:usageNote "Recommended property. Cardinality [0..1]. This property refers to a type of licence, e.g. indicating ‘public domain’ or ‘royalties required’."@en .
+  
+#--------------------------------->
+#----- Period of Time Class ------>
+#--------------------------------->
+
+#-- Class definition -->
+
+<http://purl.org/dc/terms/PeriodOfTime> a rdfs:Class ;
+  rdfs:label "Period of time"@en ;
+  vann:usageNote "Optional class. An interval of time that is named or defined by its start and end dates."@en ;
+  rdfs:isDefinedBy "http://dublincore.org/documents/dcmi-terms/#terms-PeriodOfTime" .
+
+#-- Properties definition -->
+
+<http://schema.org/startTime> a rdf:Property ;
+  rdfs:label "start date/time"@en ;
+  vann:usageNote "Optional  class. Cardinality [0..1]. The date and time on which the period of time starts. This property should be defined as rdfs:Literal typed as xsd:date or xsd:dateTime. Please note that while both properties are optional, one of the two must be present for each instance of the class dct:PeriodOfTime, if such an instance is present. The start of the period should be understood as the start of the date, hour, minute etc. given (e.g. starting at midnight at the beginning of the day if the value is a date); the end of the period should be understood as the end of the date, hour, minute etc. given (e.g. ending at midnight at the end of the day if the value is a date)."@en .
+
+<http://schema.org/endTime> a rdf:Property ;
+  rdfs:label "end date/time"@en ;
+  vann:usageNote "Optional  class. Cardinality [0..1]. This property specifies the end of the period. This property should be defined as rdfs:Literal typed as xsd:date or xsd:dateTime. Please note that while both properties are optional, one of the two must be present for each instance of the class dct:PeriodOfTime, if such an instance is present. The start of the period should be understood as the start of the date, hour, minute etc. given (e.g. starting at midnight at the beginning of the day if the value is a date); the end of the period should be understood as the end of the date, hour, minute etc. given (e.g. ending at midnight at the end of the day if the value is a date)."@en .
+
+#-------------------------->
+#----- Literal Class ------>
+#-------------------------->
+
+#-- Class definition -->
+
+<http://www.w3.org/2000/01/rdf-schema#Literal> a rdfs:Class ;
+  rdfs:label "Literal"@en ;
+  vann:usageNote "Mandatory class. A literal value such as a string or integer; Literals may be typed, e.g. as a date according to xsd:date. Literals that contain human-readable text have an optional language tag as defined by BCP 47."@en ;
+  rdfs:isDefinedBy "http://www.w3.org/TR/rdf-concepts/#section-Literals" .
+  
+#-------------------------->
+#----- Resource Class ----->
+#-------------------------->
+
+#-- Class definition -->
+
+<http://www.w3.org/2000/01/rdf-schema#Resource> a rdfs:Class ;
+  rdfs:label "Resource"@en ;
+  vann:usageNote "Mandatory class. Anything described by RDF."@en ;
+  rdfs:isDefinedBy "http://www.w3.org/TR/rdf-schema/#ch_resource" .
+  
+#--------------------------->
+#----- Document Class ------>
+#--------------------------->
+
+#-- Class definition -->
+
+<http://xmlns.com/foaf/0.1/Document> a rdfs:Class ;
+  rdfs:label "Document"@en ;
+  vann:usageNote "Optional class. A textual resource intended for human consumption that contains information, e.g. a web page about a Dataset."@en ;
+  rdfs:isDefinedBy "http://xmlns.com/foaf/spec/#term_Document" .
+
+
+#---------------------------->
+#----- Frequency Class ------>
+#---------------------------->
+
+#-- Class definition -->
+
+<http://purl.org/dc/terms/Frequency> a rdfs:Class ;
+  rdfs:label "Frequency"@en ;
+  vann:usageNote "Optional class. A rate at which something recurs, e.g. the publication of a Dataset."@en ;
+  rdfs:isDefinedBy "http://dublincore.org/documents/dcmi-terms/#terms-Frequency" .
+
+#----------------------->
+#----- Kind Class ------>
+#----------------------->
+
+#-- Class definition -->
+
+<http://www.w3.org/2006/vcard/ns#Kind> a rdfs:Class ;
+  rdfs:label "Kind"@en ;
+  vann:usageNote "Optional class. A description following the vCard specification, e.g. to provide telephone number and e-mail address for a contact point. Note that the class Kind is the parent class for the four explicit types of vCard (Individual, Organization, Location, Group)."@en ;
+  rdfs:isDefinedBy "http://www.w3.org/2006/vcard/ns#" .
+
+#------------------------------------>
+#----- Linguistic System Class ------>
+#------------------------------------>
+
+#-- Class definition -->
+
+<http://purl.org/dc/terms/LinguisticSystem> a rdfs:Class ;
+  rdfs:label "Linguistic System"@en ;
+  vann:usageNote "Optional class. A system of signs, symbols, sounds, gestures, or rules used in communication, e.g. a language."@en ;
+  rdfs:isDefinedBy "http://dublincore.org/documents/2012/06/14/dcmi-terms/?v=terms#LinguisticSystem" .  
+
+
+#--------------------------->
+#----- Location Class ------>
+#--------------------------->
+
+#-- Class definition -->
+
+<http://purl.org/dc/terms/Location> a rdfs:Class ;
+  rdfs:label "Location"@en ;
+  vann:usageNote "Optional class. A spatial region or named place. It can be represented using a controlled vocabulary or with geographic coordinates. In the latter case, the use of the Core Location Vocabulary  is recommended, following the approach described in the GeoDCAT-AP specification."@en ;
+  rdfs:isDefinedBy "http://dublincore.org/documents/2012/06/14/dcmi-terms/?v=terms#Location" .
+
+#--------------------------------------->
+#----- Media type or extent Class ------>
+#--------------------------------------->
+
+#-- Class definition -->
+
+<http://purl.org/dc/terms/MediaTypeOrExtent> a rdfs:Class ;
+  rdfs:label "Media type or extent"@en ;
+  vann:usageNote "Optional class. A media type or extent, e.g. the format of a computer file."@en ;
+  rdfs:isDefinedBy "http://dublincore.org/documents/dcmi-terms/#terms-MediaTypeOrExtent" .
+
+  
+#--------------------------------->
+#----- Publisher Type Class ------>
+#--------------------------------->
+
+#-- Class definition -->
+
+<http://www.w3.org/2004/02/skos/core#Concept> a rdfs:Class ;
+  rdfs:label "Publisher type"@en ;
+  vann:usageNote "Optional class. A type of organisation that acts as a publisher."@en ;
+  rdfs:isDefinedBy "http://www.w3.org/TR/2013/WD-vocab-dcat-20130312/#class-category-and-category-scheme" .
+  
+#----------------------------------->
+#----- Rights Statement Class ------>
+#----------------------------------->
+
+#-- Class definition -->
+
+<http://purl.org/dc/terms/RightsStatement> a rdfs:Class ;
+  rdfs:label "Rights statement"@en ;
+  vann:usageNote "Optional class. A statement about the intellectual property rights (IPR) held in or over a resource, a legal document giving official permission to do something with a resource, or a statement about access rights."@en ;
+  rdfs:isDefinedBy "http://dublincore.org/documents/dcmi-terms/#terms-RightsStatement" .
+  
+#--------------------------->
+#----- Standard Class ------>
+#--------------------------->
+
+#-- Class definition -->
+
+<http://purl.org/dc/terms/Standard> a rdfs:Class ;
+  rdfs:label "Standard"@en ;
+  vann:usageNote "Optional class. A standard or other specification to which a Dataset or Distribution conforms."@en ;
+  rdfs:isDefinedBy "http://dublincore.org/documents/dcmi-terms/#terms-Standard" .
+
+#------------------------->
+#----- Status Class ------>
+#------------------------->
+
+#-- Class definition -->
+
+<http://www.w3.org/2004/02/skos/core#Concept> a rdfs:Class ;
+  rdfs:label "Status"@en ;
+  vann:usageNote "Optional class. An indication of the maturity of a Distribution or the type of change of a Catalogue Record."@en ;
+  rdfs:isDefinedBy "http://www.w3.org/TR/2013/WD-vocab-dcat-20130312/#class-category-and-category-scheme" .
+  
+#--------------------------------------->
+#----- Provenance Statement Class ------>
+#--------------------------------------->
+
+#-- Class definition -->
+
+<http://purl.org/dc/terms/ProvenanceStatement> a rdfs:Class ;
+  rdfs:label "Provenance statement"@en ;
+  vann:usageNote "Optional class. A statement of any changes in ownership and custody of a resource since its creation that are significant for its authenticity, integrity, and interpretation."@en ;
+  rdfs:isDefinedBy "http://dublincore.org/documents/dcmi-terms/#terms-ProvenanceStatement" .
+  
+#----------------------------->
+#----- Annotation Class ------>
+#----------------------------->
+
+#-- Class definition -->
+
+<http://www.w3.org/ns/oa#Annotation> a rdfs:Class ;
+  rdfs:label "annotation"@en ;
+  vann:usageNote "Aditional optional class. A statement providing explanatory information about a resource. In this profile, used for statements related to quality of the Dataset, including rating, quality certificate, feedback that can be associated to datasets or distributions."@en .
+  
+#------------------------------------->
+#----- Attribute Property Class ------>
+#------------------------------------->
+
+#-- Class definition -->
+
+<http://purl.org/linked-data/cube#AttributeProperty> a rdfs:Class ;
+  rdfs:label "Attribute property"@en ;
+  vann:usageNote "Aditional optional class. A component property which represents an attribute of observations in the Dataset, e.g. unit of measurement."@en .
+
+#------------------------------------->
+#----- Dimension Property Class ------>
+#------------------------------------->
+
+#-- Class definition -->
+
+<http://purl.org/linked-data/cube#DimensionProperty> a rdfs:Class ;
+  rdfs:label "Dimension Property"@en ;
+  vann:usageNote "Aditional optional class. A component property which represents a dimension in the Dataset."@en .
+  
+#----------------------------------->
+#----- Size Or Duration Class ------>
+#----------------------------------->
+
+#-- Class definition -->
+
+<http://purl.org/linked-data/cube#SizeOrDuration> a rdfs:Class ;
+  rdfs:label "Size or duration"@en ;
+  vann:usageNote "Aditional optional class. A dimension or extent, e.g. the number of data series in a Dataset."@en .
+  
