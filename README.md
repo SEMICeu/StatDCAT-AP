@@ -1,3 +1,4 @@
+![SEMIC Core Vocabulary](/semic-icon-small.png)
 # StatDCAT-AP
 
 This is the issue tracker for the maintenance of StatDCAT-AP.
