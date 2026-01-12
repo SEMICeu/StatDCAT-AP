@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.0//EN" "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
+
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="13.89cm" height="8.07cm" viewBox="0 0 525 305">
+<title></title>
+<desc>s1n vocabulary</desc>
+
+<g style="fill:#FFFFFF;fill-opacity:1.00;">
+	 <rect x="0" y="0" width="525" height="305" shape-rendering="auto"/>
+</g><g style="stroke-width:1;stroke-linecap:square;stroke-linejoin:miter; fill:#000000;fill-opacity:0.00; stroke:#000000; stroke-opacity:1.00;">
+  <path d="M 6 6 L 6 299 L 519 299 L 519 6 L 6 6" shape-rendering="auto"/>
+</g>
+<g style="stroke-width:1;stroke-linecap:square;stroke-linejoin:miter; fill:#FFFFFF;fill-opacity:1.00; stroke:#000000; stroke-opacity:1.00;">
+  <polygon points="6 26 48 26 61 12 61 6 6 6 6 26" shape-rendering="auto"   style="fill-rule:evenodd;"/>
+</g>
+<g style="stroke-width:1;stroke-linecap:square;stroke-linejoin:miter; fill:#000000;fill-opacity:1.00; stroke:#000000; stroke-opacity:0.00;">
+	<text x="11.00" y="19.00" textLength="35" style="font-family:Calibri; font-weight:700; font-style:normal; font-size:10px; fill:#000000;fill-opacity:1.00; stroke:#000000; stroke-opacity:0.00; stroke-width:0; white-space: pre;" xml:space="preserve" transform="rotate(-0.00 11.00 19.00)">class s1n</text>
+</g>
+<g style="stroke-width:1;stroke-linecap:round;stroke-linejoin:bevel; fill:#FDFAF7;fill-opacity:1.00; stroke:#9A8484; stroke-opacity:1.00;">
+ <rect x="35" y="40" width="166" height="232" rx="0.00" shape-rendering="auto"  />
+</g>
+<g style="stroke-width:1;stroke-linecap:round;stroke-linejoin:bevel; fill:#595959;fill-opacity:1.00; stroke:#000000; stroke-opacity:0.00;">
+	<text x="89.00" y="59.00" textLength="57" style="font-family:Calibri; font-weight:700; font-style:normal; font-size:10px; fill:#595959;fill-opacity:1.00; stroke:#000000; stroke-opacity:0.00; stroke-width:0; white-space: pre;" xml:space="preserve" transform="rotate(-0.00 89.00 59.00)">rdfs:Resource</text>
+</g>
+<g style="stroke-width:1;stroke-linecap:round;stroke-linejoin:bevel; fill:#000000;fill-opacity:0.00; stroke:#9A8484; stroke-opacity:1.00;">
+  <path d="M 35 67 L 200 67" shape-rendering="auto"/>
+</g>
+<g style="stroke-width:1;stroke-linecap:round;stroke-linejoin:bevel; fill:#66413F;fill-opacity:1.00; stroke:#000000; stroke-opacity:0.00;">
+	<text x="40.00" y="81.00" textLength="7" style="font-family:Calibri; font-weight:0; font-style:normal; font-size:10px; fill:#66413F;fill-opacity:1.00; stroke:#000000; stroke-opacity:0.00; stroke-width:0; white-space: pre;" xml:space="preserve" transform="rotate(-0.00 40.00 81.00)">+ </text>
+	<text x="57.00" y="81.00" textLength="42" style="font-family:Calibri; font-weight:0; font-style:normal; font-size:10px; fill:#66413F;fill-opacity:1.00; stroke:#000000; stroke-opacity:0.00; stroke-width:0; white-space: pre;" xml:space="preserve" transform="rotate(-0.00 57.00 81.00)">numSeries</text>
+</g>
+<g style="stroke-width:1;stroke-linecap:round;stroke-linejoin:bevel; fill:#FDFAF7;fill-opacity:1.00; stroke:#9A8484; stroke-opacity:1.00;">
+ <rect x="320" y="219" width="155" height="39" rx="0.00" shape-rendering="auto"  />
+</g>
+<g style="stroke-width:1;stroke-linecap:round;stroke-linejoin:bevel; fill:#595959;fill-opacity:1.00; stroke:#000000; stroke-opacity:0.00;">
+	<text x="355.00" y="238.00" textLength="85" style="font-family:Calibri; font-weight:700; font-style:normal; font-size:10px; fill:#595959;fill-opacity:1.00; stroke:#000000; stroke-opacity:0.00; stroke-width:0; white-space: pre;" xml:space="preserve" transform="rotate(-0.00 355.00 238.00)">qb:AttributeProperty</text>
+</g>
+<g style="stroke-width:1;stroke-linecap:round;stroke-linejoin:bevel; fill:#FDFAF7;fill-opacity:1.00; stroke:#9A8484; stroke-opacity:1.00;">
+ <rect x="321" y="159" width="152" height="41" rx="0.00" shape-rendering="auto"  />
+</g>
+<g style="stroke-width:1;stroke-linecap:round;stroke-linejoin:bevel; fill:#595959;fill-opacity:1.00; stroke:#000000; stroke-opacity:0.00;">
+	<text x="351.00" y="178.00" textLength="91" style="font-family:Calibri; font-weight:700; font-style:normal; font-size:10px; fill:#595959;fill-opacity:1.00; stroke:#000000; stroke-opacity:0.00; stroke-width:0; white-space: pre;" xml:space="preserve" transform="rotate(-0.00 351.00 178.00)">qb:DimensionProperty</text>
+</g>
+<g style="stroke-width:1;stroke-linecap:round;stroke-linejoin:bevel; fill:#FDFAF7;fill-opacity:1.00; stroke:#9A8484; stroke-opacity:1.00;">
+ <rect x="320" y="45" width="155" height="41" rx="0.00" shape-rendering="auto"  />
+</g>
+<g style="stroke-width:1;stroke-linecap:round;stroke-linejoin:bevel; fill:#595959;fill-opacity:1.00; stroke:#000000; stroke-opacity:0.00;">
+	<text x="371.00" y="64.00" textLength="53" style="font-family:Calibri; font-weight:700; font-style:normal; font-size:10px; fill:#595959;fill-opacity:1.00; stroke:#000000; stroke-opacity:0.00; stroke-width:0; white-space: pre;" xml:space="preserve" transform="rotate(-0.00 371.00 64.00)">skos:Concept</text>
+</g>
+<g style="stroke-width:1;stroke-linecap:round;stroke-linejoin:bevel; fill:#000000;fill-opacity:0.00; stroke:#69738C; stroke-opacity:1.00;">
+  <path d="M 201 65 L 320 65" shape-rendering="auto"/>
+  <path d="M 305 71 L 320 65 L 305 59" shape-rendering="auto"/>
+  <path d="M 201 177 L 321 177" shape-rendering="auto"/>
+  <path d="M 306 183 L 321 177 L 306 171" shape-rendering="auto"/>
+  <path d="M 201 237 L 320 237" shape-rendering="auto"/>
+  <path d="M 305 243 L 320 237 L 305 231" shape-rendering="auto"/>
+</g>
+<g style="stroke-width:1;stroke-linecap:round;stroke-linejoin:bevel; fill:#595959;fill-opacity:1.00; stroke:#000000; stroke-opacity:0.00;">
+	<text x="232.00" y="58.00" textLength="67" style="font-family:Calibri; font-weight:0; font-style:normal; font-size:10px; fill:#595959;fill-opacity:1.00; stroke:#000000; stroke-opacity:0.00; stroke-width:0; white-space: pre;" xml:space="preserve" transform="rotate(-0.00 232.00 58.00)">statUnitMeasure</text>
+	<text x="241.00" y="173.00" textLength="41" style="font-family:Calibri; font-weight:0; font-style:normal; font-size:10px; fill:#595959;fill-opacity:1.00; stroke:#000000; stroke-opacity:0.00; stroke-width:0; white-space: pre;" xml:space="preserve" transform="rotate(-0.00 241.00 173.00)">dimension</text>
+	<text x="243.00" y="233.00" textLength="34" style="font-family:Calibri; font-weight:0; font-style:normal; font-size:10px; fill:#595959;fill-opacity:1.00; stroke:#000000; stroke-opacity:0.00; stroke-width:0; white-space: pre;" xml:space="preserve" transform="rotate(-0.00 243.00 233.00)">attribute</text>
+</g>
+</svg>

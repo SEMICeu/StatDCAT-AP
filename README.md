@@ -6,15 +6,15 @@ The StatDCAT Application profile for data portals in Europe (StatDCAT-AP) is an 
 
 The specification of the StatDCAT-AP was a joint initiative of Eurostat, the EU Publications Office and the ISA Programme.
 
-The current version of StatDCAT-AP (v1.0.0) can be downloaded from https://joinup.ec.europa.eu/release/statdcat-ap-v100.
+The current version of StatDCAT-AP (v1.0.1) can be downloaded from https://interoperable-europe.ec.europa.eu/collection/semic-support-centre/solution/statdcat-application-profile-data-portals-europe/release/101.
 
 Any problems encountered, or suggestions for new functionalities can be submitted as issues on the StatDCAT-AP repository on GitHub. A short guideline for submitting issues can be found at https://github.com/SEMICeu/StatDCAT-AP/wiki/Submission-guidelines.
 
 ## Structure of the repository
-/StatDCAT-AP: StatDCAT-AP releases (1.00, 2.00 etc), each release might have different distributions.
+/releases: StatDCAT-AP releases (1.0, 1.0.1, etc.), each release might have different distributions.
 
 ## License
-Copyright © 2024 European Union. All material in this repository is published under the licence CC-BY 4.0, unless explicitly otherwise mentioned. Any problems encountered, or suggestions for new functionalities can be submitted as issues on the StatDCAT-AP repository on GitHub.
+Copyright © 2026 European Union. All material in this repository is published under the licence CC-BY 4.0, unless explicitly otherwise mentioned. Any problems encountered, or suggestions for new functionalities can be submitted as issues on the StatDCAT-AP repository on GitHub.
 
 ## Webinar Overview
 This section offers an overview of the webinars and events related to StatDCAT-AP.
