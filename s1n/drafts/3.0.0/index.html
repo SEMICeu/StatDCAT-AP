@@ -692,6 +692,7 @@ Either these are reused as-is, i.e. with no formal additional constraints compar
 
  
 
+  
 
 <section class="appendix">
 
@@ -898,12 +899,82 @@ Past and current contributors are :
 		, 
            
 	 	Øystein Åsnes
-		
-          
-     
+		.
+</p>
+</section>
+      
 
-.
+<section id="Mapping-SMDX-to-statdcat-ap" class="appendix">
 
+<h2>Mapping SMDX to StatDCAT-AP </h2>
+
+	<section id="scope">
+    <h2>Scope</h2>
+    <p>
+      The scope of this section is to describe the mapping of StatDCAT-AP to the SDMX Information Model. This is achieved by means of schematic diagrams of the SDMX Information Model and also by a worked example where the SDMX-ML content is mapped to the classes and properties of DCAT-AP.
+    </p>
+<p>
+    The intent of this mapping is twofold:
+  </p>
+  <ol>
+    <li>
+      It enables organisations using SDMX to know which metadata structures to use in order to generate DCAT-AP compliant messages directly from their SDMX metadata repositories (such as an SDMX Registry).
+    </li>
+    <li>
+      It enables organisations that intend to use SDMX-ML structural metadata as format for the Transformation Mechanism (described in Annex V of this specification) to map SDMX-ML elements or attributes to DCAT-AP classes or properties.
+    </li>
+	<!--Described in section IV to change-->
+  </ol>
+</section>
+
+
+ 
+<section id="diagrams">
+  <h3>Diagrams</h3>
+
+  <figure id="Schematic-map-of-SMDX-Classes-to-DCAT-AP">
+    <!-- Add imsge of schematic map of SMDX classes to DCAT-AP -->
+    <img
+      src="assets/img/sdmx-dcat-schematic.png"
+      alt="Schematic mapping between SDMX classes (Category Scheme, Categorisation, Dataflow, Provision Agreement, Registered Data Source, Agency) and DCAT-AP entities (Catalog, Dataset, Distribution, Category Scheme, Category, Agent), showing links via Categorisation and Provision Agreement."
+      width="760"
+      style="max-width:100%; height:auto; border:0;"
+      loading="lazy"
+      decoding="async"
+    />
+    <figcaption>
+      <strong>Figure&nbsp;7:</strong> Schematic map of SDMX Classes to DCAT-AP.
+      This diagram highlights the high-level SDMX classes that provide the metadata required by StatDCAT-AP and their correspondences to DCAT-AP entities.
+    </figcaption>
+  </figure>
+
+  <p>
+    This is a schematic diagram of those high level classes in the SDMX Information Model that provide the metadata required by StatDCAT-AP.
+  </p>
+
+  <p>A narrative explanation is:</p>
+  <ol>
+    <li>
+    The DCAT Catalogue is mapped to an SDMX Category Scheme. The Category can link to any other structural metadata object in SDMX using a Categorisation. The Categorisation provides the link, i.e. the Categorisation references both the object and the Category to which it is linked. Two Categories are present in the Category Scheme representing the DCAT-Catalogue, one for linking the Dataflows, and one for linking the Category Scheme containing the topic themes.  There will be multiple Categorisations, each one linking the object (e.g. Dataflow) to the relevant Category. Therefore, for instance, there will be one Categorisation for each Dataflow, each Categorisation referencing the same Category. In this way all of the Dataflows that are contained in the catalogue are linked to the same Category.
+    </li>
+    <li>
+    The StatDCAT-AP Dataset maps to the SDMX Dataflow. 
+    </li>
+    <li>
+    Dimension and Attribute in the StatDCAT-AP Dataset map to Dimension and Attribute in the SDMX Data Structure
+    </li>
+    <li>
+    The DCAT Category Scheme maps to the SDMX Category Scheme. However, it should be noted that this Category Scheme will be different from the one that contains the DCAT Catalogue. The Categories in this Category Scheme are the topics or themes that categorise the type of data. Each Category links to the Dataflows that are relevant to the topic by means of a Categorisation. A Dataflow may be linked to many such topics (Categories) and a topic (Category) can be linked to many Dataflows.
+    </li>
+    <li>
+    The DCAT Distribution maps to the SDMX Provision Agreement which links a Data Provider with a Dataflow. The Data Provider and the Dataflow have a many-to- many association, each one-to-one association is represented as a Provision Agreement. The actual data source for one Data Provider and its linked Dataflow is the Registered Data Source linked to the Provision Agreement. The URL of the Registered Data Source is a link to a data source, which can be a URL that resolves to an actual set of data or it may be a URL to a web service that can be queried for the data. SDMX makes a distinction between the two.
+    </li>
+    <li>
+    The DCAT Agent maps to the SDMX Agency which is the “Maintenance Agency” for the metadata such as the Dataflow. Note that in SDMX the Maintenance Agency is maintained in a different scheme from the Data Provider. So, the Data Provider is a different construct from the Agency. In SDMX the Data Provider (of the actual data) can be different from the Maintenance Agency of the metadata describing the data (the SDMX Dataflow): they may both have the same Id but are different entities.
+    </li>
+  </ol>
+</section>
+ 
 
 </section>
 <!-- End page content -->
