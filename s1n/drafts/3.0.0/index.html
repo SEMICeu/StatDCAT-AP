@@ -90,7 +90,7 @@
       edDraftURI: "https://semiceu.github.io/StatDCAT-AP/s1n/drafts/3.0.0/",
       latestVersion: "https://semiceu.github.io/StatDCAT-AP/s1n/drafts/3.0.0/",
       specStatus: "base",
-      publishDate: "2026-01-12",
+      publishDate: "2026-01-20",
       editors: myeditors,
       authors: myauthors,
       github: "SEMICeu/StatDCAT-AP",
@@ -108,6 +108,15 @@
       },],
       generatedSubtitle: "",
       additionalCopyrightHolders: "",
+      otherLinks: [{
+          key: "Links",
+          data: [
+            {
+              value: "StatDCAT-AP Application Profile",
+              href: "../../../drafts/3.0.0/"
+            }
+          ]
+      }],
       localBiblio: {
         "DXWG": {
           "href" : "https://www.w3.org/2017/dxwg/wiki/Main_Page",
@@ -198,17 +207,11 @@
 
 <h3>Revision history</h3>
 
-  <p class="ednote" title="NAMESPACE ISSUE">
-    <a href="https://github.com/SEMICeu/StatDCAT-AP/issues/3">Issue #3</a> has to addressed!
-    <br/>
-    In StatDCAT-AP document the namespace mentioned in the PDF document is a temporary one <code>http://data.europa.eu/(xyz)/statdcat-ap/</code>. But in the TTL the Core Vocabularies namespace <code>http://data.europa.eu/m8g</code>is used. See <a href="https://github.com/SEMICeu/StatDCAT-AP/blob/master/Release%201.0.1/StatDCAT-AP_1.0.1.ttl#L293">https://github.com/SEMICeu/StatDCAT-AP/blob/master/Release%201.0.1/StatDCAT-AP_1.0.1.ttl#L293</a>. 
-    <br/>
-    Proposal is to move it to this namespace as it was the intention and mentioned in the <a href="https://github.com/SEMICeu/StatDCAT-AP/issues/3">Issue #3</a>. 
-  </p>
-
   <p class="ednote" title="DOMAIN">
-    The domain is set to <code>rdfs:Resource</code> while these properties are only meaningful with DCAT ecosystem. Suggestion to  change the domain to <code>dcat:Resource</code>. The problem is that <code>dcat:Distribution</code> not a subclass is from <code>dcat:Resource</code>. 
-    That would possibly limit the reuse.
+    The domain is set to <code>rdfs:Resource</code> while these properties are only meaningful within the DCAT ecosystem.
+    They can therefore be used with any resource such as Dataset or Distribution.
+    That is why the domain cannot be changed to <code>dcat:Resource</code>, because <code>dcat:Distribution</code> not a subclass of <code>dcat:Resource</code>.
+    TODO: Check, whether the properties are to be used on Distribution, or just DCAT resources (Dataset, Data Service, Dataset Series).
   </p>
 
 <h3>Meeting minutes</h3>
@@ -231,7 +234,7 @@ It is under maintenance by the SEMIC action, Interoperable Europe.
 <section id="specstatus">
     <h2>Status</h2>
         <p>
-            This vocabulary has the status <a href="https://www.w3.org/2021/Process-20211102/#RecsWD">Working Draft</a> published at 2026-01-12.
+            This vocabulary has the status <a href="https://www.w3.org/2021/Process-20211102/#RecsWD">Working Draft</a> published at 2026-01-20.
         </p>
         <p>
             Information about the process and the decisions involved in the creation of this specification are consultable at the <a href="https://semiceu.github.io/StatDCAT-AP/drafts/3.0.0/CHANGELOG.html">Changelog</a>.
@@ -378,7 +381,7 @@ This section lists the properties matching the base namespace of this vocabulary
 				   URI
 				</td>
 				<td>
-				http://data.europa.eu/s1n/attribute
+				<code>http://data.europa.eu/s1n/attribute</code>
 				</td>
 			</tr>
                         <tr id="attribute.label">
@@ -461,7 +464,7 @@ Attribute is a &quot;conceptual&quot; entity that applies to all distribution fo
 				   URI
 				</td>
 				<td>
-				http://data.europa.eu/s1n/dimension
+				<code>http://data.europa.eu/s1n/dimension</code>
 				</td>
 			</tr>
                         <tr id="dimension.label">
@@ -545,7 +548,7 @@ Dimension is a&quot;conceptual&quot; entity that applies to all distribution for
 				   URI
 				</td>
 				<td>
-				http://data.europa.eu/s1n/numSeries
+				<code>http://data.europa.eu/s1n/numSeries</code>
 				</td>
 			</tr>
                         <tr id="numberofdataseries.label">
@@ -616,7 +619,7 @@ Dimension is a&quot;conceptual&quot; entity that applies to all distribution for
 				   URI
 				</td>
 				<td>
-				http://data.europa.eu/s1n/statUnitMeasure
+				<code>http://data.europa.eu/s1n/statUnitMeasure</code>
 				</td>
 			</tr>
                         <tr id="unitofmeasurement.label">
@@ -692,7 +695,6 @@ Either these are reused as-is, i.e. with no formal additional constraints compar
 
  
 
-  
 
 <section class="appendix">
 
@@ -899,13 +901,12 @@ Past and current contributors are :
 		, 
            
 	 	Øystein Åsnes
-		.
-</p>
-</section>
-      
+		
+          
+     
 
+.
 
- 
 
 </section>
 <!-- End page content -->
