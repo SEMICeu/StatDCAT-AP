@@ -4,14 +4,19 @@ This is the issue tracker for the maintenance of StatDCAT-AP.
 
 The StatDCAT Application profile for data portals in Europe (StatDCAT-AP) is an extension of the DCAT Application profile for data portals in Europe (DCAT-AP) designed to support to exchange of statistical information between data protals in Europe. 
 
-The specification of the StatDCAT-AP was a joint initiative of Eurostat, the EU Publications Office and the ISA Programme.
+The specification of the StatDCAT-AP was a joint initiative of Eurostat, the EU Publications Office and the Interoperable Europe initiative.
 
-The current version of StatDCAT-AP (v1.0.1) can be downloaded from https://interoperable-europe.ec.europa.eu/collection/semic-support-centre/solution/statdcat-application-profile-data-portals-europe/release/101.
+The latest released version of StatDCAT-AP (v1.0.1) can be downloaded from https://interoperable-europe.ec.europa.eu/collection/semic-support-centre/solution/statdcat-application-profile-data-portals-europe/release/101.
+
+Work on version 3.0.0 is underway.
+- [StatDCAT-AP 3.0.0 draft Application Profile](https://semiceu.github.io/StatDCAT-AP/drafts/3.0.0/)
+- [`s1n` namespace document 3.0.0 draft](https://semiceu.github.io/StatDCAT-AP/s1n/drafts/3.0.0/)
 
 Any problems encountered, or suggestions for new functionalities can be submitted as issues on the StatDCAT-AP repository on GitHub. A short guideline for submitting issues can be found at https://github.com/SEMICeu/StatDCAT-AP/wiki/Submission-guidelines.
 
 ## Structure of the repository
-/releases: StatDCAT-AP releases (1.0, 1.0.1, etc.), each release might have different distributions.
+/releases: StatDCAT-AP releases (1.0, 1.0.1, etc.)
+/drafts: StatDCAT-AP drafts (3.0.0, etc.)
 
 ## License
 Copyright © 2026 European Union. All material in this repository is published under the licence CC-BY 4.0, unless explicitly otherwise mentioned. Any problems encountered, or suggestions for new functionalities can be submitted as issues on the StatDCAT-AP repository on GitHub.
