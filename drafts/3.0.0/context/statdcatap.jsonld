@@ -323,6 +323,11 @@
       "@container": "@set",
       "@id": "http://purl.org/dc/terms/title"
     },
+    "dqv:hasQualityAnnotation": {
+      "@container": "@set",
+      "@id": "http://www.w3.org/ns/dqv#hasQualityAnnotation",
+      "@type": "@id"
+    },
     "foaf:documentation": {
       "@container": "@set",
       "@id": "http://xmlns.com/foaf/0.1/page",

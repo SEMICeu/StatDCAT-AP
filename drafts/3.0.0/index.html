@@ -96,7 +96,7 @@
       prevRecURI: "https://interoperable-europe.ec.europa.eu/collection/semic-support-centre/solution/statdcat-application-profile-data-portals-europe/release/101",
       latestVersion: "https://semiceu.github.io/StatDCAT-AP/drafts/3.0.0/",
       specStatus: "base",
-      publishDate: "2026-01-20",
+      publishDate: "2026-02-05",
       editors: myeditors,
       authors: myauthors,
       otherLinks: [{
@@ -1207,9 +1207,9 @@ The following webinars have been held for the creation of this release
     <h2>Status</h2>
         <p>
 <!-- readd when SEMIC has a codelist about it process 
-	This application profile has the status <a href="https://www.w3.org/2021/Process-20211102/#RecsWD">Working Draft</a> published at 2026-01-20.
+	This application profile has the status <a href="https://www.w3.org/2021/Process-20211102/#RecsWD">Working Draft</a> published at 2026-02-05.
 -->
-	This application profile has the status Working Draft published at 2026-01-20.
+	This application profile has the status Working Draft published at 2026-02-05.
         </p>
         <p>
             Information about the process and the decisions involved in the creation of this specification are consultable at the <a href="https://github.com/SEMICeu/StatDCAT-AP/drafts/3.0.0/CHANGELOG">Changelog</a>.
@@ -5162,6 +5162,7 @@ For this usage, consult the guidelines in section [[[#UsageGuidelines]]].
                             , <a href="#Dataset.publisher">publisher</a>
                             , <a href="#Dataset.qualifiedattribution">qualified attribution</a>
                             , <a href="#Dataset.qualifiedrelation">qualified relation</a>
+                            , <a href="#Dataset.qualityannotation">quality annotation</a>
                             , <a href="#Dataset.relatedresource">related resource</a>
                             , <a href="#Dataset.releasedate">release date</a>
                             , <a href="#Dataset.sample">sample</a>
@@ -5357,7 +5358,7 @@ For this usage, consult the guidelines in section [[[#UsageGuidelines]]].
                                     0..*
                                 </td>
                                 <td property="rdfs:comment">
-                                    a component used to qualify and interpret observed values, e.g. units of measure, any scaling factors and metadata such as the status of the observation (e.g. estimated, provisional). Attribute is a "conceptual" entity that applies to all distribution formats, e.g. in case a dataset is provided both in SDMX and in DataCube.
+                                    A component used to qualify and interpret observed values, e.g. units of measure, any scaling factors and metadata such as the status of the observation (e.g. estimated, provisional). Attribute is a "conceptual" entity that applies to all distribution formats, e.g. in case a dataset is provided both in SDMX and in DataCube.
                                 </td>
                                 <td property="skos:scopeNote">
                                     
@@ -5675,7 +5676,7 @@ For this usage, consult the guidelines in section [[[#UsageGuidelines]]].
                                     0..*
                                 </td>
                                 <td property="rdfs:comment">
-                                    a component that identifies observations, e.g. the time to which the observation applies , or a geographic region which the observation covers. Dimension is a"conceptual" entity that applies to all distribution formats, e.g. in case a dataset is provided both in SDMX and in DataCube.
+                                    A component that identifies observations, e.g. the time to which the observation applies , or a geographic region which the observation covers. Dimension is a"conceptual" entity that applies to all distribution formats, e.g. in case a dataset is provided both in SDMX and in DataCube.
                                 </td>
                                 <td property="skos:scopeNote">
                                     
@@ -6314,7 +6315,7 @@ For this usage, consult the guidelines in section [[[#UsageGuidelines]]].
                                     This property contains the number of data series contained in the Dataset
                                 </td>
                                 <td property="skos:scopeNote">
-                                    
+                                    Cartesian Product of the number of modalities of each dimension, excluding what Data Cube calls the measure dimension (that denotes which particular measure is being conveyed by the observation). The numSeries is the actual number of series in the data set as referenced in the Distribution. This is usually less than the theoretical number calculated as the Cartesian Product (and sometimes significantly less). The actual number of series is, when combined with the dimension list, a useful indication of the detail of the data in the data set.
                                 </td>
 				<!--
                                 <td>
@@ -6597,6 +6598,59 @@ For this usage, consult the guidelines in section [[[#UsageGuidelines]]].
 				        <a href="https://semiceu.github.io/DCAT-AP/releases/3.0.1/#Dataset.qualifiedrelation">A</a>
                                        
                                     
+                                </td>
+                            </tr>
+                        
+                            <tr id="Dataset.qualityannotation"
+                                typeof="rdf:Property"
+                                resource="http://www.w3.org/ns/dqv#hasQualityAnnotation"
+                                class="class mandatory">
+<!--
+                                <td>
+				    <a href="https://github.com/SEMICeu/StatDCAT-AP/issues/new?title=Issue%20for%20quality annotation%20in%20Dataset&body=Explain%20your%20issue%20for%20https://semiceu.github.io/StatDCAT-AP/drafts/3.0.0%23Dataset.qualityannotation" target="_blank" rel="noopener noreferrer" >
+                                        <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
+                                    </a>
+                                </td>
+--->
+                                <td>
+                                        <a href="http://www.w3.org/ns/dqv#hasQualityAnnotation"
+                                           data-toggle="tooltip"
+                                           data-content="http://www.w3.org/ns/dqv#hasQualityAnnotation"
+                                           data-placement="right">
+                                        quality annotation</a>
+                                </td>
+                                <td>
+                                    
+                                        
+                                            <a href="#Annotation" data-placement="right">Annotation</a>
+                                        
+                                    
+                                </td>
+                                <td>
+                                    0..*
+                                </td>
+                                <td property="rdfs:comment">
+                                    This property links to a statement related to quality of the Dataset, including rating, quality certificate, feedback that can be associated to the Dataset.
+                                </td>
+                                <td property="skos:scopeNote">
+                                    
+                                </td>
+				<!--
+                                <td>
+                                    
+                                </td>
+				-->
+				<!--
+                                <td>
+                                    
+                                </td>
+				-->
+                                <td>
+                                    
+                                       
+				        P
+				       
+				    
                                 </td>
                             </tr>
                         
@@ -7161,7 +7215,7 @@ For this usage, consult the guidelines in section [[[#UsageGuidelines]]].
                                     0..*
                                 </td>
                                 <td property="rdfs:comment">
-                                    a unit of measurement of the observations in the dataset, for example Euro, square kilometre, purchasing power standard (PPS), full-time equivalent, percentage. Unit of measurement is a "conceptual" entity that applies to all distribution formats, e.g. in the case when a dataset is provided both in SDMX and in Data Cube.
+                                    A unit of measurement of the observations in the dataset, for example Euro, square kilometre, purchasing power standard (PPS), full-time equivalent, percentage. Unit of measurement is a "conceptual" entity that applies to all distribution formats, e.g. in the case when a dataset is provided both in SDMX and in Data Cube.
                                 </td>
                                 <td property="skos:scopeNote">
                                     
@@ -12342,6 +12396,7 @@ The tables below show the usage of the codelists with the expected qualification
 		<tr><td>dct:accrualPeriodicity</td><td><a href="#Dataset">Dataset</a>,<a href="#DatasetSeries">Dataset Series</a></td><td><a href="http://publications.europa.eu/resource/authority/frequency">EU Vocabularies Frequency Named Authority List</a></td><td></td></tr>
 		<tr><td>dct:format</td><td><a href="#Distribution">Distribution</a>,<a href="#DataService">Data Service </a></td><td><a href="http://publications.europa.eu/resource/authority/file-type">EU Vocabularies File Type Named Authority List</a></td><td></td></tr>
 		<tr><td>dct:language</td><td><a href="#Catalogue">Catalogue</a>,<a href="#Dataset">Dataset</a>, <a href="#CatalogueRecord">Catalogue Records</a>, <a href="#Distribution">Distribution</a></td><td><a href="http://publications.europa.eu/resource/authority/language">EU Vocabularies Languages Named Authority List</a></td><td></td></tr>
+		<tr><td>dct:type</td><td><a href="#Distribution">Distribution</a></td><td><a href="http://publications.europa.eu/resource/dataset/distribution-type">EU Vocabularies Distribution type</a></td><td></td></tr>
 		<tr><td>adms:status</td><td><a href="#Distribution">Distribution</a></td><td><a href="http://publications.europa.eu/resource/authority/distribution-status">EU Vocabularies Distribution Status</a></td><td></td></tr>
 		<tr><td>dcatap:availability</td><td><a href="#Distribution">Distribution</a></td><td><a href="http://publications.europa.eu/resource/authority/planned-availability">Distribution availability vocabulary</a></td><td>The list of terms for the avalability levels of a dataset distribution in the DCAT-AP  specification.</td></tr>
 		<tr><td>spdx:algorithm</td><td><a href="#Checksum">Checksum</a></td><td><a href="https://spdx.org/rdf/terms/#d4e2129">Checksum algorithm members</a></td><td>The members listed are considered a controlled vocabulary of supported checksum algorithms.</td></tr>
@@ -14980,6 +15035,8 @@ The properties are grouped under headings <it>mandatory, recommended, optional</
 						
 					
 						
+					
+						
 							<tr>
 								<td><a href="#Dataset">Dataset</a></td>
 								<td><div class="shorten">http://www.w3.org/ns/dcat#Dataset</div></td>
@@ -15086,6 +15143,8 @@ The properties are grouped under headings <it>mandatory, recommended, optional</
 								<td><a href="#Dataset.publisher">publisher </a></td>
 								<td><div class="shorten">http://purl.org/dc/terms/publisher</div></td>
 							</tr>
+						
+					
 						
 					
 						
@@ -15346,6 +15405,16 @@ The properties are grouped under headings <it>mandatory, recommended, optional</
 								<td>Optional</td>
 								<td><a href="#Dataset.qualifiedrelation">qualified relation </a></td>
 								<td><div class="shorten">http://www.w3.org/ns/dcat#qualifiedRelation</div></td>
+							</tr>
+						
+					
+						
+							<tr>
+								<td><a href="#Dataset">Dataset</a></td>
+								<td><div class="shorten">http://www.w3.org/ns/dcat#Dataset</div></td>
+								<td>Optional</td>
+								<td><a href="#Dataset.qualityannotation">quality annotation </a></td>
+								<td><div class="shorten">http://www.w3.org/ns/dqv#hasQualityAnnotation</div></td>
 							</tr>
 						
 					

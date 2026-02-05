@@ -1966,7 +1966,7 @@
           "rdfs:seeAlso": "https://semiceu.github.io/StatDCAT-AP/drafts/3.0.0#Dataset.unitofmeasurement",
           "sh:class": "http://www.w3.org/2004/02/skos/core#Concept",
           "sh:description": {
-            "en": "a unit of measurement of the observations in the dataset, for example Euro, square kilometre, purchasing power standard (PPS), full-time equivalent, percentage. Unit of measurement is a \"conceptual\" entity that applies to all distribution formats, e.g. in the case when a dataset is provided both in SDMX and in Data Cube."
+            "en": "A unit of measurement of the observations in the dataset, for example Euro, square kilometre, purchasing power standard (PPS), full-time equivalent, percentage. Unit of measurement is a \"conceptual\" entity that applies to all distribution formats, e.g. in the case when a dataset is provided both in SDMX and in Data Cube."
           },
           "sh:name": {
             "en": "unit of measurement"
@@ -2166,6 +2166,18 @@
           "sh:path": "http://www.w3.org/ns/prov#wasGeneratedBy"
         },
         {
+          "@id": "https://semiceu.github.io/StatDCAT-AP/drafts/3.0.0#dcat:DatasetShape/3dfdb1b86e9476a9694997fc76c47085161b750c",
+          "rdfs:seeAlso": "https://semiceu.github.io/StatDCAT-AP/drafts/3.0.0#Dataset.qualityannotation",
+          "sh:class": "http://www.w3.org/ns/oa#Annotation",
+          "sh:description": {
+            "en": "This property links to a statement related to quality of the Dataset, including rating, quality certificate, feedback that can be associated to the Dataset."
+          },
+          "sh:name": {
+            "en": "quality annotation"
+          },
+          "sh:path": "http://www.w3.org/ns/dqv#hasQualityAnnotation"
+        },
+        {
           "@id": "https://semiceu.github.io/StatDCAT-AP/drafts/3.0.0#dcat:DatasetShape/3f1fe87dc7be37001827234cfe37b5314b16efcc",
           "rdfs:seeAlso": "https://semiceu.github.io/StatDCAT-AP/drafts/3.0.0#Dataset.isreferencedby",
           "sh:description": {
@@ -2346,6 +2358,18 @@
           "sh:path": "http://purl.org/dc/terms/accrualPeriodicity"
         },
         {
+          "@id": "https://semiceu.github.io/StatDCAT-AP/drafts/3.0.0#dcat:DatasetShape/647d563357ce6f8f406394f0c49645a4109863fc",
+          "rdfs:seeAlso": "https://semiceu.github.io/StatDCAT-AP/drafts/3.0.0#Dataset.qualityannotation",
+          "sh:description": {
+            "en": "This property links to a statement related to quality of the Dataset, including rating, quality certificate, feedback that can be associated to the Dataset."
+          },
+          "sh:name": {
+            "en": "quality annotation"
+          },
+          "sh:nodeKind": "sh:BlankNodeOrIRI",
+          "sh:path": "http://www.w3.org/ns/dqv#hasQualityAnnotation"
+        },
+        {
           "@id": "https://semiceu.github.io/StatDCAT-AP/drafts/3.0.0#dcat:DatasetShape/67dcdb36167ca7969c0532898e11a98e9c2a80f5",
           "rdfs:seeAlso": "https://semiceu.github.io/StatDCAT-AP/drafts/3.0.0#Dataset.publisher",
           "sh:description": {
@@ -2374,7 +2398,7 @@
           "rdfs:seeAlso": "https://semiceu.github.io/StatDCAT-AP/drafts/3.0.0#Dataset.attribute",
           "sh:class": "http://purl.org/linked-data/cube#AttributeProperty",
           "sh:description": {
-            "en": "a component used to qualify and interpret observed values, e.g. units of measure, any scaling factors and metadata such as the status of the observation (e.g. estimated, provisional). Attribute is a \"conceptual\" entity that applies to all distribution formats, e.g. in case a dataset is provided both in SDMX and in DataCube."
+            "en": "A component used to qualify and interpret observed values, e.g. units of measure, any scaling factors and metadata such as the status of the observation (e.g. estimated, provisional). Attribute is a \"conceptual\" entity that applies to all distribution formats, e.g. in case a dataset is provided both in SDMX and in DataCube."
           },
           "sh:name": {
             "en": "attribute"
@@ -2409,7 +2433,7 @@
           "@id": "https://semiceu.github.io/StatDCAT-AP/drafts/3.0.0#dcat:DatasetShape/705d3d050df964292af08292097fe05ded9edab6",
           "rdfs:seeAlso": "https://semiceu.github.io/StatDCAT-AP/drafts/3.0.0#Dataset.unitofmeasurement",
           "sh:description": {
-            "en": "a unit of measurement of the observations in the dataset, for example Euro, square kilometre, purchasing power standard (PPS), full-time equivalent, percentage. Unit of measurement is a \"conceptual\" entity that applies to all distribution formats, e.g. in the case when a dataset is provided both in SDMX and in Data Cube."
+            "en": "A unit of measurement of the observations in the dataset, for example Euro, square kilometre, purchasing power standard (PPS), full-time equivalent, percentage. Unit of measurement is a \"conceptual\" entity that applies to all distribution formats, e.g. in the case when a dataset is provided both in SDMX and in Data Cube."
           },
           "sh:name": {
             "en": "unit of measurement"
@@ -2709,7 +2733,7 @@
           "@id": "https://semiceu.github.io/StatDCAT-AP/drafts/3.0.0#dcat:DatasetShape/bce1392b280f9ca89cf71595cc73dfa53ed83eba",
           "rdfs:seeAlso": "https://semiceu.github.io/StatDCAT-AP/drafts/3.0.0#Dataset.attribute",
           "sh:description": {
-            "en": "a component used to qualify and interpret observed values, e.g. units of measure, any scaling factors and metadata such as the status of the observation (e.g. estimated, provisional). Attribute is a \"conceptual\" entity that applies to all distribution formats, e.g. in case a dataset is provided both in SDMX and in DataCube."
+            "en": "A component used to qualify and interpret observed values, e.g. units of measure, any scaling factors and metadata such as the status of the observation (e.g. estimated, provisional). Attribute is a \"conceptual\" entity that applies to all distribution formats, e.g. in case a dataset is provided both in SDMX and in DataCube."
           },
           "sh:name": {
             "en": "attribute"
@@ -2757,7 +2781,7 @@
           "@id": "https://semiceu.github.io/StatDCAT-AP/drafts/3.0.0#dcat:DatasetShape/cd4869e0415166799e4cc19b3f0f6550cdfc1e9a",
           "rdfs:seeAlso": "https://semiceu.github.io/StatDCAT-AP/drafts/3.0.0#Dataset.dimension",
           "sh:description": {
-            "en": "a component that identifies observations, e.g. the time to which the observation applies , or a geographic region which the observation covers. Dimension is a\"conceptual\" entity that applies to all distribution formats, e.g. in case a dataset is provided both in SDMX and in DataCube."
+            "en": "A component that identifies observations, e.g. the time to which the observation applies , or a geographic region which the observation covers. Dimension is a\"conceptual\" entity that applies to all distribution formats, e.g. in case a dataset is provided both in SDMX and in DataCube."
           },
           "sh:name": {
             "en": "dimension"
@@ -2818,7 +2842,7 @@
           "rdfs:seeAlso": "https://semiceu.github.io/StatDCAT-AP/drafts/3.0.0#Dataset.dimension",
           "sh:class": "http://purl.org/linked-data/cube#DimensionProperty",
           "sh:description": {
-            "en": "a component that identifies observations, e.g. the time to which the observation applies , or a geographic region which the observation covers. Dimension is a\"conceptual\" entity that applies to all distribution formats, e.g. in case a dataset is provided both in SDMX and in DataCube."
+            "en": "A component that identifies observations, e.g. the time to which the observation applies , or a geographic region which the observation covers. Dimension is a\"conceptual\" entity that applies to all distribution formats, e.g. in case a dataset is provided both in SDMX and in DataCube."
           },
           "sh:name": {
             "en": "dimension"
