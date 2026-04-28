@@ -110,6 +110,278 @@
       "sh:targetClass": "http://data.europa.eu/eli/ontology#LegalResource"
     },
     {
+      "@id": "https://semiceu.github.io/StatDCAT-AP/drafts/3.0.0#statdcatap:DataflowShape",
+      "@type": "sh:NodeShape",
+      "sh:closed": false,
+      "sh:property": [
+        {
+          "@id": "https://semiceu.github.io/StatDCAT-AP/drafts/3.0.0#statdcatap:DataflowShape/01d5c746936ff78bb5eb353a1b0e49303cb2fd31",
+          "rdfs:seeAlso": "https://semiceu.github.io/StatDCAT-AP/drafts/3.0.0#Dataflow.dataset",
+          "sh:description": {
+            "en": "A Dataset conformant to the Dataflow."
+          },
+          "sh:name": {
+            "en": "dataset"
+          },
+          "sh:nodeKind": "sh:BlankNodeOrIRI",
+          "sh:path": "http://www.w3.org/ns/dcat#dataset"
+        },
+        {
+          "@id": "https://semiceu.github.io/StatDCAT-AP/drafts/3.0.0#statdcatap:DataflowShape/1e2ff89f72ca069b1668489d90cb44ba553353d5",
+          "rdfs:seeAlso": "https://semiceu.github.io/StatDCAT-AP/drafts/3.0.0#Dataflow.version",
+          "sh:description": {
+            "en": "The version of a Dataflow."
+          },
+          "sh:maxCount": "1",
+          "sh:name": {
+            "en": "version"
+          },
+          "sh:path": "http://www.w3.org/ns/dcat#version"
+        },
+        {
+          "@id": "https://semiceu.github.io/StatDCAT-AP/drafts/3.0.0#statdcatap:DataflowShape/3333ccdad6cd9a5d3473a8485594b5a6c2a1f823",
+          "rdfs:seeAlso": "https://semiceu.github.io/StatDCAT-AP/drafts/3.0.0#Dataflow.validity",
+          "sh:class": "http://purl.org/dc/terms/PeriodOfTime",
+          "sh:description": {
+            "en": "Range of validity of a Dataflow."
+          },
+          "sh:name": {
+            "en": "validity"
+          },
+          "sh:path": "http://purl.org/dc/terms/valid"
+        },
+        {
+          "@id": "https://semiceu.github.io/StatDCAT-AP/drafts/3.0.0#statdcatap:DataflowShape/531cd7ec5123506ee59bced26bfc6edc8e1589a5",
+          "rdfs:seeAlso": "https://semiceu.github.io/StatDCAT-AP/drafts/3.0.0#Dataflow.category",
+          "sh:class": "http://www.w3.org/2004/02/skos/core#Concept",
+          "sh:description": {
+            "en": "The category of a Dataflow."
+          },
+          "sh:name": {
+            "en": "category"
+          },
+          "sh:path": "http://purl.org/dc/terms/subject"
+        },
+        {
+          "@id": "https://semiceu.github.io/StatDCAT-AP/drafts/3.0.0#statdcatap:DataflowShape/67dcdb36167ca7969c0532898e11a98e9c2a80f5",
+          "rdfs:seeAlso": "https://semiceu.github.io/StatDCAT-AP/drafts/3.0.0#Dataflow.publisher",
+          "sh:description": {
+            "en": "An entity (organisation) responsible for making the Dataflow available."
+          },
+          "sh:maxCount": "1",
+          "sh:name": {
+            "en": "publisher"
+          },
+          "sh:path": "http://purl.org/dc/terms/publisher"
+        },
+        {
+          "@id": "https://semiceu.github.io/StatDCAT-AP/drafts/3.0.0#statdcatap:DataflowShape/6ac5a0c747a6826e0667858fed6065039aa38ff2",
+          "rdfs:seeAlso": "https://semiceu.github.io/StatDCAT-AP/drafts/3.0.0#Dataflow.datastructuredefinition",
+          "sh:class": "http://purl.org/dc/terms/Standard",
+          "sh:description": {
+            "en": "Data structure definition (DSD) that defines the structure of the data flowing through the Dataflow."
+          },
+          "sh:name": {
+            "en": "data structure definition"
+          },
+          "sh:path": "http://purl.org/dc/terms/conformsTo"
+        },
+        {
+          "@id": "https://semiceu.github.io/StatDCAT-AP/drafts/3.0.0#statdcatap:DataflowShape/6cae9880e515253132af1452a38a8a5827165149",
+          "rdfs:seeAlso": "https://semiceu.github.io/StatDCAT-AP/drafts/3.0.0#Dataflow.description",
+          "sh:description": {
+            "en": "A free-text account of the Dataflow."
+          },
+          "sh:name": {
+            "en": "description"
+          },
+          "sh:nodeKind": "sh:Literal",
+          "sh:path": "http://purl.org/dc/terms/description"
+        },
+        {
+          "@id": "https://semiceu.github.io/StatDCAT-AP/drafts/3.0.0#statdcatap:DataflowShape/7b94c69361e00163d16d78016cd994668c7fccda",
+          "rdfs:seeAlso": "https://semiceu.github.io/StatDCAT-AP/drafts/3.0.0#Dataflow.dataset",
+          "sh:class": "http://www.w3.org/ns/dcat#Dataset",
+          "sh:description": {
+            "en": "A Dataset conformant to the Dataflow."
+          },
+          "sh:name": {
+            "en": "dataset"
+          },
+          "sh:path": "http://www.w3.org/ns/dcat#dataset"
+        },
+        {
+          "@id": "https://semiceu.github.io/StatDCAT-AP/drafts/3.0.0#statdcatap:DataflowShape/8f61614144aa7bca188b24f5976593dc08aad0e6",
+          "rdfs:seeAlso": "https://semiceu.github.io/StatDCAT-AP/drafts/3.0.0#Dataflow.description",
+          "sh:description": {
+            "en": "A free-text account of the Dataflow."
+          },
+          "sh:minCount": "1",
+          "sh:name": {
+            "en": "description"
+          },
+          "sh:path": "http://purl.org/dc/terms/description"
+        },
+        {
+          "@id": "https://semiceu.github.io/StatDCAT-AP/drafts/3.0.0#statdcatap:DataflowShape/93f73e69bb03d2928fcf758a253ef316becdf9b9",
+          "rdfs:seeAlso": "https://semiceu.github.io/StatDCAT-AP/drafts/3.0.0#Dataflow.publisher",
+          "sh:description": {
+            "en": "An entity (organisation) responsible for making the Dataflow available."
+          },
+          "sh:name": {
+            "en": "publisher"
+          },
+          "sh:nodeKind": "sh:BlankNodeOrIRI",
+          "sh:path": "http://purl.org/dc/terms/publisher"
+        },
+        {
+          "@id": "https://semiceu.github.io/StatDCAT-AP/drafts/3.0.0#statdcatap:DataflowShape/9b44a563453dc6dbd39a0a0727fca8928bbb2e8f",
+          "rdfs:seeAlso": "https://semiceu.github.io/StatDCAT-AP/drafts/3.0.0#Dataflow.datastructuredefinition",
+          "sh:description": {
+            "en": "Data structure definition (DSD) that defines the structure of the data flowing through the Dataflow."
+          },
+          "sh:minCount": "1",
+          "sh:name": {
+            "en": "data structure definition"
+          },
+          "sh:path": "http://purl.org/dc/terms/conformsTo"
+        },
+        {
+          "@id": "https://semiceu.github.io/StatDCAT-AP/drafts/3.0.0#statdcatap:DataflowShape/9f0d5897170cffd298e43629d19dcdb6deefc7c6",
+          "rdfs:seeAlso": "https://semiceu.github.io/StatDCAT-AP/drafts/3.0.0#Dataflow.datastructuredefinition",
+          "sh:description": {
+            "en": "Data structure definition (DSD) that defines the structure of the data flowing through the Dataflow."
+          },
+          "sh:name": {
+            "en": "data structure definition"
+          },
+          "sh:nodeKind": "sh:BlankNodeOrIRI",
+          "sh:path": "http://purl.org/dc/terms/conformsTo"
+        },
+        {
+          "@id": "https://semiceu.github.io/StatDCAT-AP/drafts/3.0.0#statdcatap:DataflowShape/a0ccdf3bd7f5d161d07f375a26e68c18ca91dc19",
+          "rdfs:seeAlso": "https://semiceu.github.io/StatDCAT-AP/drafts/3.0.0#Dataflow.publisher",
+          "sh:description": {
+            "en": "An entity (organisation) responsible for making the Dataflow available."
+          },
+          "sh:minCount": "1",
+          "sh:name": {
+            "en": "publisher"
+          },
+          "sh:path": "http://purl.org/dc/terms/publisher"
+        },
+        {
+          "@id": "https://semiceu.github.io/StatDCAT-AP/drafts/3.0.0#statdcatap:DataflowShape/aadbd67a77a624f073be2076627fb9dc883cbe48",
+          "rdfs:seeAlso": "https://semiceu.github.io/StatDCAT-AP/drafts/3.0.0#Dataflow.identifier",
+          "sh:description": {
+            "en": "The identifier of the Dataflow"
+          },
+          "sh:name": {
+            "en": "identifier"
+          },
+          "sh:nodeKind": "sh:Literal",
+          "sh:path": "http://purl.org/dc/terms/identifier"
+        },
+        {
+          "@id": "https://semiceu.github.io/StatDCAT-AP/drafts/3.0.0#statdcatap:DataflowShape/b3ec0655204c62a2531244aaeab12f1a2c5e5b5d",
+          "rdfs:seeAlso": "https://semiceu.github.io/StatDCAT-AP/drafts/3.0.0#Dataflow.publisher",
+          "sh:class": "http://xmlns.com/foaf/0.1/Agent",
+          "sh:description": {
+            "en": "An entity (organisation) responsible for making the Dataflow available."
+          },
+          "sh:name": {
+            "en": "publisher"
+          },
+          "sh:path": "http://purl.org/dc/terms/publisher"
+        },
+        {
+          "@id": "https://semiceu.github.io/StatDCAT-AP/drafts/3.0.0#statdcatap:DataflowShape/b7170c2e447992534cf37d140ae57a7b443da4d9",
+          "rdfs:seeAlso": "https://semiceu.github.io/StatDCAT-AP/drafts/3.0.0#Dataflow.datastructuredefinition",
+          "sh:description": {
+            "en": "Data structure definition (DSD) that defines the structure of the data flowing through the Dataflow."
+          },
+          "sh:maxCount": "1",
+          "sh:name": {
+            "en": "data structure definition"
+          },
+          "sh:path": "http://purl.org/dc/terms/conformsTo"
+        },
+        {
+          "@id": "https://semiceu.github.io/StatDCAT-AP/drafts/3.0.0#statdcatap:DataflowShape/bda64b6b9c27a850b8782b17019e888c5edd7ce0",
+          "rdfs:seeAlso": "https://semiceu.github.io/StatDCAT-AP/drafts/3.0.0#Dataflow.version",
+          "sh:description": {
+            "en": "The version of a Dataflow."
+          },
+          "sh:name": {
+            "en": "version"
+          },
+          "sh:nodeKind": "sh:Literal",
+          "sh:path": "http://www.w3.org/ns/dcat#version"
+        },
+        {
+          "@id": "https://semiceu.github.io/StatDCAT-AP/drafts/3.0.0#statdcatap:DataflowShape/d5d74574f70f9a979535f3624608f88180dd0c97",
+          "rdfs:seeAlso": "https://semiceu.github.io/StatDCAT-AP/drafts/3.0.0#Dataflow.title",
+          "sh:description": {
+            "en": "A name given to the Dataflow."
+          },
+          "sh:name": {
+            "en": "title"
+          },
+          "sh:nodeKind": "sh:Literal",
+          "sh:path": "http://purl.org/dc/terms/title"
+        },
+        {
+          "@id": "https://semiceu.github.io/StatDCAT-AP/drafts/3.0.0#statdcatap:DataflowShape/d64ea446a6e10609aac435de849407ecf53c62cf",
+          "rdfs:seeAlso": "https://semiceu.github.io/StatDCAT-AP/drafts/3.0.0#Dataflow.validity",
+          "sh:description": {
+            "en": "Range of validity of a Dataflow."
+          },
+          "sh:maxCount": "1",
+          "sh:name": {
+            "en": "validity"
+          },
+          "sh:path": "http://purl.org/dc/terms/valid"
+        },
+        {
+          "@id": "https://semiceu.github.io/StatDCAT-AP/drafts/3.0.0#statdcatap:DataflowShape/eb5997fb794c965f549e1780005f816e36fa9897",
+          "rdfs:seeAlso": "https://semiceu.github.io/StatDCAT-AP/drafts/3.0.0#Dataflow.validity",
+          "sh:description": {
+            "en": "Range of validity of a Dataflow."
+          },
+          "sh:name": {
+            "en": "validity"
+          },
+          "sh:nodeKind": "sh:BlankNodeOrIRI",
+          "sh:path": "http://purl.org/dc/terms/valid"
+        },
+        {
+          "@id": "https://semiceu.github.io/StatDCAT-AP/drafts/3.0.0#statdcatap:DataflowShape/f1249f171bcbfa12f01658d50155b64beb61e40f",
+          "rdfs:seeAlso": "https://semiceu.github.io/StatDCAT-AP/drafts/3.0.0#Dataflow.category",
+          "sh:description": {
+            "en": "The category of a Dataflow."
+          },
+          "sh:name": {
+            "en": "category"
+          },
+          "sh:nodeKind": "sh:BlankNodeOrIRI",
+          "sh:path": "http://purl.org/dc/terms/subject"
+        },
+        {
+          "@id": "https://semiceu.github.io/StatDCAT-AP/drafts/3.0.0#statdcatap:DataflowShape/f8b02efd063b8089b72ce9677a1e4a3488eeb9a9",
+          "rdfs:seeAlso": "https://semiceu.github.io/StatDCAT-AP/drafts/3.0.0#Dataflow.title",
+          "sh:description": {
+            "en": "A name given to the Dataflow."
+          },
+          "sh:minCount": "1",
+          "sh:name": {
+            "en": "title"
+          },
+          "sh:path": "http://purl.org/dc/terms/title"
+        }
+      ],
+      "sh:targetClass": "http://data.europa.eu/s1n/Dataflow"
+    },
+    {
       "@id": "https://semiceu.github.io/StatDCAT-AP/drafts/3.0.0#dct:FrequencyShape",
       "@type": "sh:NodeShape",
       "sh:closed": false,
@@ -418,11 +690,25 @@
       "sh:targetClass": "http://purl.org/linked-data/cube#AttributeProperty"
     },
     {
+      "@id": "https://semiceu.github.io/StatDCAT-AP/drafts/3.0.0#qb:DataStructureDefinitionShape",
+      "@type": "sh:NodeShape",
+      "sh:closed": false,
+      "sh:property": [],
+      "sh:targetClass": "http://purl.org/linked-data/cube#DataStructureDefinition"
+    },
+    {
       "@id": "https://semiceu.github.io/StatDCAT-AP/drafts/3.0.0#qb:DimensionPropertyShape",
       "@type": "sh:NodeShape",
       "sh:closed": false,
       "sh:property": [],
       "sh:targetClass": "http://purl.org/linked-data/cube#DimensionProperty"
+    },
+    {
+      "@id": "https://semiceu.github.io/StatDCAT-AP/drafts/3.0.0#qb:MeasurePropertyShape",
+      "@type": "sh:NodeShape",
+      "sh:closed": false,
+      "sh:property": [],
+      "sh:targetClass": "http://purl.org/linked-data/cube#MeasureProperty"
     },
     {
       "@id": "https://semiceu.github.io/StatDCAT-AP/drafts/3.0.0#spdx:ChecksumShape",
@@ -2022,6 +2308,18 @@
           "sh:path": "http://purl.org/dc/terms/provenance"
         },
         {
+          "@id": "https://semiceu.github.io/StatDCAT-AP/drafts/3.0.0#dcat:DatasetShape/0f6cb927d0d26f3819cba3fb903a075cd426180d",
+          "rdfs:seeAlso": "https://semiceu.github.io/StatDCAT-AP/drafts/3.0.0#Dataset.status",
+          "sh:class": "http://www.w3.org/2004/02/skos/core#Concept",
+          "sh:description": {
+            "en": "The status of the dataset in the context of maturity lifecycle."
+          },
+          "sh:name": {
+            "en": "status"
+          },
+          "sh:path": "http://www.w3.org/ns/adms#status"
+        },
+        {
           "@id": "https://semiceu.github.io/StatDCAT-AP/drafts/3.0.0#dcat:DatasetShape/10c0ca4deadefb51c529f56ee01caf9bd2639ef4",
           "rdfs:seeAlso": "https://semiceu.github.io/StatDCAT-AP/drafts/3.0.0#Dataset.accessrights",
           "sh:description": {
@@ -2032,6 +2330,18 @@
           },
           "sh:nodeKind": "sh:BlankNodeOrIRI",
           "sh:path": "http://purl.org/dc/terms/accessRights"
+        },
+        {
+          "@id": "https://semiceu.github.io/StatDCAT-AP/drafts/3.0.0#dcat:DatasetShape/122461ad6af6b9022dc6251f75df4a5149098906",
+          "rdfs:seeAlso": "https://semiceu.github.io/StatDCAT-AP/drafts/3.0.0#Dataset.measure",
+          "sh:class": "http://purl.org/linked-data/cube#MeasureProperty",
+          "sh:description": {
+            "en": "A component that represents the phenomenon being observed. Measure is a \"conceptual\" entity that applies to all distribution formats, e.g. in case a dataset is provided both in SDMX and in DataCube."
+          },
+          "sh:name": {
+            "en": "measure"
+          },
+          "sh:path": "http://data.europa.eu/s1n/measure"
         },
         {
           "@id": "https://semiceu.github.io/StatDCAT-AP/drafts/3.0.0#dcat:DatasetShape/1522e6818f6f9d132e873991b42dd4567fccc6cf",
@@ -2106,6 +2416,18 @@
           "sh:path": "http://www.w3.org/ns/dcat#distribution"
         },
         {
+          "@id": "https://semiceu.github.io/StatDCAT-AP/drafts/3.0.0#dcat:DatasetShape/2bc917d85a4ffccfa9de4268bf84b517c322ce2c",
+          "rdfs:seeAlso": "https://semiceu.github.io/StatDCAT-AP/drafts/3.0.0#Dataset.status",
+          "sh:description": {
+            "en": "The status of the dataset in the context of maturity lifecycle."
+          },
+          "sh:maxCount": "1",
+          "sh:name": {
+            "en": "status"
+          },
+          "sh:path": "http://www.w3.org/ns/adms#status"
+        },
+        {
           "@id": "https://semiceu.github.io/StatDCAT-AP/drafts/3.0.0#dcat:DatasetShape/2d388ed1a94fa93a83fb179a4ecb339b2566b790",
           "rdfs:seeAlso": "https://semiceu.github.io/StatDCAT-AP/drafts/3.0.0#Dataset.source",
           "sh:class": "http://www.w3.org/ns/dcat#Dataset",
@@ -2166,11 +2488,23 @@
           "sh:path": "http://www.w3.org/ns/prov#wasGeneratedBy"
         },
         {
+          "@id": "https://semiceu.github.io/StatDCAT-AP/drafts/3.0.0#dcat:DatasetShape/3c1ab2e1170c5050c8b7742e97810027ddc104b1",
+          "rdfs:seeAlso": "https://semiceu.github.io/StatDCAT-AP/drafts/3.0.0#Dataset.status",
+          "sh:description": {
+            "en": "The status of the dataset in the context of maturity lifecycle."
+          },
+          "sh:name": {
+            "en": "status"
+          },
+          "sh:nodeKind": "sh:BlankNodeOrIRI",
+          "sh:path": "http://www.w3.org/ns/adms#status"
+        },
+        {
           "@id": "https://semiceu.github.io/StatDCAT-AP/drafts/3.0.0#dcat:DatasetShape/3dfdb1b86e9476a9694997fc76c47085161b750c",
           "rdfs:seeAlso": "https://semiceu.github.io/StatDCAT-AP/drafts/3.0.0#Dataset.qualityannotation",
           "sh:class": "http://www.w3.org/ns/oa#Annotation",
           "sh:description": {
-            "en": "This property links to a statement related to quality of the Dataset, including rating, quality certificate, feedback that can be associated to the Dataset."
+            "en": "A statement related to quality of the Dataset, including rating, quality certificate, feedback that can be associated to the Dataset."
           },
           "sh:name": {
             "en": "quality annotation"
@@ -2240,9 +2574,9 @@
         {
           "@id": "https://semiceu.github.io/StatDCAT-AP/drafts/3.0.0#dcat:DatasetShape/4923bee6acbe82452cb8b78283b295b039834e42",
           "rdfs:seeAlso": "https://semiceu.github.io/StatDCAT-AP/drafts/3.0.0#Dataset.numberofdataseries",
-          "sh:datatype": "http://www.w3.org/2001/XMLSchema#integer",
+          "sh:datatype": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
           "sh:description": {
-            "en": "This property contains the number of data series contained in the Dataset"
+            "en": "The number of distinct time series available in the dataset that contain data. A distinct time series is defined as a unique combination of dimension values (such as country, sex, age, unit of measure, etc.) that has at least one observation value or attribute associated with it - where an attribute may include a flag even in the absence of an actual data value. Time (e.g., year) is treated as one dimension among others, not as a unit of aggregation."
           },
           "sh:name": {
             "en": "number of data series"
@@ -2361,7 +2695,7 @@
           "@id": "https://semiceu.github.io/StatDCAT-AP/drafts/3.0.0#dcat:DatasetShape/647d563357ce6f8f406394f0c49645a4109863fc",
           "rdfs:seeAlso": "https://semiceu.github.io/StatDCAT-AP/drafts/3.0.0#Dataset.qualityannotation",
           "sh:description": {
-            "en": "This property links to a statement related to quality of the Dataset, including rating, quality certificate, feedback that can be associated to the Dataset."
+            "en": "A statement related to quality of the Dataset, including rating, quality certificate, feedback that can be associated to the Dataset."
           },
           "sh:name": {
             "en": "quality annotation"
@@ -2404,6 +2738,18 @@
             "en": "attribute"
           },
           "sh:path": "http://data.europa.eu/s1n/attribute"
+        },
+        {
+          "@id": "https://semiceu.github.io/StatDCAT-AP/drafts/3.0.0#dcat:DatasetShape/6ac5a0c747a6826e0667858fed6065039aa38ff2",
+          "rdfs:seeAlso": "https://semiceu.github.io/StatDCAT-AP/drafts/3.0.0#Dataset.datastructuredefinition",
+          "sh:class": "http://purl.org/linked-data/cube#DataStructureDefinition",
+          "sh:description": {
+            "en": "Links a statistical dataset to the Data Structure Definition (DSD) that defines its dimensions, attributes, measures, and overall observation structure."
+          },
+          "sh:name": {
+            "en": "data structure definition"
+          },
+          "sh:path": "http://data.europa.eu/s1n/dataStructureDefinition"
         },
         {
           "@id": "https://semiceu.github.io/StatDCAT-AP/drafts/3.0.0#dcat:DatasetShape/6b7242b6b89977700c05e4875131fbb975c4235e",
@@ -2493,7 +2839,7 @@
           "@id": "https://semiceu.github.io/StatDCAT-AP/drafts/3.0.0#dcat:DatasetShape/7fbb308e895fedb27f92858933ff4305958c78ec",
           "rdfs:seeAlso": "https://semiceu.github.io/StatDCAT-AP/drafts/3.0.0#Dataset.numberofdataseries",
           "sh:description": {
-            "en": "This property contains the number of data series contained in the Dataset"
+            "en": "The number of distinct time series available in the dataset that contain data. A distinct time series is defined as a unique combination of dimension values (such as country, sex, age, unit of measure, etc.) that has at least one observation value or attribute associated with it - where an attribute may include a flag even in the absence of an actual data value. Time (e.g., year) is treated as one dimension among others, not as a unit of aggregation."
           },
           "sh:name": {
             "en": "number of data series"
@@ -2560,6 +2906,18 @@
             "en": "frequency"
           },
           "sh:path": "http://purl.org/dc/terms/accrualPeriodicity"
+        },
+        {
+          "@id": "https://semiceu.github.io/StatDCAT-AP/drafts/3.0.0#dcat:DatasetShape/8d7def3cece10ba875f70016873b36a61b50228f",
+          "rdfs:seeAlso": "https://semiceu.github.io/StatDCAT-AP/drafts/3.0.0#Dataset.measure",
+          "sh:description": {
+            "en": "A component that represents the phenomenon being observed. Measure is a \"conceptual\" entity that applies to all distribution formats, e.g. in case a dataset is provided both in SDMX and in DataCube."
+          },
+          "sh:name": {
+            "en": "measure"
+          },
+          "sh:nodeKind": "sh:BlankNodeOrIRI",
+          "sh:path": "http://data.europa.eu/s1n/measure"
         },
         {
           "@id": "https://semiceu.github.io/StatDCAT-AP/drafts/3.0.0#dcat:DatasetShape/8e3b1c0888909beb09cd832b3145ad1f7abb1caa",
@@ -2670,6 +3028,18 @@
           "sh:path": "http://purl.org/dc/terms/modified"
         },
         {
+          "@id": "https://semiceu.github.io/StatDCAT-AP/drafts/3.0.0#dcat:DatasetShape/9f0d5897170cffd298e43629d19dcdb6deefc7c6",
+          "rdfs:seeAlso": "https://semiceu.github.io/StatDCAT-AP/drafts/3.0.0#Dataset.datastructuredefinition",
+          "sh:description": {
+            "en": "Links a statistical dataset to the Data Structure Definition (DSD) that defines its dimensions, attributes, measures, and overall observation structure."
+          },
+          "sh:name": {
+            "en": "data structure definition"
+          },
+          "sh:nodeKind": "sh:BlankNodeOrIRI",
+          "sh:path": "http://data.europa.eu/s1n/dataStructureDefinition"
+        },
+        {
           "@id": "https://semiceu.github.io/StatDCAT-AP/drafts/3.0.0#dcat:DatasetShape/9fe7c5889615d19dd4849fb66a5664fc016aa598",
           "rdfs:seeAlso": "https://semiceu.github.io/StatDCAT-AP/drafts/3.0.0#Dataset.otheridentifier",
           "sh:class": "http://www.w3.org/ns/adms#Identifier",
@@ -2716,6 +3086,18 @@
             "en": "publisher"
           },
           "sh:path": "http://purl.org/dc/terms/publisher"
+        },
+        {
+          "@id": "https://semiceu.github.io/StatDCAT-AP/drafts/3.0.0#dcat:DatasetShape/b7170c2e447992534cf37d140ae57a7b443da4d9",
+          "rdfs:seeAlso": "https://semiceu.github.io/StatDCAT-AP/drafts/3.0.0#Dataset.datastructuredefinition",
+          "sh:description": {
+            "en": "Links a statistical dataset to the Data Structure Definition (DSD) that defines its dimensions, attributes, measures, and overall observation structure."
+          },
+          "sh:maxCount": "1",
+          "sh:name": {
+            "en": "data structure definition"
+          },
+          "sh:path": "http://data.europa.eu/s1n/dataStructureDefinition"
         },
         {
           "@id": "https://semiceu.github.io/StatDCAT-AP/drafts/3.0.0#dcat:DatasetShape/baaa3d4a8f33f8b2b8c1d19c8d2817a75377145d",
@@ -2865,7 +3247,7 @@
           "@id": "https://semiceu.github.io/StatDCAT-AP/drafts/3.0.0#dcat:DatasetShape/e7bd94a0b3ca7851390e2555fc60ddf04aa6c8ef",
           "rdfs:seeAlso": "https://semiceu.github.io/StatDCAT-AP/drafts/3.0.0#Dataset.numberofdataseries",
           "sh:description": {
-            "en": "This property contains the number of data series contained in the Dataset"
+            "en": "The number of distinct time series available in the dataset that contain data. A distinct time series is defined as a unique combination of dimension values (such as country, sex, age, unit of measure, etc.) that has at least one observation value or attribute associated with it - where an attribute may include a flag even in the absence of an actual data value. Time (e.g., year) is treated as one dimension among others, not as a unit of aggregation."
           },
           "sh:maxCount": "1",
           "sh:name": {
@@ -3014,6 +3396,18 @@
           "sh:path": "http://purl.org/dc/terms/publisher"
         },
         {
+          "@id": "https://semiceu.github.io/StatDCAT-AP/drafts/3.0.0#dcat:DatasetSeriesShape/68388ec47b77212d80036e8a02e9956f5ba0e0f5",
+          "rdfs:seeAlso": "https://semiceu.github.io/StatDCAT-AP/drafts/3.0.0#DatasetSeries.documentation",
+          "sh:class": "http://xmlns.com/foaf/0.1/Document",
+          "sh:description": {
+            "en": "A page or document about this Dataset Series."
+          },
+          "sh:name": {
+            "en": "documentation"
+          },
+          "sh:path": "http://xmlns.com/foaf/0.1/page"
+        },
+        {
           "@id": "https://semiceu.github.io/StatDCAT-AP/drafts/3.0.0#dcat:DatasetSeriesShape/6b7242b6b89977700c05e4875131fbb975c4235e",
           "rdfs:seeAlso": "https://semiceu.github.io/StatDCAT-AP/drafts/3.0.0#DatasetSeries.modificationdate",
           "sh:description": {
@@ -3134,6 +3528,30 @@
           "sh:path": "http://purl.org/dc/terms/spatial"
         },
         {
+          "@id": "https://semiceu.github.io/StatDCAT-AP/drafts/3.0.0#dcat:DatasetSeriesShape/9678e29dc284ba14312bf01cd0a581b960b77a08",
+          "rdfs:seeAlso": "https://semiceu.github.io/StatDCAT-AP/drafts/3.0.0#DatasetSeries.theme",
+          "sh:description": {
+            "en": "A category of the Dataset Series."
+          },
+          "sh:name": {
+            "en": "theme"
+          },
+          "sh:nodeKind": "sh:BlankNodeOrIRI",
+          "sh:path": "http://www.w3.org/ns/dcat#theme"
+        },
+        {
+          "@id": "https://semiceu.github.io/StatDCAT-AP/drafts/3.0.0#dcat:DatasetSeriesShape/998ce689a5bcc3e2764ff84a05255e34d91e8102",
+          "rdfs:seeAlso": "https://semiceu.github.io/StatDCAT-AP/drafts/3.0.0#DatasetSeries.documentation",
+          "sh:description": {
+            "en": "A page or document about this Dataset Series."
+          },
+          "sh:name": {
+            "en": "documentation"
+          },
+          "sh:nodeKind": "sh:BlankNodeOrIRI",
+          "sh:path": "http://xmlns.com/foaf/0.1/page"
+        },
+        {
           "@id": "https://semiceu.github.io/StatDCAT-AP/drafts/3.0.0#dcat:DatasetSeriesShape/9adf9f5890592909cf3e67021ae7ab4f895a7745",
           "rdfs:seeAlso": "https://semiceu.github.io/StatDCAT-AP/drafts/3.0.0#DatasetSeries.contactpoint",
           "sh:description": {
@@ -3192,6 +3610,18 @@
           },
           "sh:nodeKind": "sh:Literal",
           "sh:path": "http://purl.org/dc/terms/title"
+        },
+        {
+          "@id": "https://semiceu.github.io/StatDCAT-AP/drafts/3.0.0#dcat:DatasetSeriesShape/dede6a68a95ac0f43ca88def472d8fc001f86ebe",
+          "rdfs:seeAlso": "https://semiceu.github.io/StatDCAT-AP/drafts/3.0.0#DatasetSeries.theme",
+          "sh:class": "http://www.w3.org/2004/02/skos/core#Concept",
+          "sh:description": {
+            "en": "A category of the Dataset Series."
+          },
+          "sh:name": {
+            "en": "theme"
+          },
+          "sh:path": "http://www.w3.org/ns/dcat#theme"
         },
         {
           "@id": "https://semiceu.github.io/StatDCAT-AP/drafts/3.0.0#dcat:DatasetSeriesShape/f8b02efd063b8089b72ce9677a1e4a3488eeb9a9",

@@ -48,12 +48,15 @@
     "Prov:Activity": "http://www.w3.org/ns/prov#Activity",
     "Prov:Attribution": "http://www.w3.org/ns/prov#Attribution",
     "Qb:AttributeProperty": "http://purl.org/linked-data/cube#AttributeProperty",
+    "Qb:DataStructureDefinition": "http://purl.org/linked-data/cube#DataStructureDefinition",
     "Qb:DimensionProperty": "http://purl.org/linked-data/cube#DimensionProperty",
+    "Qb:MeasureProperty": "http://purl.org/linked-data/cube#MeasureProperty",
     "Rdfs:Literal": "http://www.w3.org/2000/01/rdf-schema#Literal",
     "Rdfs:Resource": "http://www.w3.org/2000/01/rdf-schema#Resource",
     "Skos:Concept": "http://www.w3.org/2004/02/skos/core#Concept",
     "Skos:ConceptScheme": "http://www.w3.org/2004/02/skos/core#ConceptScheme",
     "Spdx:Checksum": "http://spdx.org/rdf/terms#Checksum",
+    "Statdcatap:Dataflow": "http://data.europa.eu/s1n/Dataflow",
     "TemporalLiteral": "http://www.w3.org/2000/01/rdf-schema#Literal",
     "TimeInstant": "http://www.w3.org/2006/time#Instant",
     "Vcard:Kind": "http://www.w3.org/2006/vcard/ns#Kind",
@@ -314,6 +317,11 @@
       "@id": "http://purl.org/dc/terms/spatial",
       "@type": "@id"
     },
+    "dct:subject": {
+      "@container": "@set",
+      "@id": "http://purl.org/dc/terms/subject",
+      "@type": "@id"
+    },
     "dct:temporal": {
       "@container": "@set",
       "@id": "http://purl.org/dc/terms/temporal",
@@ -322,6 +330,10 @@
     "dct:title": {
       "@container": "@set",
       "@id": "http://purl.org/dc/terms/title"
+    },
+    "dct:valid": {
+      "@id": "http://purl.org/dc/terms/valid",
+      "@type": "@id"
     },
     "dqv:hasQualityAnnotation": {
       "@container": "@set",
@@ -387,21 +399,30 @@
       "@id": "http://spdx.org/rdf/terms#checksumValue",
       "@type": "http://www.w3.org/2001/XMLSchema#hexBinary"
     },
-    "stat:attribute": {
+    "statdcatap:attribute": {
       "@container": "@set",
       "@id": "http://data.europa.eu/s1n/attribute",
       "@type": "@id"
     },
-    "stat:dimension": {
+    "statdcatap:dataStructureDefinition": {
+      "@id": "http://data.europa.eu/s1n/dataStructureDefinition",
+      "@type": "@id"
+    },
+    "statdcatap:dimension": {
       "@container": "@set",
       "@id": "http://data.europa.eu/s1n/dimension",
       "@type": "@id"
     },
-    "stat:numSeries": {
-      "@id": "http://data.europa.eu/s1n/numSeries",
-      "@type": "http://www.w3.org/2001/XMLSchema#integer"
+    "statdcatap:measure": {
+      "@container": "@set",
+      "@id": "http://data.europa.eu/s1n/measure",
+      "@type": "@id"
     },
-    "stat:statUnitMeasure": {
+    "statdcatap:numSeries": {
+      "@id": "http://data.europa.eu/s1n/numSeries",
+      "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
+    },
+    "statdcatap:statUnitMeasure": {
       "@container": "@set",
       "@id": "http://data.europa.eu/s1n/statUnitMeasure",
       "@type": "@id"
