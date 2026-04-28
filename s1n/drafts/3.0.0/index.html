@@ -90,7 +90,7 @@
       edDraftURI: "https://semiceu.github.io/StatDCAT-AP/s1n/drafts/3.0.0/",
       latestVersion: "https://semiceu.github.io/StatDCAT-AP/s1n/drafts/3.0.0/",
       specStatus: "base",
-      publishDate: "2026-01-20",
+      publishDate: "2026-04-28",
       editors: myeditors,
       authors: myauthors,
       github: "SEMICeu/StatDCAT-AP",
@@ -206,16 +206,9 @@
     </p>
 
 <h3>Revision history</h3>
-
-  <p class="ednote" title="DOMAIN">
-    The domain is set to <code>rdfs:Resource</code> while these properties are only meaningful within the DCAT ecosystem.
-    They can therefore be used with any resource such as Dataset or Distribution.
-    That is why the domain cannot be changed to <code>dcat:Resource</code>, because <code>dcat:Distribution</code> not a subclass of <code>dcat:Resource</code>.
-    TODO: Check, whether the properties are to be used on Distribution, or just DCAT resources (Dataset, Data Service, Dataset Series).
-  </p>
-
-<h3>Meeting minutes</h3>
-  </p>
+    <p>
+        This namespace document was created during the process of aligning the StatDCAT-AP profile with DCAT-AP 3.x and the SEMIC style guide in 2026.
+    </p>
 
 
 </section>
@@ -234,7 +227,7 @@ It is under maintenance by the SEMIC action, Interoperable Europe.
 <section id="specstatus">
     <h2>Status</h2>
         <p>
-            This vocabulary has the status <a href="https://www.w3.org/2021/Process-20211102/#RecsWD">Working Draft</a> published at 2026-01-20.
+            This vocabulary has the status <a href="https://www.w3.org/2021/Process-20211102/#RecsWD">Working Draft</a> published at 2026-04-28.
         </p>
         <p>
             Information about the process and the decisions involved in the creation of this specification are consultable at the <a href="https://semiceu.github.io/StatDCAT-AP/drafts/3.0.0/CHANGELOG.html">Changelog</a>.
@@ -264,7 +257,7 @@ It is under maintenance by the SEMIC action, Interoperable Europe.
 </section>
 
 
-  <section id="conformance" class="informative">
+  <section id="conformance">
 <h2>Conformance Statement</h2>
 
 In order to conform to this vocabulary the usage of the terms MUST:
@@ -297,13 +290,8 @@ In the RDF ecosystem these are the universal denominators.
             <thead><tr><th>Prefix</th><th>Namespace IRI</th></tr></thead>
             <tbody>
             <tr><td><code>dcat</code></td><td><code>http://www.w3.org/ns/dcat#</code></td></tr>
-            <tr><td><code>dcatap</code></td><td><code>http://data.europa.eu/r5r/</code></td></tr>
-            <tr><td><code>oa</code></td><td><code>http://www.w3.org/ns/oa#</code></td></tr>
             <tr><td><code>qb</code></td><td><code>http://purl.org/linked-data/cube#</code></td></tr>
-            <tr><td><code>rdf</code></td><td><code>http://www.w3.org/1999/02/22-rdf-syntax-ns#</code></td></tr>
-            <tr><td><code>rdfs</code></td><td><code>http://www.w3.org/2000/01/rdf-schema#</code></td></tr>
             <tr><td><code>skos</code></td><td><code>http://www.w3.org/2004/02/skos/core#</code></td></tr>
-            <tr><td><code>stat</code></td><td><code>http://data.europa.eu/s1n/</code></td></tr>
             <tr><td><code>xsd</code></td><td><code>http://www.w3.org/2001/XMLSchema#</code></td></tr>
             </tbody>
         </table>
@@ -328,6 +316,23 @@ In the RDF ecosystem these are the universal denominators.
 
     <div id="overview">
                 
+                        <p>
+                            This specification describes the following classes:
+                            <br />
+                            | 
+			      <a href="#Dataflow">Dataflow</a> |
+                        </p>
+                        <p> and the following properties:
+                            <br />
+                            | 
+			      <a href="#attribute">attribute</a> |
+			      <a href="#dataStructureDefinition">data structure definition</a> |
+			      <a href="#dimension">dimension</a> |
+			      <a href="#measure">measure</a> |
+			      <a href="#numberOfDataSeries">number of data series</a> |
+			      <a href="#unitOfMeasurement">unit of measurement</a> |
+                        </p>
+                
                 
     </div>
     <div>
@@ -343,6 +348,74 @@ In the RDF ecosystem these are the universal denominators.
 </h2>
 This section lists the classes matching the base namespace of this vocabulary.
 
+
+   
+
+    <h3 id="Dataflow" >Dataflow</h3>
+    <table class="def" id="Dataflow">
+                    <thead>
+                        <tr >
+                            <th class="" style="width:5%">
+					<a href="https://github.com/SEMICeu/StatDCAT-AP/issues/new?title=Issue%20for%20Dataflow&body=Explain%20your%20issue"}}>
+					   <img src="html/callout.png" loading="lazy" alt="(create issue)" width="20" height="20"/>
+					</a>
+                            </th>
+                            <th class="" style="width:20%">
+                                Class
+                            </th>
+                            <th class="" style="width:75%">
+				<a href="http://data.europa.eu/s1n/Dataflow"
+					   data-toggle="tooltip"
+					   data-content="http://data.europa.eu/s1n/Dataflow"
+					   data-placement="right">Dataflow</a>
+                            </th> 
+                        </tr>
+                    </thead>
+		    <tbody> 
+                        <tr id="Dataflow.uri">
+                                <td></td>
+                                <td>
+				   URI
+				</td>
+				<td>
+				<code>http://data.europa.eu/s1n/Dataflow</code>
+				</td>
+			</tr>
+                        <tr id="Dataflow.label">
+                                <td></td>
+                                <td>
+				   label
+				</td>
+				<td>
+				Dataflow
+				</td>
+			</tr>
+                        <tr id="Dataflow.definition">
+                                <td></td>
+                                <td>
+				   definition
+				</td>
+				<td>
+				An abstract concept of the Data Sets, i.e. a structure without any data.
+				</td>
+			</tr>
+			
+			
+                        <tr id="Dataflow.subclass">
+                                <td></td>
+                                <td>
+				   subclass of 
+				</td>
+				<td> <a href=""></a>
+                                
+				</td>
+			</tr>
+			
+		    </tbody>
+        </table>
+	<p/>
+
+     
 
 
 <h2>
@@ -411,7 +484,7 @@ Attribute is a &quot;conceptual&quot; entity that applies to all distribution fo
 				   domain
 				</td>
 				<td> 
-				<a href="http://www.w3.org/2000/01/rdf-schema#Resource"><div class="shorten">http://www.w3.org/2000/01/rdf-schema#Resource</div></a>
+				<a href="http://www.w3.org/ns/dcat#Dataset"><div class="shorten">http://www.w3.org/ns/dcat#Dataset</div></a>
                                 
 				</td>
 			</tr>
@@ -424,6 +497,88 @@ Attribute is a &quot;conceptual&quot; entity that applies to all distribution fo
 				</td>
 				<td> 
 				<a href="http://purl.org/linked-data/cube#AttributeProperty"><div class="shorten">http://purl.org/linked-data/cube#AttributeProperty</div></a>
+                                
+				</td>
+			</tr>
+			
+			
+		    </tbody>
+        </table>
+	<p/>
+
+     
+
+   
+
+    <h3 id="dataStructureDefinition">data structure definition</h3>
+    <table class="def" id="table-term-dataStructureDefinition">
+                    <thead>
+                        <tr >
+                            <th class="" style="width:5%">
+					<a href="https://github.com/SEMICeu/StatDCAT-AP/issues/new?title=Issue%20for%20dataStructureDefinition&body=Explain%20your%20issue"}}>
+					   <img src="html/callout.png" loading="lazy" alt="(create issue)" width="20" height="20"/>
+					</a>
+                            </th>
+                            <th class="" style="width:20%">
+                                Property
+                            </th>
+                            <th class="" style="width:75%">
+				<a href="http://data.europa.eu/s1n/dataStructureDefinition"
+					   data-toggle="tooltip"
+					   data-content="http://data.europa.eu/s1n/dataStructureDefinition"
+					   data-placement="right">data structure definition</a>
+                            </th> 
+                        </tr>
+                    </thead>
+		    <tbody> 
+                        <tr id="datastructuredefinition.uri">
+                                <td></td>
+                                <td>
+				   URI
+				</td>
+				<td>
+				<code>http://data.europa.eu/s1n/dataStructureDefinition</code>
+				</td>
+			</tr>
+                        <tr id="datastructuredefinition.label">
+                                <td></td>
+                                <td>
+				   label
+				</td>
+				<td>
+				data structure definition
+				</td>
+			</tr>
+                        <tr id="datastructuredefinition.definition">
+                                <td></td>
+                                <td>
+				   definition
+				</td>
+				<td>
+				Links a statistical dataset to the Data Structure Definition (DSD) that defines its dimensions, attributes, measures, and overall observation structure.
+				</td>
+			</tr>
+			
+			
+                        <tr id="datastructuredefinition.domain">
+                                <td></td>
+                                <td>
+				   domain
+				</td>
+				<td> 
+				<a href="http://www.w3.org/ns/dcat#Dataset"><div class="shorten">http://www.w3.org/ns/dcat#Dataset</div></a>
+                                
+				</td>
+			</tr>
+			
+			
+                        <tr id="datastructuredefinition.range">
+                                <td></td>
+                                <td>
+				   range
+				</td>
+				<td> 
+				<a href="http://purl.org/linked-data/cube#DataStructureDefinition"><div class="shorten">http://purl.org/linked-data/cube#DataStructureDefinition</div></a>
                                 
 				</td>
 			</tr>
@@ -484,7 +639,7 @@ Attribute is a &quot;conceptual&quot; entity that applies to all distribution fo
 				<td>
 				a component that identifies observations, e.g. the time to which the observation applies , or a geographic region which the observation covers.
 
-Dimension is a&quot;conceptual&quot; entity that applies to all distribution formats, e.g. in case a dataset is provided both in SDMX and in DataCube. 
+Dimension is a &quot;conceptual&quot; entity that applies to all distribution formats, e.g. in case a dataset is provided both in SDMX and in DataCube. 
 				</td>
 			</tr>
 			
@@ -495,7 +650,7 @@ Dimension is a&quot;conceptual&quot; entity that applies to all distribution for
 				   domain
 				</td>
 				<td> 
-				<a href="http://www.w3.org/2000/01/rdf-schema#Resource"><div class="shorten">http://www.w3.org/2000/01/rdf-schema#Resource</div></a>
+				<a href="http://www.w3.org/ns/dcat#Dataset"><div class="shorten">http://www.w3.org/ns/dcat#Dataset</div></a>
                                 
 				</td>
 			</tr>
@@ -508,6 +663,90 @@ Dimension is a&quot;conceptual&quot; entity that applies to all distribution for
 				</td>
 				<td> 
 				<a href="http://purl.org/linked-data/cube#DimensionProperty"><div class="shorten">http://purl.org/linked-data/cube#DimensionProperty</div></a>
+                                
+				</td>
+			</tr>
+			
+			
+		    </tbody>
+        </table>
+	<p/>
+
+     
+
+   
+
+    <h3 id="measure">measure</h3>
+    <table class="def" id="table-term-measure">
+                    <thead>
+                        <tr >
+                            <th class="" style="width:5%">
+					<a href="https://github.com/SEMICeu/StatDCAT-AP/issues/new?title=Issue%20for%20measure&body=Explain%20your%20issue"}}>
+					   <img src="html/callout.png" loading="lazy" alt="(create issue)" width="20" height="20"/>
+					</a>
+                            </th>
+                            <th class="" style="width:20%">
+                                Property
+                            </th>
+                            <th class="" style="width:75%">
+				<a href="http://data.europa.eu/s1n/measure"
+					   data-toggle="tooltip"
+					   data-content="http://data.europa.eu/s1n/measure"
+					   data-placement="right">measure</a>
+                            </th> 
+                        </tr>
+                    </thead>
+		    <tbody> 
+                        <tr id="measure.uri">
+                                <td></td>
+                                <td>
+				   URI
+				</td>
+				<td>
+				<code>http://data.europa.eu/s1n/measure</code>
+				</td>
+			</tr>
+                        <tr id="measure.label">
+                                <td></td>
+                                <td>
+				   label
+				</td>
+				<td>
+				measure
+				</td>
+			</tr>
+                        <tr id="measure.definition">
+                                <td></td>
+                                <td>
+				   definition
+				</td>
+				<td>
+				a component that represents the phenomenon being observed.
+
+Measure is a &quot;conceptual&quot; entity that applies to all distribution formats, e.g. in case a dataset is provided both in SDMX and in DataCube.
+				</td>
+			</tr>
+			
+			
+                        <tr id="measure.domain">
+                                <td></td>
+                                <td>
+				   domain
+				</td>
+				<td> 
+				<a href="http://www.w3.org/ns/dcat#Dataset"><div class="shorten">http://www.w3.org/ns/dcat#Dataset</div></a>
+                                
+				</td>
+			</tr>
+			
+			
+                        <tr id="measure.range">
+                                <td></td>
+                                <td>
+				   range
+				</td>
+				<td> 
+				<a href="http://purl.org/linked-data/cube#MeasureProperty"><div class="shorten">http://purl.org/linked-data/cube#MeasureProperty</div></a>
                                 
 				</td>
 			</tr>
@@ -566,7 +805,8 @@ Dimension is a&quot;conceptual&quot; entity that applies to all distribution for
 				   definition
 				</td>
 				<td>
-				number of data series contained in the dataset
+				represents the number of distinct time series available in the dataset that contain data.
+A distinct time series is defined as a unique combination of dimension values (such as country, sex, age, unit of measure, etc.) that has at least one observation value or attribute associated with it - where an attribute may include a flag even in the absence of an actual data value. Time (e.g., year) is treated as one dimension among others, not as a unit of aggregation.
 				</td>
 			</tr>
 			
@@ -577,11 +817,22 @@ Dimension is a&quot;conceptual&quot; entity that applies to all distribution for
 				   domain
 				</td>
 				<td> 
-				<a href="http://www.w3.org/2000/01/rdf-schema#Resource"><div class="shorten">http://www.w3.org/2000/01/rdf-schema#Resource</div></a>
+				<a href="http://www.w3.org/ns/dcat#Dataset"><div class="shorten">http://www.w3.org/ns/dcat#Dataset</div></a>
                                 
 				</td>
 			</tr>
 			
+			
+                        <tr id="numberofdataseries.range">
+                                <td></td>
+                                <td>
+				   range
+				</td>
+				<td> 
+				<a href="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"><div class="shorten">http://www.w3.org/2001/XMLSchema#nonNegativeInteger</div></a>
+                                
+				</td>
+			</tr>
 			
 			
 		    </tbody>
@@ -651,7 +902,7 @@ e.g. in the case when a dataset is provided both in SDMX and in Data Cube.
 				   domain
 				</td>
 				<td> 
-				<a href="http://www.w3.org/2000/01/rdf-schema#Resource"><div class="shorten">http://www.w3.org/2000/01/rdf-schema#Resource</div></a>
+				<a href="http://www.w3.org/ns/dcat#Dataset"><div class="shorten">http://www.w3.org/ns/dcat#Dataset</div></a>
                                 
 				</td>
 			</tr>
@@ -775,9 +1026,6 @@ Past and current contributors are :
 		, 
            
 	 	Casper Gras
-		, 
-           
-	 	Bart Hanssens
 		, 
            
 	 	Bart Hanssens

@@ -1,7 +1,7 @@
 {
   "dcterms:mediator": {
     "foaf:homepage": "https://semic.eu",
-    "foaf:mbox": "mailto:contact@semic.eu",
+    "foaf:mbox": "mailto: contact@semic.eu",
     "foaf:name": "Semantic Interoperability Community (SEMIC)"
   },
   "@id": "http://data.europa.eu/s1n",
@@ -254,11 +254,6 @@
     },
     {
       "@type": "foaf:Person",
-      "foaf:firstName": "Bart",
-      "foaf:lastName": "Hanssens"
-    },
-    {
-      "@type": "foaf:Person",
       "foaf:firstName": "Casper",
       "foaf:lastName": "Gras"
     },
@@ -362,8 +357,22 @@
   "issued": "TODO",
   "navigation": {},
   "publication-state": "https://www.w3.org/2021/Process-20211102/#RecsWD",
-  "publication-date": "2026-01-20",
-  "classes": [],
+  "publication-date": "2026-04-28",
+  "classes": [
+    {
+      "@id": "http://data.europa.eu/s1n/Dataflow",
+      "@type": "http://www.w3.org/2002/07/owl#Class",
+      "label": {
+        "en": "Dataflow"
+      },
+      "definition": {
+        "en": "An abstract concept of the Data Sets, i.e. a structure without any data."
+      },
+      "parents": [
+        "http://www.w3.org/ns/dcat#Catalog"
+      ]
+    }
+  ],
   "externals": [],
   "properties": [
     {
@@ -376,7 +385,7 @@
         "en": "a unit of measurement of the observations in the dataset, for example Euro, square kilometre,\r\npurchasing power standard (PPS), full-time equivalent, percentage. \r\nUnit of measurement is a \"conceptual\" entity that applies to all distribution formats,\r\ne.g. in the case when a dataset is provided both in SDMX and in Data Cube."
       },
       "domain": [
-        "http://www.w3.org/2000/01/rdf-schema#Resource"
+        "http://www.w3.org/ns/dcat#Dataset"
       ],
       "range": [
         "http://www.w3.org/2004/02/skos/core#Concept"
@@ -385,17 +394,36 @@
     },
     {
       "@id": "http://data.europa.eu/s1n/numSeries",
-      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+      "@type": "http://www.w3.org/2002/07/owl#DatatypeProperty",
       "label": {
         "en": "number of data series"
       },
       "definition": {
-        "en": "number of data series contained in the dataset"
+        "en": "represents the number of distinct time series available in the dataset that contain data.\r\nA distinct time series is defined as a unique combination of dimension values (such as country, sex, age, unit of measure, etc.) that has at least one observation value or attribute associated with it - where an attribute may include a flag even in the absence of an actual data value. Time (e.g., year) is treated as one dimension among others, not as a unit of aggregation."
       },
       "domain": [
-        "http://www.w3.org/2000/01/rdf-schema#Resource"
+        "http://www.w3.org/ns/dcat#Dataset"
       ],
-      "range": [],
+      "range": [
+        "http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
+      ],
+      "generalization": []
+    },
+    {
+      "@id": "http://data.europa.eu/s1n/measure",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "label": {
+        "en": "measure"
+      },
+      "definition": {
+        "en": "a component that represents the phenomenon being observed.\r\n\r\nMeasure is a \"conceptual\" entity that applies to all distribution formats, e.g. in case a dataset is provided both in SDMX and in DataCube."
+      },
+      "domain": [
+        "http://www.w3.org/ns/dcat#Dataset"
+      ],
+      "range": [
+        "http://purl.org/linked-data/cube#MeasureProperty"
+      ],
       "generalization": []
     },
     {
@@ -405,13 +433,30 @@
         "en": "dimension"
       },
       "definition": {
-        "en": "a component that identifies observations, e.g. the time to which the observation applies , or a geographic region which the observation covers.\r\n\r\nDimension is a\"conceptual\" entity that applies to all distribution formats, e.g. in case a dataset is provided both in SDMX and in DataCube. "
+        "en": "a component that identifies observations, e.g. the time to which the observation applies , or a geographic region which the observation covers.\r\n\r\nDimension is a \"conceptual\" entity that applies to all distribution formats, e.g. in case a dataset is provided both in SDMX and in DataCube. "
       },
       "domain": [
-        "http://www.w3.org/2000/01/rdf-schema#Resource"
+        "http://www.w3.org/ns/dcat#Dataset"
       ],
       "range": [
         "http://purl.org/linked-data/cube#DimensionProperty"
+      ],
+      "generalization": []
+    },
+    {
+      "@id": "http://data.europa.eu/s1n/dataStructureDefinition",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "label": {
+        "en": "data structure definition"
+      },
+      "definition": {
+        "en": "Links a statistical dataset to the Data Structure Definition (DSD) that defines its dimensions, attributes, measures, and overall observation structure."
+      },
+      "domain": [
+        "http://www.w3.org/ns/dcat#Dataset"
+      ],
+      "range": [
+        "http://purl.org/linked-data/cube#DataStructureDefinition"
       ],
       "generalization": []
     },
@@ -425,7 +470,7 @@
         "en": "a component used to qualify and interpret observed values, e.g. units of measure, any scaling factors and metadata such as the status of the observation (e.g. estimated, provisional).\r\nAttribute is a \"conceptual\" entity that applies to all distribution formats, e.g. in case a dataset is provided both in SDMX and in DataCube."
       },
       "domain": [
-        "http://www.w3.org/2000/01/rdf-schema#Resource"
+        "http://www.w3.org/ns/dcat#Dataset"
       ],
       "range": [
         "http://purl.org/linked-data/cube#AttributeProperty"
