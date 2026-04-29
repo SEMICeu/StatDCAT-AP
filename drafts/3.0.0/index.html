@@ -1390,6 +1390,7 @@ The following webinars have been held for the creation of this release
             <tbody>
             <tr><td><code>adms</code></td><td><code>http://www.w3.org/ns/adms#</code></td></tr>
             <tr><td><code>cnt</code></td><td><code>http://www.w3.org/2011/content#</code></td></tr>
+            <tr><td><code>csvw</code></td><td><code>http://www.w3.org/ns/csvw#</code></td></tr>
             <tr><td><code>dcat</code></td><td><code>http://www.w3.org/ns/dcat#</code></td></tr>
             <tr><td><code>dcatap</code></td><td><code>http://data.europa.eu/r5r/</code></td></tr>
             <tr><td><code>dct</code></td><td><code>http://purl.org/dc/terms/</code></td></tr>
@@ -13901,6 +13902,321 @@ How multilingual information is handled in systems, for example in indexing and 
             </section>
         </section>
     </section>
+    
+    <section>
+    <h3>Usage guide on statistical datasets and CSV on the Web</h3>
+        <p>
+            The CSVW (CSV on the Web) specification, defined by the W3C Recommendation <a href="https://www.w3.org/TR/tabular-metadata">Metadata Vocabulary for Tabular Data</a> [[tabular-metadata]], provides a standardised framework for describing tabular data and its metadata as a JSON-LD document using a specific <a href="https://www.w3.org/TR/2015/REC-tabular-metadata-20151217/#json-ld-dialect">CSVW JSON-LD dialect</a>.
+            In the context of StatDCAT-AP, CSVW is used to formally document the statistical variables that constitute the structure of a CSV distribution — covering dimensions, attributes, unit measures, and observation values.
+        </p>
+
+        <p>
+            This section presents the tabular schema that is linked via the <a href="#Distribution.linkedschemas">linked schemas</a> property of a Distribution.
+            The CSV distribution provides the actual data, while the CSVW tabular schema documents the meaning, role, and technical characteristics of each column, enabling precise, machine-readable documentation of each statistical variable — including its technical identifier, human-readable label, statistical role, datatype, and optional semantic reference to standard code lists.
+        </p>
+
+        <p>
+            This section is illustrated using the Eurostat dataset <code>ISOC_EB_AIN2</code> — "Enterprises that have used Artificial Intelligence technologies" — which is a typical Eurostat CSV dissemination file following SDMX data structure conventions.
+            The following three entities work together to provide comprehensive statistical variable documentation:
+        </p>
+
+        <ul>
+            <li>Table — represents a single CSV file (e.g. a flat SDMX-CSV export) with its metadata and variable definitions.</li>
+            <li>TableSchema — describes the structure of the table.</li>
+            <li>Column — describes individual statistical variables (columns) within the CSV file.</li>
+        </ul>
+
+        <h4>Table</h4>
+
+        <dl>
+            <dt>Definition</dt>
+            <dd>A table within a CSVW Table Group that represents a single CSV file containing statistical data.</dd>
+            <dt>Usage note</dt>
+            <dd>In a StatDCAT-AP context, this is the flat-file representation of a statistical dataset (e.g. an SDMX-CSV export), and its column definitions describe the statistical structure of the data.</dd>
+            <dt>Reference in CSVW</dt>
+            <dd><a href="https://www.w3.org/TR/tabular-metadata/#tables">csvw:Table</a></dd>
+        </dl>
+
+        <table class="data-table simple">
+        <thead>
+            <tr>
+                <th>Property</th>
+                <th>Range</th>
+                <th>Card</th>
+                <th>Definition</th>
+                <th>Usage Note</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><a href="http://www.w3.org/ns/csvw#url">url</a></td>
+                <td>IRI</td>
+                <td>0..1</td>
+                <td>The URL of the CSV file to which this table refers.</td>
+                <td>Should point to the downloadable CSV file that this CSVW description documents. For Eurostat datasets, this is typically the downloadURL of the dcat:Distribution.</td>
+            </tr>
+            <tr>
+                <td><a href="http://purl.org/dc/terms/title">title</a></td>
+                <td>Literal</td>
+                <td>1..n</td>
+                <td>A human-readable title for the table.</td>
+                <td>Provides a descriptive title for the statistical table. May be repeated for multiple languages (e.g. English, French).</td>
+            </tr>
+            <tr>
+                <td><a href="http://www.w3.org/ns/dcat#keyword">keyword</a></td>
+                <td>Literal</td>
+                <td>0..n</td>
+                <td>A keyword or tag describing the statistical table.</td>
+                <td>Provides terms to support search and discovery. Recommended values include statistical domain codes, thematic keywords, or SDMX dataflow identifiers.</td>
+            </tr>
+            <tr>
+                <td><a href="http://www.w3.org/ns/csvw#tableSchema">tableSchema</a></td>
+                <td>Table Schema</td>
+                <td>0..1</td>
+                <td>An object property that provides a single schema description.</td>
+                <td></td>
+            </tr>
+        </tbody>
+        </table>
+        
+        <h4>Table Schema</h4>
+
+        <dl>
+            <dt>Definition</dt>
+            <dd>A schema is a definition of a tabular format that may be common to multiple tables.</dd>
+            <dt>Reference in CSVW</dt>
+            <dd><a href="https://www.w3.org/TR/2015/REC-tabular-metadata-20151217/#schemas">csvw:TableSchema</a></dd>
+        </dl>
+
+        <table class="data-table simple">
+        <thead>
+            <tr>
+                <th>Property</th>
+                <th>Range</th>
+                <th>Card</th>
+                <th>Definition</th>
+                <th>Usage Note</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>columns (http://www.w3.org/ns/csvw#columns)</td>
+                <td>Columns</td>
+                <td>1..n</td>
+                <td>A column node defines metadata for one statistical variable (column) in the CSV file.</td>
+                <td>Each column node describes one statistical variable: a dimension (e.g. geo, TIME_PERIOD, nace_r2), an attribute (e.g. OBS_FLAG, CONF_STATUS), a unit of measure (e.g. unit), or the observation value (OBS_VALUE). Each column must be identified by a fragment URI to allow statistical role annotations to reference it.</td>
+            </tr>
+        </tbody>
+        </table>
+
+        <p>Example - Table and Table Schema for ISOC_EB_AIN2:</p>
+
+        <pre class="json">{
+    "@context": ["http://www.w3.org/ns/csvw", {"@language": "en"}],
+    "@id": "https://ec.europa.eu/eurostat/csvw/isoc_eb_ain2/table",
+    "@type": "Table",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/sdmx/2.1/data/ISOC_EB_AIN2?format=SDMX-CSV",
+    "dcterms:title": "Enterprises using AI technologies - ISOC_EB_AIN2",
+    "dcat:keyword": ["artificial intelligence", "enterprises", "ICT"],
+    "tableSchema": {
+        "columns": [
+            { "@id": "#col-freq" },
+            { "@id": "#col-size_emp" },
+            { "@id": "#col-nace_r2" },
+            { "@id": "#col-indic_is" },
+            { "@id": "#col-unit" },
+            { "@id": "#col-geo" },
+            { "@id": "#col-TIME_PERIOD" },
+            { "@id": "#col-OBS_VALUE" },
+            { "@id": "#col-OBS_FLAG" },
+            { "@id": "#col-CONF_STATUS" }
+        ]
+    }
+}</pre>
+
+        <p class="note">
+            Column references use fragment identifiers (e.g. <code>#col-freq</code>), which are relative IRIs that resolve against the base URL of the JSON-LD document.
+            For example, <code>#col-freq</code> resolves to <code>https://ec.europa.eu/eurostat/csvw/isoc_eb_ain2/table#col-freq</code>.
+            This is required so that the statistical role annotations declared on the <code>csvw:Table</code> node can unambiguously reference each column.
+        </p>
+
+        <h4>Column</h4>
+
+        <dl>
+            <dt>Definition</dt>
+            <dd>A column within a CSV table that represents a statistical variable.</dd>
+            <dt>Usage note</dt>
+            <dd>In StatDCAT-AP, the statistical role of each column — dimension, attribute, unit of measure, or observation value — is declared explicitly on the <code>csvw:Table</code> node using StatDCAT-AP properties, as described in the following section.</dd>
+            <dt>Reference in CSVW</dt>
+            <dd><a href="https://www.w3.org/TR/tabular-metadata/#columns">csvw:Column</a></dd>
+        </dl>
+
+        <table class="data-table simple">
+        <thead>
+            <tr>
+                <th>Property</th>
+                <th>Card</th>
+                <th>Definition</th>
+                <th>Usage Note</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><a href="http://www.w3.org/ns/csvw#name">name</a></td>
+                <td>0..1</td>
+                <td>The technical name (part of an URI) of the statistical variable.</td>
+            </tr>
+            <tr>
+                <td><a href="http://www.w3.org/ns/csvw#titles">title</a></td>
+                <td>1..n</td>
+                <td>A human-readable label for the statistical variable.</td>
+                <td>Provides a descriptive, language-tagged label for the column.
+                    Must exactly match the column header in the CSV file.</td>
+            </tr>
+            <tr>
+                <td><a href="http://purl.org/dc/terms/description">description</a></td>
+                <td>1..n</td>
+                <td>A textual description of the statistical variable.</td>
+                <td>Explains the meaning of the variable in the statistical context.</td>
+            </tr>
+            <tr>
+                <td><a href="http://www.w3.org/ns/csvw#datatype">datatype</a></td>
+                <td>1..1</td>
+                <td>Specifies the expected datatype of the values in the column.</td>
+                <td>Must correspond to a CSVW built-in type.</td>
+            </tr>
+            <tr>
+                <td><a href="http://www.w3.org/ns/csvw#propertyUrl">propertyUrl</a></td>
+                <td>0..1</td>
+                <td>A URI linking the column to a standard concept.</td>
+                <td>Optional.</td>
+            </tr>
+        </tbody>
+        </table>
+
+        <h5>Describing statistical roles of columns</h5>
+
+        <p>
+            CSVW provides a rich set of properties to describe columns — their names, titles, and datatypes, and optionally their mapping to external concepts via <code>csvw:propertyUrl</code>.
+            However, CSVW does not provide a mechanism to express the statistical role of a column.
+        </p>
+
+        <p>
+            StatDCAT-AP addresses this gap by allowing the statistical roles of columns to be declared explicitly, using the properties <code>statdcatap:dimension</code>, <code>statdcatap:statUnitMeasure</code>, and <code>statdcatap:attribute</code>.
+        </p>
+
+        <p>Complete example:</p>
+
+        <pre class="json">{
+  "@context": ["http://www.w3.org/ns/csvw", {"@language": "en"}],
+  "@id": "https://ec.europa.eu/eurostat/csvw/isoc_eb_ain2/table",
+  "@type": "Table",
+  "url": {"@id": "https://ec.europa.eu/eurostat/api/dissemination/sdmx/2.1/data/ISOC_EB_AIN2?format=SDMX-CSV"},
+  "dcterms:title": "Enterprises using AI technologies - ISOC_EB_AIN2",
+  "dcat:keyword": [ "artificial intelligence", "enterprises", "ICT" ],
+  "http://data.europa.eu/s1n/dimension": [
+    { "@id": "#col-freq" },
+    { "@id": "#col-size_emp" },
+    { "@id": "#col-nace_r2" },
+    { "@id": "#col-indic_is" },
+    { "@id": "#col-geo" },
+    { "@id": "#col-TIME_PERIOD" }
+  ],
+  "http://data.europa.eu/s1n/measure": [
+    { "@id": "#col-OBS_VALUE" }
+  ],
+  "http://data.europa.eu/s1n/attribute": [
+    { "@id": "#col-unit" },
+    { "@id": "#col-OBS_FLAG" },
+    { "@id": "#col-CONF_STATUS" }
+  ],
+  "tableSchema": {
+    "columns": [
+        {
+            "@id": "#col-freq",
+            "@type": "Column",
+            "name": "freq",
+            "titles": "Frequency",
+            "dcterms:description": "Frequency of data collection. A = Annual.",
+            "datatype": "string"
+        },
+        {
+            "@id": "#col-size_emp",
+            "@type": "Column",
+            "name": "size_emp",
+            "titles": "Enterprise size class",
+            "dcterms:description": "Size of enterprise by number of employees. GE10 = 10 or more employees.",
+            "datatype": "string"
+        },
+        {
+            "@id": "#col-nace_r2",
+            "@type": "Column",
+            "name": "nace_r2",
+            "titles": "Economic activity (NACE Rev. 2)",
+            "dcterms:description": "Economic sector of the enterprise per NACE Rev. 2 classification.",
+            "datatype": "string",
+            "propertyUrl": "http://data.europa.eu/ux2/nace2"
+        },
+        {
+            "@id": "#col-indic_is",
+            "@type": "Column",
+            "name": "indic_is",
+            "titles": "ICT indicator",
+            "dcterms:description": "Specific ICT/AI statistical indicator being measured.",
+            "datatype": "string"
+        },
+        {
+            "@id": "#col-unit",
+            "@type": "Column",
+            "name": "unit",
+            "titles": "Unit of measure",
+            "dcterms:description": "Unit expressing the measurement scale. PC_ENT = percentage of enterprises.",
+            "datatype": "string"
+        },
+        {
+            "@id": "#col-geo",
+            "@type": "Column",
+            "name": "geo",
+            "titles": "Geographical area",
+            "dcterms:description": "Country or geographic aggregate. ISO 3166-1 alpha-2 and Eurostat aggregate codes.",
+            "datatype": "string"
+        },
+        {
+            "@id": "#col-TIME_PERIOD",
+            "@type": "Column",
+            "name": "TIME_PERIOD",
+            "titles": "Reference period",
+            "dcterms:description": "Reference year of the observation. Four-digit year.",
+            "datatype": "gYear"
+        },
+        {
+            "@id": "#col-OBS_VALUE",
+            "@type": "Column",
+            "name": "OBS_VALUE",
+            "titles": "Observation value",
+            "dcterms:description": "Percentage of enterprises satisfying the indicator criterion.",
+            "datatype": "decimal"
+        },
+        {
+            "@id": "#col-OBS_FLAG",
+            "@type": "Column",
+            "name": "OBS_FLAG",
+            "titles": "Observation flag",
+            "dcterms:description": "Flag qualifying the observation: b=break in series, e=estimated, p=provisional, u=unreliable.",
+            "datatype": "string"
+        },
+        {
+            "@id": "#col-CONF_STATUS",
+            "@type": "Column",
+            "name": "CONF_STATUS",
+            "titles": "Confidentiality status",
+            "dcterms:description": "Confidentiality restriction on the observation. Empty = not confidential.",
+            "datatype": "string"
+        }
+    ]
+  }
+}</pre>
+    </section>
 </section>
 
   <section class="informative">
@@ -14108,7 +14424,7 @@ The shape is downloadable <a href="./shacl/statdcatap-SHACL.ttl">here</a>.
             A distinct time series is a unique combination of values across all these dimensions. Only combinations that have at least one observation value or a flag are counted:
         </p>
 
-        <table>
+        <table class="data-table simple">
         <thead>
             <tr>
                 <th>FREQ</th>
