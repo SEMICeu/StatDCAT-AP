@@ -2291,7 +2291,21 @@
 
 <https://semiceu.github.io/StatDCAT-AP/drafts/3.0.0#dct:StandardShape> a shacl:NodeShape;
   shacl:closed false;
+  shacl:property <https://semiceu.github.io/StatDCAT-AP/drafts/3.0.0#dct:StandardShape/08118c51bfc41b71d11f3a58e9410da74e6480e6>,
+    <https://semiceu.github.io/StatDCAT-AP/drafts/3.0.0#dct:StandardShape/c84f7330b9538a899ebb875c44dc23c9882e74ac>;
   shacl:targetClass dc:Standard .
+
+<https://semiceu.github.io/StatDCAT-AP/drafts/3.0.0#dct:StandardShape/08118c51bfc41b71d11f3a58e9410da74e6480e6> rdfs:seeAlso "https://semiceu.github.io/StatDCAT-AP/drafts/3.0.0#Standard.conformsto";
+  shacl:description "An established specification to which the described Standard conforms."@en;
+  shacl:name "conforms to"@en;
+  shacl:nodeKind shacl:BlankNodeOrIRI;
+  shacl:path dc:conformsTo .
+
+<https://semiceu.github.io/StatDCAT-AP/drafts/3.0.0#dct:StandardShape/c84f7330b9538a899ebb875c44dc23c9882e74ac> rdfs:seeAlso "https://semiceu.github.io/StatDCAT-AP/drafts/3.0.0#Standard.conformsto";
+  shacl:class dc:Standard;
+  shacl:description "An established specification to which the described Standard conforms."@en;
+  shacl:name "conforms to"@en;
+  shacl:path dc:conformsTo .
 
 <https://semiceu.github.io/StatDCAT-AP/drafts/3.0.0#eli:LegalResourceShape> a shacl:NodeShape;
   shacl:closed false;

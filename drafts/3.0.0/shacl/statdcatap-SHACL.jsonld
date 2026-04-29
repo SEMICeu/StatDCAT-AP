@@ -679,7 +679,32 @@
       "@id": "https://semiceu.github.io/StatDCAT-AP/drafts/3.0.0#dct:StandardShape",
       "@type": "sh:NodeShape",
       "sh:closed": false,
-      "sh:property": [],
+      "sh:property": [
+        {
+          "@id": "https://semiceu.github.io/StatDCAT-AP/drafts/3.0.0#dct:StandardShape/08118c51bfc41b71d11f3a58e9410da74e6480e6",
+          "rdfs:seeAlso": "https://semiceu.github.io/StatDCAT-AP/drafts/3.0.0#Standard.conformsto",
+          "sh:description": {
+            "en": "An established specification to which the described Standard conforms."
+          },
+          "sh:name": {
+            "en": "conforms to"
+          },
+          "sh:nodeKind": "sh:BlankNodeOrIRI",
+          "sh:path": "http://purl.org/dc/terms/conformsTo"
+        },
+        {
+          "@id": "https://semiceu.github.io/StatDCAT-AP/drafts/3.0.0#dct:StandardShape/c84f7330b9538a899ebb875c44dc23c9882e74ac",
+          "rdfs:seeAlso": "https://semiceu.github.io/StatDCAT-AP/drafts/3.0.0#Standard.conformsto",
+          "sh:class": "http://purl.org/dc/terms/Standard",
+          "sh:description": {
+            "en": "An established specification to which the described Standard conforms."
+          },
+          "sh:name": {
+            "en": "conforms to"
+          },
+          "sh:path": "http://purl.org/dc/terms/conformsTo"
+        }
+      ],
       "sh:targetClass": "http://purl.org/dc/terms/Standard"
     },
     {
