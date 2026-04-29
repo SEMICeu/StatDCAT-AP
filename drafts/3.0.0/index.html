@@ -13803,84 +13803,6 @@ How multilingual information is handled in systems, for example in indexing and 
             </section>
         </section>
     </section>
-
-    <section>
-    <h3>Usage guide on Number of data series</h3>
-        <p>
-        The dataset <em><a href="https://data.europa.eu/data/datasets/jqhch6zcxktvr2i6sbacg?locale=en">migr_asyrescra</a></em> has the following 7 dimensions as declared in the dataset:
-        </p>
-
-        <ul>
-        <li>FREQ (Time frequency)</li>
-        <li>GEO (Geopolitical entity / reporting country)</li>
-        <li>AGE (Age class)</li>
-        <li>SEX (Sex)</li>
-        <li>CITIZEN (Country of citizenship)</li>
-        <li>C_RESID (Country of previous residence)</li>
-        <li>UNIT (Unit of measure)</li>
-        </ul>
-
-        <p>
-        A distinct time series is a unique combination of values across all these dimensions. Only combinations that have at least one observation value or a flag are counted:
-        </p>
-
-        <table>
-        <thead>
-            <tr>
-            <th>FREQ</th>
-            <th>GEO</th>
-            <th>AGE</th>
-            <th>SEX</th>
-            <th>CITIZEN</th>
-            <th>C_RESID</th>
-            <th>UNIT</th>
-            <th>Counted</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-            <td>A</td>
-            <td>LU</td>
-            <td>TOTAL</td>
-            <td>T</td>
-            <td>SYR</td>
-            <td>TUR</td>
-            <td>PER</td>
-            <td>Counted</td>
-            </tr>
-            <tr>
-            <td>A</td>
-            <td>LU</td>
-            <td>TOTAL</td>
-            <td>M</td>
-            <td>SYR</td>
-            <td>TUR</td>
-            <td>PER</td>
-            <td>Counted</td>
-            </tr>
-            <tr>
-            <td>A</td>
-            <td>LU</td>
-            <td>Y15-17</td>
-            <td>F</td>
-            <td>AFG</td>
-            <td>IRN</td>
-            <td>PER</td>
-            <td>flag only → Counted</td>
-            </tr>
-            <tr>
-            <td>A</td>
-            <td>DE</td>
-            <td>Y_LT15</td>
-            <td>T</td>
-            <td>IRQ</td>
-            <td>LBY</td>
-            <td>PER</td>
-            <td>not counted</td>
-            </tr>
-        </tbody>
-        </table>
-    </section>
 </section>
 
   <section class="informative">
@@ -13999,7 +13921,7 @@ The shape is downloadable <a href="./shacl/statdcatap-SHACL.ttl">here</a>.
 </section>
 
   <section class="informative">
-<h2>Example</h2>
+<h2>Examples</h2>
     <p>
         In this section we illustrate selected StatDCAT-AP situations.
     </p>
@@ -14044,6 +13966,88 @@ The shape is downloadable <a href="./shacl/statdcatap-SHACL.ttl">here</a>.
     dct:accrualPeriodicity &lt;http://publications.europa.eu/resource/authority/frequency/MONTHLY&gt;;
     dct:source &lt;http://data.europa.eu/88u/dataset/dzzomwhlfy7s3kylnvaslg&gt;.
 </pre>
+    </section>
+
+    <section>
+    <h3>Example of number of data series</h3>
+        <p>
+            The dataset <em><a href="https://data.europa.eu/data/datasets/jqhch6zcxktvr2i6sbacg?locale=en">migr_asyrescra</a></em> has the following 7 dimensions as declared in the dataset:
+        </p>
+
+        <ul>
+            <li>FREQ (Time frequency)</li>
+            <li>GEO (Geopolitical entity / reporting country)</li>
+            <li>AGE (Age class)</li>
+            <li>SEX (Sex)</li>
+            <li>CITIZEN (Country of citizenship)</li>
+            <li>C_RESID (Country of previous residence)</li>
+            <li>UNIT (Unit of measure)</li>
+        </ul>
+
+        <p>
+            A distinct time series is a unique combination of values across all these dimensions. Only combinations that have at least one observation value or a flag are counted:
+        </p>
+
+        <table>
+        <thead>
+            <tr>
+                <th>FREQ</th>
+                <th>GEO</th>
+                <th>AGE</th>
+                <th>SEX</th>
+                <th>CITIZEN</th>
+                <th>C_RESID</th>
+                <th>UNIT</th>
+                <th>Counted</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>A</td>
+                <td>LU</td>
+                <td>TOTAL</td>
+                <td>T</td>
+                <td>SYR</td>
+                <td>TUR</td>
+                <td>PER</td>
+                <td>Counted</td>
+            </tr>
+            <tr>
+                <td>A</td>
+                <td>LU</td>
+                <td>TOTAL</td>
+                <td>M</td>
+                <td>SYR</td>
+                <td>TUR</td>
+                <td>PER</td>
+                <td>Counted</td>
+            </tr>
+            <tr>
+                <td>A</td>
+                <td>LU</td>
+                <td>Y15-17</td>
+                <td>F</td>
+                <td>AFG</td>
+                <td>IRN</td>
+                <td>PER</td>
+                <td>flag only → Counted</td>
+            </tr>
+            <tr>
+                <td>A</td>
+                <td>DE</td>
+                <td>Y_LT15</td>
+                <td>T</td>
+                <td>IRQ</td>
+                <td>LBY</td>
+                <td>PER</td>
+                <td>not counted</td>
+            </tr>
+        </tbody>
+        </table>
+
+        <p>
+            In this case, the number of time series is <code>43032576</code>.
+        </p>
     </section>
 </section>
 
