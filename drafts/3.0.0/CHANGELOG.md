@@ -5,6 +5,7 @@ This changelog provides an overview of the changes incorporated in StatDCAT-AP 3
 # **Editorial changes**
 - Updated statdcatap prefix
 - Added information on working groups - TODO: MoMs for WG2 and WG3
+- Added missing prefixes to overview table and used prefixes
   
 ## **Data model adaptations**
 - Updated usage note of `statistical unit of measurement` [#9](https://github.com/SEMICeu/StatDCAT-AP/issues/9)
@@ -17,12 +18,5 @@ This changelog provides an overview of the changes incorporated in StatDCAT-AP 3
 - Added Dataset.measure [#19](https://github.com/SEMICeu/StatDCAT-AP/issues/19)
 - Added Dataset series usage guidelines [#13](https://github.com/SEMICeu/StatDCAT-AP/issues/13)
 - Added `Standard.conformsTo` to support indicating the specification a linked schema follows [#25](https://github.com/SEMICeu/StatDCAT-AP/issues/25), added example
-  
-# **Alignment with DCAT-AP 3.0.1**
-
-# **Alignment with SDMX**
-
-# **Alignment with the SEMIC Style Guide**
-
-# **Bug fixes**
-
+- Added guideline on usage of CSV on the Web for statistical CSV datasets [#17](https://github.com/SEMICeu/StatDCAT-AP/issues/17)
+- Added support for linking Metadata report to Dataset and Dataflow [#28](https://github.com/SEMICeu/StatDCAT-AP/issues/28), included example

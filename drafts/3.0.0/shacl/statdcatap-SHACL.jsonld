@@ -175,6 +175,18 @@
           "sh:path": "http://purl.org/dc/terms/publisher"
         },
         {
+          "@id": "https://semiceu.github.io/StatDCAT-AP/drafts/3.0.0#statdcatap:DataflowShape/68388ec47b77212d80036e8a02e9956f5ba0e0f5",
+          "rdfs:seeAlso": "https://semiceu.github.io/StatDCAT-AP/drafts/3.0.0#Dataflow.documentation",
+          "sh:class": "http://xmlns.com/foaf/0.1/Document",
+          "sh:description": {
+            "en": "A page or document about this Dataflow."
+          },
+          "sh:name": {
+            "en": "documentation"
+          },
+          "sh:path": "http://xmlns.com/foaf/0.1/page"
+        },
+        {
           "@id": "https://semiceu.github.io/StatDCAT-AP/drafts/3.0.0#statdcatap:DataflowShape/6ac5a0c747a6826e0667858fed6065039aa38ff2",
           "rdfs:seeAlso": "https://semiceu.github.io/StatDCAT-AP/drafts/3.0.0#Dataflow.datastructuredefinition",
           "sh:class": "http://purl.org/dc/terms/Standard",
@@ -233,6 +245,18 @@
           },
           "sh:nodeKind": "sh:BlankNodeOrIRI",
           "sh:path": "http://purl.org/dc/terms/publisher"
+        },
+        {
+          "@id": "https://semiceu.github.io/StatDCAT-AP/drafts/3.0.0#statdcatap:DataflowShape/998ce689a5bcc3e2764ff84a05255e34d91e8102",
+          "rdfs:seeAlso": "https://semiceu.github.io/StatDCAT-AP/drafts/3.0.0#Dataflow.documentation",
+          "sh:description": {
+            "en": "A page or document about this Dataflow."
+          },
+          "sh:name": {
+            "en": "documentation"
+          },
+          "sh:nodeKind": "sh:BlankNodeOrIRI",
+          "sh:path": "http://xmlns.com/foaf/0.1/page"
         },
         {
           "@id": "https://semiceu.github.io/StatDCAT-AP/drafts/3.0.0#statdcatap:DataflowShape/9b44a563453dc6dbd39a0a0727fca8928bbb2e8f",
@@ -4616,7 +4640,32 @@
       "@id": "https://semiceu.github.io/StatDCAT-AP/drafts/3.0.0#foaf:DocumentShape",
       "@type": "sh:NodeShape",
       "sh:closed": false,
-      "sh:property": [],
+      "sh:property": [
+        {
+          "@id": "https://semiceu.github.io/StatDCAT-AP/drafts/3.0.0#foaf:DocumentShape/08118c51bfc41b71d11f3a58e9410da74e6480e6",
+          "rdfs:seeAlso": "https://semiceu.github.io/StatDCAT-AP/drafts/3.0.0#Document.conformsto",
+          "sh:description": {
+            "en": "An established specification to which the described Document conforms."
+          },
+          "sh:name": {
+            "en": "conforms to"
+          },
+          "sh:nodeKind": "sh:BlankNodeOrIRI",
+          "sh:path": "http://purl.org/dc/terms/conformsTo"
+        },
+        {
+          "@id": "https://semiceu.github.io/StatDCAT-AP/drafts/3.0.0#foaf:DocumentShape/c84f7330b9538a899ebb875c44dc23c9882e74ac",
+          "rdfs:seeAlso": "https://semiceu.github.io/StatDCAT-AP/drafts/3.0.0#Document.conformsto",
+          "sh:class": "http://purl.org/dc/terms/Standard",
+          "sh:description": {
+            "en": "An established specification to which the described Document conforms."
+          },
+          "sh:name": {
+            "en": "conforms to"
+          },
+          "sh:path": "http://purl.org/dc/terms/conformsTo"
+        }
+      ],
       "sh:targetClass": "http://xmlns.com/foaf/0.1/Document"
     }
   ]

@@ -36,8 +36,8 @@
     "Dct:RightsStatement": "http://purl.org/dc/terms/RightsStatement",
     "Dct:Standard": "http://purl.org/dc/terms/Standard",
     "Eli:LegalResource": "http://data.europa.eu/eli/ontology#LegalResource",
-    "Foaf: Agent": "http://xmlns.com/foaf/0.1/Agent",
-    "Foaf: Agent.dct:type": {
+    "Foaf:Agent": "http://xmlns.com/foaf/0.1/Agent",
+    "Foaf:Agent.dct:type": {
       "@id": "http://purl.org/dc/terms/type",
       "@type": "@id"
     },

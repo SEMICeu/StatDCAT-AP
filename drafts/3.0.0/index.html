@@ -97,7 +97,7 @@
       latestVersion: "https://semiceu.github.io/StatDCAT-AP/drafts/3.0.0/",
       specStatus: "base",
       maxTocLevel: 3,
-      publishDate: "2026-04-29",
+      publishDate: "2026-05-06",
       editors: myeditors,
       authors: myauthors,
       otherLinks: [{
@@ -1203,9 +1203,9 @@ The following webinars have been held for the creation of this release
     <h2>Status</h2>
         <p>
 <!-- readd when SEMIC has a codelist about it process 
-	This application profile has the status <a href="https://www.w3.org/2021/Process-20211102/#RecsWD">Working Draft</a> published at 2026-04-29.
+	This application profile has the status <a href="https://www.w3.org/2021/Process-20211102/#RecsWD">Working Draft</a> published at 2026-05-06.
 -->
-	This application profile has the status Working Draft published at 2026-04-29.
+	This application profile has the status Working Draft published at 2026-05-06.
         </p>
         <p>
             Information about the process and the decisions involved in the creation of this specification are consultable at the <a href="https://github.com/SEMICeu/StatDCAT-AP/drafts/3.0.0/CHANGELOG">Changelog</a>.
@@ -1398,10 +1398,12 @@ The following webinars have been held for the creation of this release
             <tr><td><code>dqv</code></td><td><code>http://www.w3.org/ns/dqv#</code></td></tr>
             <tr><td><code>foaf</code></td><td><code>http://xmlns.com/foaf/0.1/</code></td></tr>
             <tr><td><code>locn</code></td><td><code>http://www.w3.org/ns/locn#</code></td></tr>
+            <tr><td><code>oa</code></td><td><code>http://www.w3.org/ns/oa#</code></td></tr>
             <tr><td><code>odrl</code></td><td><code>http://www.w3.org/ns/odrl/2/</code></td></tr>
             <tr><td><code>org</code></td><td><code>http://www.w3.org/ns/org#</code></td></tr>
             <tr><td><code>owl</code></td><td><code>http://www.w3.org/2002/07/owl#</code></td></tr>
             <tr><td><code>prov</code></td><td><code>http://www.w3.org/ns/prov#</code></td></tr>
+            <tr><td><code>qb</code></td><td><code>http://purl.org/linked-data/cube#</code></td></tr>
             <tr><td><code>rdf</code></td><td><code>http://www.w3.org/1999/02/22-rdf-syntax-ns#</code></td></tr>
             <tr><td><code>rdfs</code></td><td><code>http://www.w3.org/2000/01/rdf-schema#</code></td></tr>
             <tr><td><code>sdmx-attribute</code></td><td><code>http://purl.org/linked-data/sdmx/2009/attribute#</code></td></tr>
@@ -5127,6 +5129,7 @@ For instance the data service adheres to the OGC WFS API standard, while the ass
                             , <a href="#Dataflow.datastructuredefinition">data structure definition</a>
                             , <a href="#Dataflow.dataset">dataset</a>
                             , <a href="#Dataflow.description">description</a>
+                            , <a href="#Dataflow.documentation">documentation</a>
                             , <a href="#Dataflow.identifier">identifier</a>
                             , <a href="#Dataflow.publisher">publisher</a>
                             , <a href="#Dataflow.title">title</a>
@@ -5387,6 +5390,59 @@ For instance the data service adheres to the OGC WFS API standard, while the ass
 				        <a href="https://semiceu.github.io/DCAT-AP/releases/3.0.1/#Catalogue.description">E</a>
 				       
                                     
+                                </td>
+                            </tr>
+                        
+                            <tr id="Dataflow.documentation"
+                                typeof="rdf:Property"
+                                resource="http://xmlns.com/foaf/0.1/page"
+                                class="class mandatory">
+<!--
+                                <td>
+				    <a href="https://github.com/SEMICeu/StatDCAT-AP/issues/new?title=Issue%20for%20documentation%20in%20Dataflow&body=Explain%20your%20issue%20for%20https://semiceu.github.io/StatDCAT-AP/drafts/3.0.0%23Dataflow.documentation" target="_blank" rel="noopener noreferrer" >
+                                        <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
+                                    </a>
+                                </td>
+--->
+                                <td>
+                                        <a href="http://xmlns.com/foaf/0.1/page"
+                                           data-toggle="tooltip"
+                                           data-content="http://xmlns.com/foaf/0.1/page"
+                                           data-placement="right">
+                                        documentation</a>
+                                </td>
+                                <td>
+                                    
+                                        
+                                            <a href="#Document" data-placement="right">Document</a>
+                                        
+                                    
+                                </td>
+                                <td>
+                                    0..*
+                                </td>
+                                <td property="rdfs:comment">
+                                    A page or document about this Dataflow.
+                                </td>
+                                <td property="skos:scopeNote">
+                                    A document providing reference metadata  such as methodological descriptions and quality information  about this Dataflow. In the ESS context, such documents typically conform to the Single Integrated Metadata Structure (SIMS) or a derived reporting structure (ESMS, ESQRS).
+                                </td>
+				<!--
+                                <td>
+                                    
+                                </td>
+				-->
+				<!--
+                                <td>
+                                    
+                                </td>
+				-->
+                                <td>
+                                    
+                                       
+				        P
+				       
+				    
                                 </td>
                             </tr>
                         
@@ -6376,7 +6432,7 @@ For this usage, consult the guidelines in section [[[#UsageGuidelines]]].
                                     A page or document about this Dataset.
                                 </td>
                                 <td property="skos:scopeNote">
-                                    
+                                    A document providing reference metadata  such as methodological descriptions and quality information  about this Dataset. In the ESS context, such documents typically conform to the Single Integrated Metadata Structure (SIMS) or a derived reporting structure (ESMS, ESQRS).
                                 </td>
 				<!--
                                 <td>
@@ -11839,12 +11895,110 @@ They are included in the application profile because they form the range of prop
                         Properties
                     </dt>
                     
-                    <dd>
-                        This specification does not impose any additional requirements to properties for this entity.
+                        <dd>
+                            For this entity the following properties are defined: <a href="#Document.conformsto">conforms to</a>
+                            .
                     </dd>
                 
             </dl>
         </div>
+        
+            <div class="u-table-overflow">
+                <table class="data-table simple" id="table-mandatory-classes">
+                    <thead>
+                        <tr class="data-table__header">
+<!--
+                            <th class="data-table__header-title--sortable" style="width:5%">
+                            </th>
+--->
+                            <th class="data-table__header-title--sortable data-table__header-title--sortable-active" style="width:12%">
+                                Property
+                            </th>
+                            <th class="data-table__header-title--sortable" style="width:12%">
+                                Range
+                            </th>
+                            <th class="data-table__header-title--sortable" style="width:6%">
+                                Card
+                            </th>
+                            <th class="data-table__header-title--sortable" style="width:30%">
+                                Definition 
+                            </th>
+                            <th class="data-table__header-title--sortable" style="width:30%">
+                                Usage
+                            </th>
+			    <!--
+                            <th class="data-table__header-title--sortable" style="width:3%">
+                                Codelist
+                            </th>
+			    -->
+			    <!--
+                            <th class="data-table__header-title--sortable" style="width:5%">
+                                DCAT
+                            </th>
+			    -->
+                            <th class="data-table__header-title--sortable" style="width:3%">
+                                Reuse
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody class="supertype">
+                        
+                            <tr id="Document.conformsto"
+                                typeof="rdf:Property"
+                                resource="http://purl.org/dc/terms/conformsTo"
+                                class="class mandatory">
+<!--
+                                <td>
+				    <a href="https://github.com/SEMICeu/StatDCAT-AP/issues/new?title=Issue%20for%20conforms to%20in%20Document&body=Explain%20your%20issue%20for%20https://semiceu.github.io/StatDCAT-AP/drafts/3.0.0%23Document.conformsto" target="_blank" rel="noopener noreferrer" >
+                                        <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
+                                    </a>
+                                </td>
+--->
+                                <td>
+                                        <a href="http://purl.org/dc/terms/conformsTo"
+                                           data-toggle="tooltip"
+                                           data-content="http://purl.org/dc/terms/conformsTo"
+                                           data-placement="right">
+                                        conforms to</a>
+                                </td>
+                                <td>
+                                    
+                                        
+                                            <a href="#Standard" data-placement="right">Standard</a>
+                                        
+                                    
+                                </td>
+                                <td>
+                                    0..*
+                                </td>
+                                <td property="rdfs:comment">
+                                    An established specification to which the described Document conforms.
+                                </td>
+                                <td property="skos:scopeNote">
+                                    
+                                </td>
+				<!--
+                                <td>
+                                    
+                                </td>
+				-->
+				<!--
+                                <td>
+                                    
+                                </td>
+				-->
+                                <td>
+                                    
+                                       
+				        P
+				       
+				    
+                                </td>
+                            </tr>
+                        
+                    </tbody>
+                </table>
+            </div>
         
 
                    
@@ -13591,7 +13745,7 @@ How multilingual information is handled in systems, for example in indexing and 
   <section id="UsageGuidelines" class="informative">
 <h2>General usage guidelines</h2>
     <section>
-        <h3>Usage guide on Datasets, Distributions and Data Services</h3>
+    <h3>Usage guide on Datasets, Distributions and Data Services</h3>
         <p>
             The introduction of Data Services as first class citizens in DCAT 2.0 raised questions about the usage of Data Services and Distributions.
             This section provides a guideline for publishers: what to consider as a Distribution and what as a Data Service.
@@ -13645,7 +13799,7 @@ How multilingual information is handled in systems, for example in indexing and 
     </section>
 
     <section>
-        <h3>Usage guide on Dataset Series</h3>
+    <h3>Usage guide on Dataset Series</h3>
         <p>
             StatDCAT-AP follows the <a href="https://semiceu.github.io/DCAT-AP/releases/3.0.1/#usage-guide-on-dataset-series">DCAT-AP Usage guide on Dataset Series</a>.
             In this section, we provide specific guidelines for dataset series in the context of statistical data.
@@ -13662,27 +13816,23 @@ How multilingual information is handled in systems, for example in indexing and 
         </p>
 
         <section>
-        <h4>1. How to identify whether your datasets constitute a Dataset Series</h4>
+        <h4>How to identify whether your datasets constitute a Dataset Series</h4>
 
-            <section>
-            <h5>General Principle</h5>
+            <p>
+                Before describing a Dataset Series, a statistical organisation should assess whether a collection of datasets qualifies as such.
+                The key question is whether the datasets form a coherent, managed statistical product released over time, and that users would recognise and access as a single entity.
+            </p>
 
-                <p>
-                    Before describing a Dataset Series, a statistical organisation should assess whether a collection of datasets qualifies as such.
-                    The key question is whether the datasets form a coherent, managed statistical product released over time, and that users would recognise and access as a single entity.
-                </p>
+            <p>
+                A Dataset Series is not merely a grouping of related datasets.
+                It represents a stable, governed collection with a clear identity, consistent scope, and shared production context.
+                In practice, this corresponds to what is commonly referred to as a statistical product or output (e.g. Labour Force Survey, Harmonised Index of Consumer Prices, Population and Housing Census).
+            </p>
 
-                <p>
-                    A Dataset Series is not merely a grouping of related datasets.
-                    It represents a stable, governed collection with a clear identity, consistent scope, and shared production context.
-                    In practice, this corresponds to what is commonly referred to as a statistical product or output (e.g. Labour Force Survey, Harmonised Index of Consumer Prices, Population and Housing Census).
-                </p>
-
-                <p>
-                    From an information modelling perspective, a Dataset Series aligns with two complementary GSIM 2.0 concepts: a <a href="https://unece.github.io/GSIM-2.0/#data-resource">Data Resource</a> (an organised collection of Data Sets) and a <a href="https://unece.github.io/GSIM-2.0/#referential-metadata-resource">Referential Metadata Resource</a> (a collection of metadata describing those Data Sets).
-                    The presence of both - for example, datasets accompanied by consistent SIMS or ESSMH reports across releases - is a strong indication that the collection constitutes a Dataset Series.
-                </p>
-            </section>
+            <p>
+                From an information modelling perspective, a Dataset Series aligns with two complementary GSIM 2.0 concepts: a <a href="https://unece.github.io/GSIM-2.0/#data-resource">Data Resource</a> (an organised collection of Data Sets) and a <a href="https://unece.github.io/GSIM-2.0/#referential-metadata-resource">Referential Metadata Resource</a> (a collection of metadata describing those Data Sets).
+                The presence of both - for example, datasets accompanied by consistent SIMS or ESSMH reports across releases - is a strong indication that the collection constitutes a Dataset Series.
+            </p>
         
             <section>
             <h5>Indicators that a collection forms a Dataset Series</h5>
@@ -13699,20 +13849,21 @@ How multilingual information is handled in systems, for example in indexing and 
                     <li>They are documented using a common reference metadata structure (e.g. consistent SIMS or ESSMH reports across releases).</li>
                     <li>They are commonly understood and referred to as a single statistical product with multiple editions.</li>
                 </ul>
+            </section>
+            
+            <section>
+            <h5>Use Case: Two parallel series on the same topic: Eurostat vs. national series</h5>
 
-                <section>
-                <h6>Use Case: Two parallel series on the same topic: Eurostat vs. national series</h6>
+                <p>
+                    Eurostat's <a href="https://ec.europa.eu/eurostat/data/database?node_code=lfsi_emp_a">Employment and activity - LFS adjusted series - annual data</a> (<code>lfsi_emp_a</code>) is described as a <code>dcat:DatasetSeries</code>, grouping its individual annual dataset releases as members via <code>dcat:seriesMember</code>.
+                    All members share the same institutional mandate, legal basis, and harmonised methodology, which justifies their grouping into a single series.
+                </p>
 
-                    <p>
-                        Eurostat's <a href="https://ec.europa.eu/eurostat/data/database?node_code=lfsi_emp_a">Employment and activity - LFS adjusted series - annual data</a> (<code>lfsi_emp_a</code>) is described as a <code>dcat:DatasetSeries</code>, grouping its individual annual dataset releases as members via <code>dcat:seriesMember</code>.
-                        All members share the same institutional mandate, legal basis, and harmonised methodology, which justifies their grouping into a single series.
-                    </p>
-
-                    <p>
-                        The <a href="https://www.data.gouv.fr/datasets/activite-emploi-et-chomage-enquete-emploi-en-continu">INSEE Enquête emploi en continu</a> covers the same subject matter, but originates from a different institution, geographic scope, legal basis, and methodology.
-                        It therefore constitutes a separate <code>dcat:DatasetSeries</code> and cannot be listed as a <code>dcat:seriesMember</code> of the Eurostat series.
-                        Instead, a <code>dct:relation</code> triple is added to the Eurostat series description to signal the thematic proximity and partial overlap between the two series, without implying any methodological equivalence or shared provenance.
-                    </p>
+                <p>
+                    The <a href="https://www.data.gouv.fr/datasets/activite-emploi-et-chomage-enquete-emploi-en-continu">INSEE Enquête emploi en continu</a> covers the same subject matter, but originates from a different institution, geographic scope, legal basis, and methodology.
+                    It therefore constitutes a separate <code>dcat:DatasetSeries</code> and cannot be listed as a <code>dcat:seriesMember</code> of the Eurostat series.
+                    Instead, a <code>dct:relation</code> triple is added to the Eurostat series description to signal the thematic proximity and partial overlap between the two series, without implying any methodological equivalence or shared provenance.
+                </p>
 
 <pre class="turtle">
 @prefix dcat:     &lt;http://www.w3.org/ns/dcat#&gt; .
@@ -13728,36 +13879,31 @@ How multilingual information is handled in systems, for example in indexing and 
                     &lt;http://data.europa.eu/88u/dataset/jaziwgz3wgoopsvtcod7qg&gt; ;
     dct:relation &lt;https://www.data.gouv.fr/datasets/activite-emploi-et-chomage-enquete-emploi-en-continu&gt; .
 </pre>
-                </section>        
             </section>
         </section>
 
         <section>
-        <h4>2. When should a Dataset Series be extended, and when should a new one be started?</h4>
+        <h4>When should a Dataset Series be extended, and when should a new one be started?</h4>
 
-            <section>
-            <h5>General principle</h5>
+            <p>
+                A Dataset Series is a stable, evolving collection of datasets sharing a common subject matter, statistical methodology, and institutional mandate.
+                New datasets should be added to an existing series as long as these characteristics remain substantially unchanged.
+            </p>
 
-                <p>
-                    A Dataset Series is a stable, evolving collection of datasets sharing a common subject matter, statistical methodology, and institutional mandate.
-                    New datasets should be added to an existing series as long as these characteristics remain substantially unchanged.
-                </p>
-
-                <p>
-                    A new Dataset Series should be created when any of the following conditions apply:
-                </p>
-                
-                <ul>
-                    <li>the statistical concept, methodology, or legal basis changes in a way that is not reconcilable with prior datasets;</li>
-                    <li>a retroactive revision to the underlying data makes the new series incompatible with the old.</li>
-                </ul>
-
-                <p>
-                    When a new series succeeds a previous one, the relationship shall be documented using <code>dct:isReplacedBy</code> on the old series and <code>dct:replaces</code> on the new one.
-                </p>
+            <p>
+                A new Dataset Series should be created when any of the following conditions apply:
+            </p>
             
-                <section>
-                <h6>Old series — EU-LFS historical employment data covering 1989-2020</h6>
+            <ul>
+                <li>the statistical concept, methodology, or legal basis changes in a way that is not reconcilable with prior datasets;</li>
+                <li>a retroactive revision to the underlying data makes the new series incompatible with the old.</li>
+            </ul>
+
+            <p>
+                When a new series succeeds a previous one, the relationship shall be documented using <code>dct:isReplacedBy</code> on the old series and <code>dct:replaces</code> on the new one.
+            </p>
+            
+            <p>Old series — EU-LFS historical employment data covering 1989-2020:</p>
 
 <pre class="turtle">
 @prefix dcat:     &lt;http://www.w3.org/ns/dcat#&gt; .
@@ -13770,8 +13916,7 @@ How multilingual information is handled in systems, for example in indexing and 
     dct:publisher &lt;http://publications.europa.eu/resource/authority/corporate-body/ESTAT&gt; ;
     dct:isReplacedBy &lt;http://data.europa.eu/88u/datasetseries/lfsi_emp&gt; .
 </pre>
-
-        <h6>New series — EU-LFS historical employment data covering from 2021 onwards</h6>
+            <p>New series — EU-LFS historical employment data covering from 2021 onwards:</p>
 
 <pre class="turtle">
 &lt;http://data.europa.eu/88u/datasetseries/lfsi_emp&gt;
@@ -13781,12 +13926,10 @@ How multilingual information is handled in systems, for example in indexing and 
     dct:replaces &lt;http://data.europa.eu/88u/datasetseries/fsi_emp_h&gt; ;
     dct:relation &lt;https://www.data.gouv.fr/datasets/activite-emploi-et-chomage-enquete-emploi-en-continu&gt; .
 </pre>
-                </section>
-            </section>
         </section>
 
         <section>
-        <h4>3. How should nested Dataset Series be handled?</h4>
+        <h4>How should nested Dataset Series be handled?</h4>
 
             <p>
                 Nesting of Dataset Series is permitted but should remain the exception.
@@ -13802,8 +13945,7 @@ How multilingual information is handled in systems, for example in indexing and 
                     This pattern is appropriate when each child series has its own coherent structure and release schedule.
                 </p>
 
-                <section>
-                <h6>Nested Serie - Level 1 (object of dcat:seriesMember = dcat:DatasetSeries)</h6>
+                <p>Nested Serie - Level 1 (object of dcat:seriesMember = dcat:DatasetSeries):</p>
 
 <pre class="turtle">
 @prefix dcat:     &lt;http://www.w3.org/ns/dcat#&gt; .
@@ -13818,9 +13960,7 @@ How multilingual information is handled in systems, for example in indexing and 
         &lt;http://data.europa.eu/88u/datasetseries/eq_pop1&gt;,
         &lt;http://data.europa.eu/88u/datasetseries/eq_pop2&gt;.
 </pre>
-                </section>
-                <section>
-                <h6>Nested Serie - Level 2 (object of dcat:seriesMember = dcat:Dataset)</h6>
+                <p>Nested Serie - Level 2 (object of dcat:seriesMember = dcat:Dataset):</p>
 
 <pre class="turtle" >
 &lt;http://data.europa.eu/88u/datasetseries/eq_pop1&gt;
@@ -13871,7 +14011,6 @@ How multilingual information is handled in systems, for example in indexing and 
     dct:title "Median age of residents by sex and citizenship (demo_popmdctz)"@en .
     dcat:inSeries &lt;http://data.europa.eu/88u/datasetseries/eq_pop2&gt; .
 </pre>
-                </section>
             </section>
             
             <section>
@@ -14536,7 +14675,7 @@ The shape is downloadable <a href="./shacl/statdcatap-SHACL.ttl">here</a>.
 </pre>
     </section>
 
-        <section>
+    <section>
     <h3>Dataflow</h3>
         <p>
             A Dataflow is treated as a special type of Catalogue. For example:
@@ -14565,6 +14704,31 @@ The shape is downloadable <a href="./shacl/statdcatap-SHACL.ttl">here</a>.
     dct:conformsTo &lt;https://ec.europa.eu/eurostat/api/dissemination/sdmx/2.1/dataflow/ESTAT/isoc_eb_ain2&gt; ;
     dcat:dataset &lt;#dataset1&gt;, &lt;#dataset2&gt; .
 </pre>
+    </section>
+
+        <section>
+    <h3>Metadata report</h3>
+        <p>
+            A Metadata report can be linked from a Dataset or a Dataflow using the <code>documentation</code> property.
+            The report can then be marked as conforming to a specific standard, such as SIMS.
+        </p>
+<pre class="turtle">
+@prefix dct: &lt;http://purl.org/dc/terms/&gt;
+@prefix dcat: &lt;http://www.w3.org/ns/dcat#&gt;
+@prefix foaf: &lt;http://xmlns.com/foaf/0.1/&gt;
+@prefix statdcatap: &lt;http://data.europa.eu/s1n/&gt;
+
+&lt;dataflow&gt; a statdcatap:Dataflow ;
+    foaf:page &lt;dataflow-metadata-report&gt; .
+
+&lt;dataflow-metadata-report&gt; a foaf:Document ;
+    dct:conformsTo &lt;https://cros.ec.europa.eu/book-page/sims&gt; .
+
+&lt;dataset&gt; a dcat:Dataset ;
+    foaf:page &lt;dataset-metadata-report&gt; .
+
+&lt;dataset-metadata-report&gt; a foaf:Document ;
+    dct:conformsTo &lt;https://cros.ec.europa.eu/book-page/sims&gt; .</pre>
     </section>
 
 </section>
@@ -16834,6 +16998,8 @@ The properties are grouped under headings <it>mandatory, recommended, optional</
 						
 					
 						
+					
+						
 							<tr>
 								<td><a href="#Dataflow">Dataflow</a></td>
 								<td><div class="shorten">http://data.europa.eu/s1n/Dataflow</div></td>
@@ -16843,6 +17009,14 @@ The properties are grouped under headings <it>mandatory, recommended, optional</
 							</tr>
 						
 					
+						
+							<tr>
+								<td><a href="#Dataflow">Dataflow</a></td>
+								<td><div class="shorten">http://data.europa.eu/s1n/Dataflow</div></td>
+								<td>Mandatory</td>
+								<td><a href="#Dataflow.publisher">publisher </a></td>
+								<td><div class="shorten">http://purl.org/dc/terms/publisher</div></td>
+							</tr>
 						
 					
 						
@@ -16873,6 +17047,16 @@ The properties are grouped under headings <it>mandatory, recommended, optional</
 						
 					
 						
+							<tr>
+								<td><a href="#Dataflow">Dataflow</a></td>
+								<td><div class="shorten">http://data.europa.eu/s1n/Dataflow</div></td>
+								<td>Recommended</td>
+								<td><a href="#Dataflow.dataset">dataset </a></td>
+								<td><div class="shorten">http://www.w3.org/ns/dcat#dataset</div></td>
+							</tr>
+						
+					
+						
 					
 						
 					
@@ -16900,12 +17084,16 @@ The properties are grouped under headings <it>mandatory, recommended, optional</
 						
 					
 						
+					
+						
+					
+						
 							<tr>
 								<td><a href="#Dataflow">Dataflow</a></td>
 								<td><div class="shorten">http://data.europa.eu/s1n/Dataflow</div></td>
-								<td></td>
-								<td><a href="#Dataflow.dataset">dataset </a></td>
-								<td><div class="shorten">http://www.w3.org/ns/dcat#dataset</div></td>
+								<td>Optional</td>
+								<td><a href="#Dataflow.documentation">documentation </a></td>
+								<td><div class="shorten">http://xmlns.com/foaf/0.1/page</div></td>
 							</tr>
 						
 					
@@ -16914,22 +17102,12 @@ The properties are grouped under headings <it>mandatory, recommended, optional</
 						
 					
 						
-							<tr>
-								<td><a href="#Dataflow">Dataflow</a></td>
-								<td><div class="shorten">http://data.europa.eu/s1n/Dataflow</div></td>
-								<td></td>
-								<td><a href="#Dataflow.publisher">publisher </a></td>
-								<td><div class="shorten">http://purl.org/dc/terms/publisher</div></td>
-							</tr>
-						
-					
-						
 					
 						
 							<tr>
 								<td><a href="#Dataflow">Dataflow</a></td>
 								<td><div class="shorten">http://data.europa.eu/s1n/Dataflow</div></td>
-								<td></td>
+								<td>Optional</td>
 								<td><a href="#Dataflow.validity">validity </a></td>
 								<td><div class="shorten">http://purl.org/dc/terms/valid</div></td>
 							</tr>
@@ -18107,13 +18285,23 @@ The properties are grouped under headings <it>mandatory, recommended, optional</
 			</tr>
 		
 				
-					<tr>
-						<td><a href="#Document">Document</a></td>
-						<td><div class="shorten">http://xmlns.com/foaf/0.1/Document</div></td>
-						<td></td>
-						<td></td>
-						<td></td>
-					</tr>
+					
+						
+					
+					
+						
+					
+					
+						
+							<tr>
+								<td><a href="#Document">Document</a></td>
+								<td><div class="shorten">http://xmlns.com/foaf/0.1/Document</div></td>
+								<td>Optional</td>
+								<td><a href="#Document.conformsto">conforms to </a></td>
+								<td><div class="shorten">http://purl.org/dc/terms/conformsTo</div></td>
+							</tr>
+						
+					
 				
 			</tr>
 		
@@ -18674,13 +18862,16 @@ Past and current contributors are :
 {'pref':'dctype:', 'ns': 'http://purl.org/dc/dcmitype/'},
 {'pref':'foaf:', 'ns': 'http://xmlns.com/foaf/0.1/'},
 {'pref':'locn:', 'ns': 'http://www.w3.org/ns/locn#'},
+{'pref':'oa:', 'ns': 'http://www.w3.org/ns/oa#'},
 {'pref':'odrl:', 'ns': 'http://www.w3.org/ns/odrl/2/'},
 {'pref':'owl:', 'ns': 'http://www.w3.org/2002/07/owl#'},
 {'pref':'prov:', 'ns': 'http://www.w3.org/ns/prov#'},
+{'pref':'qb:', 'ns': 'http://purl.org/linked-data/cube#'},
 {'pref':'rdf:', 'ns': 'http://www.w3.org/1999/02/22-rdf-syntax-ns#'},
 {'pref':'rdfs:', 'ns': 'http://www.w3.org/2000/01/rdf-schema#'},
 {'pref':'skos:', 'ns': 'http://www.w3.org/2004/02/skos/core#'},
 {'pref':'spdx:', 'ns': 'http://spdx.org/rdf/terms#'},
+{'pref':'statdcatap:', 'ns': 'http://data.europa.eu/s1n/'},
 {'pref':'time:', 'ns': 'http://www.w3.org/2006/time#'},
 {'pref':'vcard:', 'ns': 'http://www.w3.org/2006/vcard/ns#'},
 {'pref':'eli:', 'ns' : 'http://data.europa.eu/eli/ontology#'},
