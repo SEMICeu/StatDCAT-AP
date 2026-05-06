@@ -1420,89 +1420,148 @@ The following webinars have been held for the creation of this release
   <section id="related-work">
     <h2>Related work</h2>
 
-    <section id="statistical-data-and-metadata-initiatives">
+    <section>
         <h3>Statistical data and metadata initiatives</h3>
 
-        <section id="eurostat-publications-office-collaboration">
-            <h4>Eurostat and EU Publications Office collaboration</h4>
+        <section>
+        <h4>Eurostat and EU Publications Office collaboration</h4>
+
             <p>
-                In the context of the European Data (EDP) <a href="https://data.europa.eu">https://data.europa.eu</a>, the Publications Office and Eurostat collaborate on the automated harvesting of metadata from Eurostat into the EDP. To achieve this, a mapping was developed between Eurostat metadata and the EDP metadata representation (a preliminary version of DCAT-AP) <a href="https://ec.europa.eu/eurostat/data/bulkdownload">https://ec.europa.eu/eurostat/data/bulkdownload</a>. <!--The Publications Office is transitioning to align with DCAT-AP. As Eurostat is the largest contributor of datasets to EU ODP, StatDCAT-AP is a joint initiative by Eurostat and the Publications Office to make more high-quality metadata associated with statistical datasets available in the broader context of open data portals.-->
+                In the context of the European Data (EDP) <a href="https://data.europa.eu">https://data.europa.eu</a>, the Publications Office and Eurostat collaborate on the automated harvesting of metadata from Eurostat into the EDP.
+                To achieve this, a mapping was developed between Eurostat metadata and the EDP metadata representation.
             </p>
+
             <p>
-                The work is supported by Directorate-General for Communications Networks, Content and Technology (DG CONNECT), since the European Data Portal will be one of the key implementers of StatDCAT-AP as the common metadata standard for harmonising descriptions of statistical datasets originating from different countries.
-            </p>
-            <p>
-                The Interoperability Solutions of European Public Administrations (ISA) Programme of the European Commission is, through ISA Action 1.1, the sponsor of the activity.
-            </p>
-            <p class="note">
-                TODO: Update
+                Eurostat is continuously working on the quality improvement of its metadata as reflected in the <a href="https://data.europa.eu/mqa/catalogues">Metadata Quality Assessment (MQA) tool</a> that studies the quality of metadata harvested by data.europa.eu.
             </p>
         </section>
 
-        <section id="sdmx">
-            <h4>SDMX</h4>
+        <section id="SDMX">
+        <h4>SDMX</h4>
+
             <p>
-                SDMX, which stands for Statistical Data and Metadata eXchange is an international initiative that aims at standardising and modernising ("industrialising") the mechanisms and processes for exchanging statistical data and metadata among international organisations and their member countries.
+                <a href="https://sdmx.org/">SDMX</a> (Statistical Data and Metadata eXchange) [[SDMX]] is an international standard and initiative that aims to standardise and modernise the mechanisms for exchanging statistical data and metadata between international organisations and their member countries.
             </p>
+
             <p>
-                SDMX is sponsored by seven international organisations: the Bank for International Settlements (BIS), the European Central Bank (ECB), Eurostat (Statistical Office of the European Union), the International Monetary Fund (IMF), the Organisation for Economic Cooperation and Development (OECD), the United Nations Statistical Division (UNSD), and the World Bank.
+                SDMX is jointly sponsored by seven international organisations: the Bank for International Settlements (BIS), the European Central Bank (ECB), Eurostat (the Statistical Office of the European Union), the International Monetary Fund (IMF), the Organisation for Economic Co-operation and Development (OECD), the United Nations Statistics Division (UNSD), and the World Bank.
+                These organisations play a central role at global and regional levels in the production and dissemination of official statistics across a wide range of domains, including economic, financial, social, and environmental statistics.
             </p>
+
             <p>
-                These organisations are the main players at world and regional levels in the collection of official statistics in a large variety of domains (agriculture statistics, economic and financial statistics, social statistics, environment statistics etc.).
+                Formalised as ISO 17369, SDMX provides a comprehensive framework covering:
             </p>
-            <p>
-                The main components of SDMX, which is now recognised as ISO International Standard IS-17369, are presented in <a href="#SDMX-main-components"></a>.
-            </p>
+
+            <ul>
+                <li>an information model for structuring statistical data and metadata;</li>
+                <li>technical formats for data exchange (e.g. SDMX-ML, SDMX-JSON); and</li>
+                <li>web service guidelines for data access and dissemination.</li>
+            </ul>
+
             <figure id="SDMX-main-components">
-                <a href="html/related-work/SDMX-main-components.png" target="_blank">
-                    <img src="html/related-work/SDMX-main-components.png"/>
+                <a href="html/related-work/SDMX-main-components.svg" target="_blank">
+                    <img src="html/related-work/SDMX-main-components.svg"/>
                 </a>
                 <figcaption>
                 SDMX Main Components
                 </figcaption>
             </figure>
+
             <p>
-                A schematic view of the information model can be seen in <a href="#SDMX-information-model-schematic-view"></a>.
+                In the context of StatDCAT-AP, SDMX and StatDCAT-AP are complementary specifications.
+                SDMX supports machine-to-machine data exchange and structural metadata definition.
+                StatDCAT-AP provides a framework for describing, publishing, and discovering statistical datasets in RDF-based data catalogues on the Web.
             </p>
+
             <figure id="SDMX-information-model-schematic-view">
-                <a href="html/related-work/SDMX-information-model-schematic-view.png" target="_blank">
-                    <img src="html/related-work/SDMX-information-model-schematic-view.png"/>
+                <a href="html/related-work/SDMX-information-model-schematic-view.svg" target="_blank">
+                    <img src="html/related-work/SDMX-information-model-schematic-view.svg"/>
                 </a>
                 <figcaption>
                 SDMX Information Model: Schematic View
                 </figcaption>
             </figure>
+
+            <p>
+                A high-level overview of the SDMX information model is presented in Figure 1.
+                Figure 2 illustrates a simplified schematic view of its main structural components.
+            </p>
         </section>
 
-        <section id="esms">
-            <h4>ESMS</h4>
+        <section id="SIMS">
+        <h4>SIMS</h4>
+
             <p>
-                The Euro SDMX Metadata Structure (ESMS) [[ESMS]] contains the description and representation of statistical metadata concepts used for documenting statistical datasets and for providing summary information useful for assessing data quality and the production process in general. The broad concepts used are based on SDMX cross-domain concepts as published in the SDMX Glossary <a href="https://sdmx.org/wp-content/uploads/SDMX_Glossary_Version_1_0_February_2016.docx">https://sdmx.org/wp-content/uploads/SDMX_Glossary_Version_1_0_February_2016.docx</a> (last version published in 2016). Its structure (i.e. allowed content) is defined using an SDMX Metadata Structure Definition.
+                The <a href="https://cros.ec.europa.eu/book-page/sims">Single Integrated Metadata Structure</a> (SIMS) is the reference framework within the European Statistical System (ESS) for describing statistical metadata.
+                It provides a unified and harmonised set of concepts covering both reference metadata and quality information for statistical datasets.
             </p>
+
             <p>
-                The ESMS is addressed to the countries which are part of the European Statistical System and was embedded in a European Recommendation published in 2009 <a href="http://eur-lex.europa.eu/LexUriServ/LexUriServ.do?uri=OJ:L:2009:168:0050:0055:EN:PDF">http://eur-lex.europa.eu/LexUriServ/LexUriServ.do?uri=OJ:L:2009:168:0050:0055:EN:PDF</a>. The ESMS is addressed to the countries which are part of the European Statistical System and was embedded in a European Recommendation published in 2009 . It is implemented both at Eurostat and at national level: the application of the concepts and sub concepts at European level and at national level is stated in the ESS guidelines.
+                SIMS integrates and consolidates two earlier structures that were previously maintained separately within the ESS:
             </p>
+
+            <ul>
+                <li>the Euro SDMX Metadata Structure (ESMS), which focuses on reference metadata — covering aspects such as statistical concepts, methodology, data sources, and dissemination policies. It was introduced through an ESS Recommendation in 2009 and is formally defined using an SDMX Metadata Structure Definition (MSD). ESMS remains in use, particularly in legacy implementations across Member States.</li>
+                <li>the ESS Standard Quality Report Structure (ESQRS), which focuses on quality metadata — including dimensions such as relevance, accuracy, timeliness, coherence, and comparability. ESQRS is used for the production of structured quality reports within the ESS, providing a standardised basis for quality assessments submitted to Eurostat.</li>
+            </ul>
+
             <p>
-                The information to be entered is normally free text, but some coded elements may be introduced in the future: this is indicated in the column "representation" below.
+                By combining these two perspectives into a single, coherent model, SIMS reduces duplication.
+                It ensures consistency in metadata reporting across statistical domains and organisations within the ESS.
             </p>
+
             <p>
-                The ESMS allows the creation of different output files comprising information related to all the concepts listed or a subset of those concepts. These output files can be used for different purposes (data dissemination, quality reporting, etc.).
+                The 19 high-level concepts defined in SIMS are derived from the SDMX cross-domain concepts, as published in the SDMX Glossary.
+                This alignment ensures compatibility with the broader international statistical data and metadata exchange ecosystem.
             </p>
+
             <p>
-                A fragment of the ESMS specification (release 4, 2014) is shown in <a href="#fragment-of-ESMS"></a>.
-            </p>
-            <figure id="fragment-of-ESMS">
-                <a href="html/related-work/fragment-of-ESMS.png" target="_blank">
-                    <img src="html/related-work/fragment-of-ESMS.png"/>
-                </a>
-                <figcaption>
-                Fragment of ESMS specification
-                </figcaption>
-            </figure>
-            <p>
-                Another standardised metadata structure currently in use is the “ESS Standard Quality Report Structure” (ESQRS). Quality reports are produced and partly disseminated by Eurostat in this format.  Eurostat has also recently introduced a "Single Integrated Metadata Structure" (SIMS), which represents the union of referential metadata attributes coming from ESMS and ESQRS, providing an integrated framework of concepts on quality assessment and more general reference metadata.
+                In the context of StatDCAT-AP, SIMS provides a comprehensive conceptual basis for describing statistical datasets.
+                It encompasses both reference and quality metadata dimensions.
+                StatDCAT-AP does not directly replicate these metadata structures.
+                It provides a framework for documenting and linking them within RDF-based data catalogues.
+                This supports improved interoperability, discoverability, and reuse of statistical metadata on the Web.
             </p>
         </section>
+
+        <section id="DDI-CDI">
+        <h4>DDI-CDI</h4>
+
+            <p>
+                <a href="https://ddialliance.org/ddi-cdi">DDI-CDI</a>, which stands for Data Documentation Initiative - Cross-Domain Integration, is an initiative of the DDI Alliance.
+                It aims at standardising the description of data and metadata to facilitate their integration across domain and institutional boundaries.
+                Although the DDI Alliance has historically focused on the Social, Behavioural, and Economic sciences, DDI-CDI is designed to be domain-neutral.
+                It serves any scientific or policy domain.
+                Version 1.0 was released in January 2025.
+            </p>
+
+            <p>
+                DDI-CDI provides a uniform approach to describing a wide range of data formats.
+                These include Wide, Long, Multi-Dimensional, and Key-Value data.
+                Beyond data structures, it describes variables and their conceptual basis through the variable cascade.
+                This makes data semantics machine-actionable.
+                It also covers provenance and process flows across the data production lifecycle.
+                The specification is model-driven.
+                It is grounded in the Generic Statistical Information Model (GSIM).
+                It produces both XML Schema and OWL/RDF representations.
+                It is designed to interoperate with established standards including DCAT, SDMX, the W3C Data Cube Vocabulary, and PROV-O.
+                It is incorporated into the Integration Profile of the <a href="https://cross-domain-interoperability-framework.github.io/cdifbook/introduction.html#">Cross-Domain Interoperability Framework</a> (CDIF).
+            </p>
+
+            <p>
+                DDI-CDI and StatDCAT-AP operate at complementary levels.
+                StatDCAT-AP addresses dataset-level discovery metadata on open data portals.
+                DDI-CDI operates at the variable level.
+                It describes the internal structure of data and how it was produced.
+                DDI-CDI metadata can directly inform StatDCAT-AP descriptions.
+                Variable-level information such as dimensions, attributes, and measures can be exposed as StatDCAT-AP properties.
+                Process descriptions can be used to populate provenance properties.
+                StatDCAT-AP does not replace DDI-CDI.
+                It provides an additional harmonised RDF representation at the catalogue level.
+                This enables producers to publish discovery metadata on DCAT-AP-conformant portals without abandoning their existing documentation infrastructure.
+            </p>
+        </section>
+
     </section>
 
     <section id="open-data-standards-and-profiles">

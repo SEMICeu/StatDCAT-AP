@@ -1,0 +1,104 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="660" viewBox="0 0 900 660" role="img" aria-labelledby="title desc">
+  <title id="title">Main Components</title>
+  <desc id="desc">Vector reconstruction of a slide describing SDMX main components with three colored gears and matching bullet lists.</desc>
+  <rect id="bg" width="900" height="660" fill="#ffffff"/>
+
+  <defs>
+    <polygon id="gear-6" points="-7.5,-47.4 -4.9,-61.8 4.9,-61.8 7.5,-47.4 37.3,-30.2 51.1,-35.1 56.0,-26.7 44.8,-17.2 44.8,17.2 56.0,26.7 51.1,35.1 37.3,30.2 7.5,47.4 4.9,61.8 -4.9,61.8 -7.5,47.4 -37.3,30.2 -51.1,35.1 -56.0,26.7 -44.8,17.2 -44.8,-17.2 -56.0,-26.7 -51.1,-35.1 -37.3,-30.2"/>
+    <polygon id="gear-9" points="-7.5,-47.4 -4.9,-61.8 4.9,-61.8 7.5,-47.4 24.7,-41.1 36.0,-50.5 43.5,-44.2 36.2,-31.5 45.4,-15.6 60.0,-15.5 61.7,-5.9 48.0,-0.8 44.8,17.2 56.0,26.7 51.1,35.1 37.3,30.2 23.3,42.0 25.7,56.4 16.6,59.7 9.2,47.1 -9.2,47.1 -16.6,59.7 -25.7,56.4 -23.3,42.0 -37.3,30.2 -51.1,35.1 -56.0,26.7 -44.8,17.2 -48.0,-0.8 -61.7,-5.9 -60.0,-15.5 -45.4,-15.6 -36.2,-31.5 -43.5,-44.2 -36.0,-50.5 -24.7,-41.1"/>
+  </defs>
+
+  <style>
+    .title { font: 700 30px "Segoe UI", Arial, sans-serif; fill: #1c313f; letter-spacing: 0.8px; }
+    .gear-label { font: 700 12.5px "Segoe UI", Arial, sans-serif; fill: #ffffff; text-anchor: middle; }
+    .gear-label-small { font-size: 9px; }
+    .bullet { font: 700 18px "Segoe UI", Arial, sans-serif; }
+    .item { font: 400 17px "Segoe UI", Arial, sans-serif; }
+    .subitem { font: 700 13px "Segoe UI", Arial, sans-serif; }
+    .foot { font: 400 13px "Segoe UI", Arial, sans-serif; fill: #303030; text-anchor: end; }
+
+    @media (prefers-color-scheme: dark) {
+      #bg { fill: #1a1a2e; }
+      .title { fill: #e0e8f0; }
+      .foot { fill: #a0aab8; }
+      .blue-bullets { fill: #4dc3f0; }
+      .green-bullets { fill: #3fd96a; }
+      .red-bullets { fill: #f05555; }
+    }
+  </style>
+
+  <text x="400" y="52" class="title" text-anchor="middle">MAIN COMPONENTS</text>
+
+  <g transform="translate(0 10)">
+    <g transform="translate(100 154) rotate(15) scale(1.35)" fill="#11a8de">
+      <use href="#gear-6"/>
+      <text class="gear-label" transform="rotate(-15)">
+        <tspan x="0" y="-10">SDMX</tspan>
+        <tspan x="0" y="5">Information</tspan>
+        <tspan x="0" y="20">Model</tspan>
+      </text>
+    </g>
+
+    <g transform="translate(155 314) rotate(-35) scale(1.55)" fill="#12b44f">
+      <use href="#gear-6"/>
+      <text class="gear-label" transform="rotate(35)">
+        <tspan x="0" y="-10">Content</tspan>
+        <tspan x="0" y="5">Oriented</tspan>
+        <tspan x="0" y="20">Guidelines</tspan>
+      </text>
+    </g>
+
+    <g transform="translate(140 494) rotate(10) scale(1.75)" fill="#d31311">
+      <use href="#gear-9"/>
+      <text class="gear-label gear-label-small" transform="rotate(-10)">
+        <tspan x="0" y="-10">IT Infrastructure</tspan>
+        <tspan x="0" y="4">for exchange and</tspan>
+        <tspan x="0" y="18">sharing</tspan>
+      </text>
+    </g>
+  </g>
+
+  <g fill="#2656d8" class="blue-bullets" transform="translate(250 100)">
+    <text x="0" y="0" class="bullet">▪</text>
+    <text x="32" y="0" class="item">Describes statistics in a standard way</text>
+
+    <text x="0" y="36" class="bullet">▪</text>
+    <text x="32" y="36" class="item">Objects and their relationships</text>
+    <text x="18" y="57" class="bullet">▪</text>
+    <text x="32" y="57" class="subitem">Data and Metadata Structures and formats, Concepts, Code Lists</text>
+
+    <text x="0" y="86" class="bullet">▪</text>
+    <text x="32" y="86" class="item">Central management and standard access</text>
+    <text x="18" y="107" class="bullet">▪</text>
+    <text x="32" y="107" class="subitem">SDMX Registry, SDMX Web Services</text>
+  </g>
+
+  <g fill="#12b44f" class="green-bullets" transform="translate(290 270)">
+    <text x="0" y="0" class="bullet">▪</text>
+    <text x="32" y="0" class="item">Cross Domain Concepts</text>
+
+    <text x="0" y="33" class="bullet">▪</text>
+    <text x="32" y="33" class="item">Cross Domain Code Lists</text>
+
+    <text x="0" y="66" class="bullet">▪</text>
+    <text x="32" y="66" class="item">Statistical Domains</text>
+
+    <text x="0" y="99" class="bullet">▪</text>
+    <text x="32" y="99" class="item">SDMX Glossary (ex Metadata Common Vocabulary)</text>
+  </g>
+
+  <g fill="#d31311" class="red-bullets" transform="translate(310 465)">
+    <text x="0" y="0" class="bullet">▪</text>
+    <text x="32" y="0" class="item">Push: Provider generates and sends file to receiver</text>
+
+    <text x="0" y="33" class="bullet">▪</text>
+    <text x="32" y="33" class="item">Pull: Provider opens web service to data</text>
+
+    <text x="0" y="66" class="bullet">▪</text>
+    <text x="32" y="66" class="item">Hub: Special case of pull: receiver downloads on end-user request</text>
+  </g>
+
+  <text x="890" y="560" class="foot">Latest version: SDMX 2.1 (2011), ISO standard in 2013</text>
+  <text x="890" y="582" class="foot">Linked Open Data is based on the SDMX Information Model</text>
+  <text x="890" y="602" class="foot">(Data Cube Vocabulary, W3C recommendation in 2012, latest version 2014)</text>
+</svg>
