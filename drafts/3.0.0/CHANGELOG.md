@@ -4,7 +4,7 @@ This changelog provides an overview of the changes incorporated in StatDCAT-AP 3
 
 # **Editorial changes**
 - Updated statdcatap prefix
-- Added information on working groups - TODO: MoMs for WG2 and WG3
+- Added information on working groups
 - Added missing prefixes to overview table and used prefixes
 - Updated Related work section [#29](https://github.com/SEMICeu/StatDCAT-AP/issues/29)
   
