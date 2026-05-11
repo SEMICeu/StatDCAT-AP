@@ -97,7 +97,7 @@
       latestVersion: "https://semiceu.github.io/StatDCAT-AP/drafts/3.0.0/",
       specStatus: "base",
       maxTocLevel: 3,
-      publishDate: "2026-05-06",
+      publishDate: "2026-05-11",
       editors: myeditors,
       authors: myauthors,
       otherLinks: [{
@@ -1203,9 +1203,9 @@ The following webinars have been held for the creation of this release
     <h2>Status</h2>
         <p>
 <!-- readd when SEMIC has a codelist about it process 
-	This application profile has the status <a href="https://www.w3.org/2021/Process-20211102/#RecsWD">Working Draft</a> published at 2026-05-06.
+	This application profile has the status <a href="https://www.w3.org/2021/Process-20211102/#RecsWD">Working Draft</a> published at 2026-05-11.
 -->
-	This application profile has the status Working Draft published at 2026-05-06.
+	This application profile has the status Working Draft published at 2026-05-11.
         </p>
         <p>
             Information about the process and the decisions involved in the creation of this specification are consultable at the <a href="https://github.com/SEMICeu/StatDCAT-AP/drafts/3.0.0/CHANGELOG">Changelog</a>.
@@ -5870,6 +5870,7 @@ For this usage, consult the guidelines in section [[[#UsageGuidelines]]].
                             , <a href="#Dataset.qualityannotation">quality annotation</a>
                             , <a href="#Dataset.relatedresource">related resource</a>
                             , <a href="#Dataset.releasedate">release date</a>
+                            , <a href="#Dataset.replaces">replaces</a>
                             , <a href="#Dataset.sample">sample</a>
                             , <a href="#Dataset.source">source</a>
                             , <a href="#Dataset.spatialresolution">spatial resolution</a>
@@ -6753,7 +6754,7 @@ For this usage, consult the guidelines in section [[[#UsageGuidelines]]].
                                     0..*
                                 </td>
                                 <td property="rdfs:comment">
-                                    A dataset series of which the dataset is part.
+                                    A Dataset Series of which the Dataset is part.
                                 </td>
                                 <td property="skos:scopeNote">
                                     
@@ -7572,6 +7573,59 @@ For this usage, consult the guidelines in section [[[#UsageGuidelines]]].
                                 </td>
                             </tr>
                         
+                            <tr id="Dataset.replaces"
+                                typeof="rdf:Property"
+                                resource="http://purl.org/dc/terms/replaces"
+                                class="class mandatory">
+<!--
+                                <td>
+				    <a href="https://github.com/SEMICeu/StatDCAT-AP/issues/new?title=Issue%20for%20replaces%20in%20Dataset&body=Explain%20your%20issue%20for%20https://semiceu.github.io/StatDCAT-AP/drafts/3.0.0%23Dataset.replaces" target="_blank" rel="noopener noreferrer" >
+                                        <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
+                                    </a>
+                                </td>
+--->
+                                <td>
+                                        <a href="http://purl.org/dc/terms/replaces"
+                                           data-toggle="tooltip"
+                                           data-content="http://purl.org/dc/terms/replaces"
+                                           data-placement="right">
+                                        replaces</a>
+                                </td>
+                                <td>
+                                    
+                                        
+                                            <a href="#CataloguedResource" data-placement="right">Catalogued Resource</a>
+                                        
+                                    
+                                </td>
+                                <td>
+                                    0..*
+                                </td>
+                                <td property="rdfs:comment">
+                                    A related resource that is supplanted, displaced, or superseded by the described Dataset.
+                                </td>
+                                <td property="skos:scopeNote">
+                                    
+                                </td>
+				<!--
+                                <td>
+                                    
+                                </td>
+				-->
+				<!--
+                                <td>
+                                    
+                                </td>
+				-->
+                                <td>
+                                    
+                                       
+				        P
+				       
+				    
+                                </td>
+                            </tr>
+                        
                             <tr id="Dataset.sample"
                                 typeof="rdf:Property"
                                 resource="http://www.w3.org/ns/adms#sample"
@@ -7760,7 +7814,7 @@ For this usage, consult the guidelines in section [[[#UsageGuidelines]]].
                                     0..1
                                 </td>
                                 <td property="rdfs:comment">
-                                    The status of the dataset in the context of maturity lifecycle.
+                                    The status of the Dataset in the context of maturity lifecycle.
                                 </td>
                                 <td property="skos:scopeNote">
                                     
@@ -8337,9 +8391,12 @@ For this usage, consult the guidelines in section [[[#UsageGuidelines]]].
                             , <a href="#DatasetSeries.documentation">documentation</a>
                             , <a href="#DatasetSeries.frequency">frequency</a>
                             , <a href="#DatasetSeries.geographicalcoverage">geographical coverage</a>
+                            , <a href="#DatasetSeries.inseries">in series</a>
                             , <a href="#DatasetSeries.modificationdate">modification date</a>
                             , <a href="#DatasetSeries.publisher">publisher</a>
                             , <a href="#DatasetSeries.releasedate">release date</a>
+                            , <a href="#DatasetSeries.replaces">replaces</a>
+                            , <a href="#DatasetSeries.status">status</a>
                             , <a href="#DatasetSeries.temporalcoverage">temporal coverage</a>
                             , <a href="#DatasetSeries.theme">theme</a>
                             , <a href="#DatasetSeries.title">title</a>
@@ -8709,6 +8766,59 @@ It is recommended to provide an indication about the dimensions the Dataset Seri
                                 </td>
                             </tr>
                         
+                            <tr id="DatasetSeries.inseries"
+                                typeof="rdf:Property"
+                                resource="http://www.w3.org/ns/dcat#inSeries"
+                                class="class mandatory">
+<!--
+                                <td>
+				    <a href="https://github.com/SEMICeu/StatDCAT-AP/issues/new?title=Issue%20for%20in series%20in%20Dataset Series&body=Explain%20your%20issue%20for%20https://semiceu.github.io/StatDCAT-AP/drafts/3.0.0%23DatasetSeries.inseries" target="_blank" rel="noopener noreferrer" >
+                                        <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
+                                    </a>
+                                </td>
+--->
+                                <td>
+                                        <a href="http://www.w3.org/ns/dcat#inSeries"
+                                           data-toggle="tooltip"
+                                           data-content="http://www.w3.org/ns/dcat#inSeries"
+                                           data-placement="right">
+                                        in series</a>
+                                </td>
+                                <td>
+                                    
+                                        
+                                            <a href="#DatasetSeries" data-placement="right">Dataset Series</a>
+                                        
+                                    
+                                </td>
+                                <td>
+                                    0..*
+                                </td>
+                                <td property="rdfs:comment">
+                                    A Dataset Series of which the Dataset Series is part.
+                                </td>
+                                <td property="skos:scopeNote">
+                                    
+                                </td>
+				<!--
+                                <td>
+                                    
+                                </td>
+				-->
+				<!--
+                                <td>
+                                    
+                                </td>
+				-->
+                                <td>
+                                    
+                                       
+				        P
+				       
+				    
+                                </td>
+                            </tr>
+                        
                             <tr id="DatasetSeries.modificationdate"
                                 typeof="rdf:Property"
                                 resource="http://purl.org/dc/terms/modified"
@@ -8868,6 +8978,112 @@ This is not equal to the release date of the oldest dataset in the collection of
 				        <a href="https://semiceu.github.io/DCAT-AP/releases/3.0.1/#DatasetSeries.releasedate">A</a>
                                        
                                     
+                                </td>
+                            </tr>
+                        
+                            <tr id="DatasetSeries.replaces"
+                                typeof="rdf:Property"
+                                resource="http://purl.org/dc/terms/replaces"
+                                class="class mandatory">
+<!--
+                                <td>
+				    <a href="https://github.com/SEMICeu/StatDCAT-AP/issues/new?title=Issue%20for%20replaces%20in%20Dataset Series&body=Explain%20your%20issue%20for%20https://semiceu.github.io/StatDCAT-AP/drafts/3.0.0%23DatasetSeries.replaces" target="_blank" rel="noopener noreferrer" >
+                                        <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
+                                    </a>
+                                </td>
+--->
+                                <td>
+                                        <a href="http://purl.org/dc/terms/replaces"
+                                           data-toggle="tooltip"
+                                           data-content="http://purl.org/dc/terms/replaces"
+                                           data-placement="right">
+                                        replaces</a>
+                                </td>
+                                <td>
+                                    
+                                        
+                                            <a href="#CataloguedResource" data-placement="right">Catalogued Resource</a>
+                                        
+                                    
+                                </td>
+                                <td>
+                                    0..*
+                                </td>
+                                <td property="rdfs:comment">
+                                    A related resource that is supplanted, displaced, or superseded by the described Dataset Series.
+                                </td>
+                                <td property="skos:scopeNote">
+                                    
+                                </td>
+				<!--
+                                <td>
+                                    
+                                </td>
+				-->
+				<!--
+                                <td>
+                                    
+                                </td>
+				-->
+                                <td>
+                                    
+                                       
+				        P
+				       
+				    
+                                </td>
+                            </tr>
+                        
+                            <tr id="DatasetSeries.status"
+                                typeof="rdf:Property"
+                                resource="http://www.w3.org/ns/adms#status"
+                                class="class mandatory">
+<!--
+                                <td>
+				    <a href="https://github.com/SEMICeu/StatDCAT-AP/issues/new?title=Issue%20for%20status%20in%20Dataset Series&body=Explain%20your%20issue%20for%20https://semiceu.github.io/StatDCAT-AP/drafts/3.0.0%23DatasetSeries.status" target="_blank" rel="noopener noreferrer" >
+                                        <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
+                                    </a>
+                                </td>
+--->
+                                <td>
+                                        <a href="http://www.w3.org/ns/adms#status"
+                                           data-toggle="tooltip"
+                                           data-content="http://www.w3.org/ns/adms#status"
+                                           data-placement="right">
+                                        status</a>
+                                </td>
+                                <td>
+                                    
+                                        
+                                            <a href="#Concept" data-placement="right">Concept</a>
+                                        
+                                    
+                                </td>
+                                <td>
+                                    0..1
+                                </td>
+                                <td property="rdfs:comment">
+                                    The status of the Dataset Series in the context of maturity lifecycle.
+                                </td>
+                                <td property="skos:scopeNote">
+                                    
+                                </td>
+				<!--
+                                <td>
+                                    
+                                </td>
+				-->
+				<!--
+                                <td>
+                                    
+                                </td>
+				-->
+                                <td>
+                                    
+                                       
+				        P
+				       
+				    
                                 </td>
                             </tr>
                         
@@ -10353,7 +10569,7 @@ This is not equal to the release date of the oldest dataset in the collection of
                                     0..1
                                 </td>
                                 <td property="rdfs:comment">
-                                    The status of the distribution in the context of maturity lifecycle.
+                                    The status of the Distribution in the context of maturity lifecycle.
                                 </td>
                                 <td property="skos:scopeNote">
                                     It MUST take one of the values Completed, Deprecated, Under Development, Withdrawn.
@@ -13682,7 +13898,7 @@ The tables below show the usage of the codelists with the expected qualification
 		<tr><td>dct:format</td><td><a href="#Distribution">Distribution</a>, <a href="#DataService">Data Service </a></td><td><a href="http://publications.europa.eu/resource/authority/file-type">EU Vocabularies File Type Named Authority List</a></td><td></td></tr>
 		<tr><td>dct:language</td><td><a href="#Catalogue">Catalogue</a>, <a href="#Dataset">Dataset</a>, <a href="#CatalogueRecord">Catalogue Records</a>, <a href="#Distribution">Distribution</a></td><td><a href="http://publications.europa.eu/resource/authority/language">EU Vocabularies Languages Named Authority List</a></td><td></td></tr>
 		<tr><td>dct:type</td><td><a href="#Distribution">Distribution</a></td><td><a href="http://publications.europa.eu/resource/dataset/distribution-type">EU Vocabularies Distribution type</a></td><td></td></tr>
-		<tr><td>adms:status</td><td><a href="#Dataset">Dataset</a></td><td><a href="http://publications.europa.eu/resource/authority/dataset-status">EU Vocabularies Dataset Status</a></td><td></td></tr>
+		<tr><td>adms:status</td><td><a href="#Dataset">Dataset</a>, <a href="#DatasetSeries">Dataset Series</a></td><td><a href="http://publications.europa.eu/resource/authority/dataset-status">EU Vocabularies Dataset Status</a></td><td></td></tr>
 		<tr><td>adms:status</td><td><a href="#Distribution">Distribution</a></td><td><a href="http://publications.europa.eu/resource/authority/distribution-status">EU Vocabularies Distribution Status</a></td><td></td></tr>
 		<tr><td>dcatap:availability</td><td><a href="#Distribution">Distribution</a></td><td><a href="http://publications.europa.eu/resource/authority/planned-availability">Distribution availability vocabulary</a></td><td>The list of terms for the avalability levels of a dataset distribution in the DCAT-AP  specification.</td></tr>
 		<tr><td>spdx:algorithm</td><td><a href="#Checksum">Checksum</a></td><td><a href="https://spdx.org/rdf/terms/#d4e2129">Checksum algorithm members</a></td><td>The members listed are considered a controlled vocabulary of supported checksum algorithms.</td></tr>
@@ -14580,6 +14796,9 @@ The shape is downloadable <a href="./shacl/statdcatap-SHACL.ttl">here</a>.
             In StatDCAT-AP, <code>dct:source</code> is used to link a table to its source multidimensional dataset.
         </p>
 <pre class="turtle">
+@prefix dct: &lt;http://purl.org/dc/terms/&gt; .
+@prefix dcat: &lt;http://www.w3.org/ns/dcat#&gt; .
+
 # Source dataset
 &lt;http://data.europa.eu/88u/dataset/dzzomwhlfy7s3kylnvaslg&gt; a dcat:Dataset;
     dct:title "Production in industry - monthly data"@en ;
@@ -14693,6 +14912,9 @@ The shape is downloadable <a href="./shacl/statdcatap-SHACL.ttl">here</a>.
             The pattern is:
         </p>
 <pre class="turtle">
+@prefix dct: &lt;http://purl.org/dc/terms/&gt; .
+@prefix dcat: &lt;http://www.w3.org/ns/dcat#&gt; .
+
 &lt;distribution&gt; a dcat:Distribution ;
     dct:conformsTo &lt;schema-file&gt; .
 
@@ -14703,6 +14925,9 @@ The shape is downloadable <a href="./shacl/statdcatap-SHACL.ttl">here</a>.
             Next, we indicate, that the schema is, in fact, a Croissant schema.
         </p>
 <pre class="turtle">
+@prefix dct: &lt;http://purl.org/dc/terms/&gt; .
+@prefix dcat: &lt;http://www.w3.org/ns/dcat#&gt; .
+
 &lt;distribution&gt; a dcat:Distribution; 
     dct:conformsTo &lt;https://raw.githubusercontent.com/mlcommons/croissant/refs/heads/main/croissant-rdf/test_data/huggingface.ttl&gt; .
 
@@ -14714,6 +14939,9 @@ The shape is downloadable <a href="./shacl/statdcatap-SHACL.ttl">here</a>.
             We indicate, that the schemas are, in fact, a CSV on the Web descriptor, and a JSON Schema.
         </p>
 <pre class="turtle">
+@prefix dct: &lt;http://purl.org/dc/terms/&gt; .
+@prefix dcat: &lt;http://www.w3.org/ns/dcat#&gt; .
+
 &lt;csv-distribution&gt; a dcat:Distribution;
     dct:format &lt;http://publications.europa.eu/resource/authority/file-type/CSV&gt; ;
     dcat:mediaType &lt;http://www.iana.org/assignments/media-types/text/csv&gt; ;
@@ -14740,9 +14968,9 @@ The shape is downloadable <a href="./shacl/statdcatap-SHACL.ttl">here</a>.
             A Dataflow is treated as a special type of Catalogue. For example:
         </p>
 <pre class="turtle">
-@prefix dct: &lt;http://purl.org/dc/terms/&gt;
-@prefix dcat: &lt;http://www.w3.org/ns/dcat#&gt;
-@prefix statdcatap: &lt;http://data.europa.eu/s1n/&gt;
+@prefix dct: &lt;http://purl.org/dc/terms/&gt; .
+@prefix dcat: &lt;http://www.w3.org/ns/dcat#&gt; .
+@prefix statdcatap: &lt;http://data.europa.eu/s1n/&gt; .
 
 &lt;#myStatDCAT-AP-catalogue&gt; a dcat:Catalog ;
     dcat:catalog &lt;urn:sdmx:org.sdmx.infomodel.datastructure.Dataflow=ESTAT:ISOC_EB_AIN2(1.0)&gt; ;
@@ -14765,17 +14993,17 @@ The shape is downloadable <a href="./shacl/statdcatap-SHACL.ttl">here</a>.
 </pre>
     </section>
 
-        <section>
+    <section>
     <h3>Metadata report</h3>
         <p>
             A Metadata report can be linked from a Dataset or a Dataflow using the <code>documentation</code> property.
             The report can then be marked as conforming to a specific standard, such as SIMS.
         </p>
 <pre class="turtle">
-@prefix dct: &lt;http://purl.org/dc/terms/&gt;
-@prefix dcat: &lt;http://www.w3.org/ns/dcat#&gt;
-@prefix foaf: &lt;http://xmlns.com/foaf/0.1/&gt;
-@prefix statdcatap: &lt;http://data.europa.eu/s1n/&gt;
+@prefix dct: &lt;http://purl.org/dc/terms/&gt; .
+@prefix dcat: &lt;http://www.w3.org/ns/dcat#&gt; .
+@prefix foaf: &lt;http://xmlns.com/foaf/0.1/&gt; .
+@prefix statdcatap: &lt;http://data.europa.eu/s1n/&gt; .
 
 &lt;dataflow&gt; a statdcatap:Dataflow ;
     foaf:page &lt;dataflow-metadata-report&gt; .
@@ -14788,6 +15016,40 @@ The shape is downloadable <a href="./shacl/statdcatap-SHACL.ttl">here</a>.
 
 &lt;dataset-metadata-report&gt; a foaf:Document ;
     dct:conformsTo &lt;https://cros.ec.europa.eu/book-page/sims&gt; .</pre>
+    </section>
+
+    <section>
+    <h3>Marking a Dataset or a Dataset Series as Deprecated (Discontinued)</h3>
+        <p>
+            Statistical datasets and dataset series are sometimes discontinued - for example when a data collection is replaced by a new dataset or dataset series, or when a data collection is simply stopped.
+        </p>
+        <p>
+            StatDCAT-AP provides a way to signal this lifecycle state and to link the deprecated resource to its successor.
+        </p>
+        <p>
+            The property <code>adms:status</code> is used with the <a href="http://publications.europa.eu/resource/authority/dataset-status">EU Vocabularies Dataset Status codelist</a> and can be applied to a Dataset and a Dataset Series.
+            The recommended approach is to set the status to <code>DISCONTINUED</code>.
+        </p>
+<pre class="turtle">
+@prefix dct: &lt;http://purl.org/dc/terms/&gt; .
+@prefix dcat: &lt;http://www.w3.org/ns/dcat#&gt; .
+@prefix adms: &lt;http://www.w3.org/ns/adms#&gt; .
+
+# A discontinued dataset
+&lt;http://data.europa.eu/88u/dataset/BLDnj0ne0SQOtKpT7KCLw&gt; a dcat:Dataset ;
+    dct:title "Enterprises - remote working (NACE Rev. 1.1 activity)"@en ;
+    adms:status &lt;http://publications.europa.eu/resource/authority/dataset-status/DISCONT&gt; ;
+    dct:isReplacedBy &lt;http://data.europa.eu/88u/dataset/zhwwkeo1ub6mitt0hopq&gt;  .
+
+# A new dataset series
+&lt;http://data.europa.eu/88u/dataset/zhwwkeo1ub6mitt0hopq&gt; a dcat:DatasetSeries ;
+    dct:title "Employees - remote working (NACE Rev. 1.1 activity)"@en .
+    dct:replaces &lt;http://data.europa.eu/88u/dataset/BLDnj0ne0SQOtKpT7KCLw&gt; .</pre>
+
+    <p>
+        To support data provenance and help users navigate to the replacing resource, it is recommended that the new resource references the replaced one with the <code>dct:replaces</code> property, and the deprecated resource reciprocates using the <code>dct:isReplacedBy</code> property.
+        These properties are optional and only applicable when a replacing resource exists.
+    </p>
     </section>
 
 </section>
@@ -17264,6 +17526,8 @@ The properties are grouped under headings <it>mandatory, recommended, optional</
 						
 					
 						
+					
+						
 							<tr>
 								<td><a href="#Dataset">Dataset</a></td>
 								<td><div class="shorten">http://www.w3.org/ns/dcat#Dataset</div></td>
@@ -17374,6 +17638,8 @@ The properties are grouped under headings <it>mandatory, recommended, optional</
 								<td><a href="#Dataset.publisher">publisher </a></td>
 								<td><div class="shorten">http://purl.org/dc/terms/publisher</div></td>
 							</tr>
+						
+					
 						
 					
 						
@@ -17696,6 +17962,16 @@ The properties are grouped under headings <it>mandatory, recommended, optional</
 								<td><a href="#Dataset">Dataset</a></td>
 								<td><div class="shorten">http://www.w3.org/ns/dcat#Dataset</div></td>
 								<td>Optional</td>
+								<td><a href="#Dataset.replaces">replaces </a></td>
+								<td><div class="shorten">http://purl.org/dc/terms/replaces</div></td>
+							</tr>
+						
+					
+						
+							<tr>
+								<td><a href="#Dataset">Dataset</a></td>
+								<td><div class="shorten">http://www.w3.org/ns/dcat#Dataset</div></td>
+								<td>Optional</td>
 								<td><a href="#Dataset.sample">sample </a></td>
 								<td><div class="shorten">http://www.w3.org/ns/adms#sample</div></td>
 							</tr>
@@ -17833,6 +18109,12 @@ The properties are grouped under headings <it>mandatory, recommended, optional</
 						
 					
 						
+					
+						
+					
+						
+					
+						
 							<tr>
 								<td><a href="#DatasetSeries">Dataset Series</a></td>
 								<td><div class="shorten">http://www.w3.org/ns/dcat#DatasetSeries</div></td>
@@ -17874,6 +18156,8 @@ The properties are grouped under headings <it>mandatory, recommended, optional</
 						
 					
 						
+					
+						
 							<tr>
 								<td><a href="#DatasetSeries">Dataset Series</a></td>
 								<td><div class="shorten">http://www.w3.org/ns/dcat#DatasetSeries</div></td>
@@ -17881,6 +18165,10 @@ The properties are grouped under headings <it>mandatory, recommended, optional</
 								<td><a href="#DatasetSeries.publisher">publisher </a></td>
 								<td><div class="shorten">http://purl.org/dc/terms/publisher</div></td>
 							</tr>
+						
+					
+						
+					
 						
 					
 						
@@ -17941,6 +18229,16 @@ The properties are grouped under headings <it>mandatory, recommended, optional</
 								<td><a href="#DatasetSeries">Dataset Series</a></td>
 								<td><div class="shorten">http://www.w3.org/ns/dcat#DatasetSeries</div></td>
 								<td>Optional</td>
+								<td><a href="#DatasetSeries.inseries">in series </a></td>
+								<td><div class="shorten">http://www.w3.org/ns/dcat#inSeries</div></td>
+							</tr>
+						
+					
+						
+							<tr>
+								<td><a href="#DatasetSeries">Dataset Series</a></td>
+								<td><div class="shorten">http://www.w3.org/ns/dcat#DatasetSeries</div></td>
+								<td>Optional</td>
 								<td><a href="#DatasetSeries.modificationdate">modification date </a></td>
 								<td><div class="shorten">http://purl.org/dc/terms/modified</div></td>
 							</tr>
@@ -17955,6 +18253,26 @@ The properties are grouped under headings <it>mandatory, recommended, optional</
 								<td>Optional</td>
 								<td><a href="#DatasetSeries.releasedate">release date </a></td>
 								<td><div class="shorten">http://purl.org/dc/terms/issued</div></td>
+							</tr>
+						
+					
+						
+							<tr>
+								<td><a href="#DatasetSeries">Dataset Series</a></td>
+								<td><div class="shorten">http://www.w3.org/ns/dcat#DatasetSeries</div></td>
+								<td>Optional</td>
+								<td><a href="#DatasetSeries.replaces">replaces </a></td>
+								<td><div class="shorten">http://purl.org/dc/terms/replaces</div></td>
+							</tr>
+						
+					
+						
+							<tr>
+								<td><a href="#DatasetSeries">Dataset Series</a></td>
+								<td><div class="shorten">http://www.w3.org/ns/dcat#DatasetSeries</div></td>
+								<td>Optional</td>
+								<td><a href="#DatasetSeries.status">status </a></td>
+								<td><div class="shorten">http://www.w3.org/ns/adms#status</div></td>
 							</tr>
 						
 					

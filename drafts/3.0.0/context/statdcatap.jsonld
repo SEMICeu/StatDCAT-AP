@@ -302,6 +302,11 @@
       "@id": "http://purl.org/dc/terms/relation",
       "@type": "@id"
     },
+    "dct:replaces": {
+      "@container": "@set",
+      "@id": "http://purl.org/dc/terms/replaces",
+      "@type": "@id"
+    },
     "dct:rights": {
       "@container": "@set",
       "@id": "http://purl.org/dc/terms/rights",

@@ -6,13 +6,14 @@ This changelog provides an overview of the changes incorporated in StatDCAT-AP 3
 - Updated statdcatap prefix
 - Added information on working groups - TODO: MoMs for WG2 and WG3
 - Added missing prefixes to overview table and used prefixes
+- Updated Related work section [#29](https://github.com/SEMICeu/StatDCAT-AP/issues/29)
   
 ## **Data model adaptations**
 - Updated usage note of `statistical unit of measurement` [#9](https://github.com/SEMICeu/StatDCAT-AP/issues/9)
 - Updated definition and usage note of `number of data series` [#11](https://github.com/SEMICeu/StatDCAT-AP/issues/11), added example
-- Added usage guidelines on `Dataset Series` [#13](https://github.com/SEMICeu/StatDCAT-AP/issues/13), added `documentation` and `theme`
+- Added usage guidelines on `Dataset Series` [#13](https://github.com/SEMICeu/StatDCAT-AP/issues/13), added `documentation` and `theme`, added `DatasetSeries.inseries` to support nested Dataset Series
 - Added usage note on `Dataset.source` about multidimensional datasets, added example [#18](https://github.com/SEMICeu/StatDCAT-AP/issues/18)
-- Added Dataset.status [#26](https://github.com/SEMICeu/StatDCAT-AP/issues/26) and controlled vocabulary to be used
+- Added Dataset.status [#26](https://github.com/SEMICeu/StatDCAT-AP/issues/26) and controlled vocabulary to be used, also added it to Dataset Series.
 - Added Dataflow with properties [#24](https://github.com/SEMICeu/StatDCAT-AP/issues/24)
 - Added Dataset.DataStructureDefinition [#21](https://github.com/SEMICeu/StatDCAT-AP/issues/21)
 - Added Dataset.measure [#19](https://github.com/SEMICeu/StatDCAT-AP/issues/19)
@@ -20,3 +21,4 @@ This changelog provides an overview of the changes incorporated in StatDCAT-AP 3
 - Added `Standard.conformsTo` to support indicating the specification a linked schema follows [#25](https://github.com/SEMICeu/StatDCAT-AP/issues/25), added example
 - Added guideline on usage of CSV on the Web for statistical CSV datasets [#17](https://github.com/SEMICeu/StatDCAT-AP/issues/17)
 - Added support for linking Metadata report to Dataset and Dataflow [#28](https://github.com/SEMICeu/StatDCAT-AP/issues/28), included example
+- Added `Dataset.replaces` and `DatasetSeries.replaces` to further support [#26](https://github.com/SEMICeu/StatDCAT-AP/issues/26)
