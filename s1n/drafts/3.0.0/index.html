@@ -22,31 +22,23 @@
 	    
 		
 		   {
-		    name: "Jitse De Cock",
-		      
-		      
-		    company: "PwC EU Services",
-		      
-		      
-		    }
-		, 
-		
-		   {
-		    name: "Jakub Klímek",
-		      
-		      
-		    company: "CUIT",
-		      
-		      
-		    }
-		, 
-		
-		   {
 		    name: "Anastasia Sofou",
 		      
 		      
-		    company: "DIGIT-EXT",
+		    company: "EC External",
 		      
+		      
+		    }
+		, 
+		
+		   {
+		    name: "Bert Van Nuffelen",
+		      
+		      
+		    company: "Digitaal Vlaanderen",
+		      
+		      
+		    mailto: "bert.vannuffelen@vlaanderen.be"
 		      
 		    }
 		
@@ -65,11 +57,13 @@
 	    
 		
 		   {
-		    name: "Bert Van Nuffelen",
+		    name: "Jakub Klímek",
 		      
 		      
-		    company: "Digitaal Vlaanderen",
+		    company: "CUIT",
 		      
+		      
+		    mailto: "jakub@cuit.cz"
 		      
 		    }
 		
@@ -82,6 +76,17 @@
 	
 	
 		]
+    
+        var myowners = [
+        {
+            value: "SEMIC",
+            href: "https://interoperable-europe.ec.europa.eu/collection/semic-support-centre",
+        },
+        {
+            value: "Eurostat",
+            href: "https://ec.europa.eu/eurostat",
+        },
+		]
 
 
    
@@ -90,7 +95,7 @@
       edDraftURI: "https://semiceu.github.io/StatDCAT-AP/s1n/drafts/3.0.0/",
       latestVersion: "https://semiceu.github.io/StatDCAT-AP/s1n/drafts/3.0.0/",
       specStatus: "base",
-      publishDate: "2026-04-28",
+      publishDate: "2026-05-14",
       editors: myeditors,
       authors: myauthors,
       github: "SEMICeu/StatDCAT-AP",
@@ -109,6 +114,9 @@
       generatedSubtitle: "",
       additionalCopyrightHolders: "",
       otherLinks: [{
+          key: "Owners:",
+          data: myowners
+        },{
           key: "Links",
           data: [
             {
@@ -118,50 +126,10 @@
           ]
       }],
       localBiblio: {
-        "DXWG": {
-          "href" : "https://www.w3.org/2017/dxwg/wiki/Main_Page",
-          "title" : "Dataset Exchange Working Group",
-          "publisher" : "W3C"
-          },
-        "ISA":{
-           "href":"https://ec.europa.eu/isa/",
-           "title":"Interoperability Solutions for European Public Administrations (ISA)",
-           "publisher":"European Commission"
-          },
-        "ISA2":{
-          "href":"https://ec.europa.eu/isa2/",
-          "title":"Interoperability solutions for public administrations, businesses and citizens (ISA²)",
-          "publisher":"European Commission"
-        },
-        "SEMIC":{
-          "href":"https://joinup.ec.europa.eu/",
-          "title":"JoinUp welcomes Interoperable Europe",
-          "publisher":"European Commission"
-         },
-        "DEU" : {
-          "href":"https://data.europa.eu",
-          "title":"The official portal for European data",
-          "publisher":"European Commission"
-        },
-        "HVD" : {
-          "href":"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32023R0138",
-          "title":"Implementing Regulation for High Value Datasets",
-          "publisher":"European Union"
-        },
-        "DCAT-AP-HVD" : {
-          "href":"https://semiceu.github.io/uri.semic.eu-generated/DCAT-AP/releases/2.2.0-hvd/",
-          "title":"Usage Guidelines of DCAT-AP for High-Value Datasets",
-          "publisher":"European Commission"
-        },
         "DCAT-AP" : {
           "href":"https://semiceu.github.io/DCAT-AP/releases/3.0.1/",
           "title":"DCAT-AP, a DCAT profile for European data portals",
           "publisher":"European Commission"
-        },
-        "PSI" : {
-          "href": "https://eur-lex.europa.eu/eli/dir/2019/1024/oj",
-          "title" :  "Directive on open data and the re-use of public sector information (recast)",
-          "publisher" : "European Union"
         }
       }
     };
@@ -227,10 +195,10 @@ It is under maintenance by the SEMIC action, Interoperable Europe.
 <section id="specstatus">
     <h2>Status</h2>
         <p>
-            This vocabulary has the status <a href="https://www.w3.org/2021/Process-20211102/#RecsWD">Working Draft</a> published at 2026-04-28.
+            This vocabulary has the status <a href="https://www.w3.org/2021/Process-20211102/#RecsWD">Working Draft</a> published at 2026-05-14.
         </p>
         <p>
-            Information about the process and the decisions involved in the creation of this specification are consultable at the <a href="https://semiceu.github.io/StatDCAT-AP/drafts/3.0.0/CHANGELOG.html">Changelog</a>.
+            Information about the process and the decisions involved in the creation of this specification are consultable at the <a href="CHANGELOG">Changelog</a>.
         </p>
 </section>
 
@@ -958,8 +926,8 @@ Either these are reused as-is, i.e. with no formal additional constraints compar
 The editors gratefully acknowledge the contributions made to this document by all members of the working group.
 </p><p>
 This work was elaborated by a Working Group under SEMIC by Interoperable Europe.
-Interoperable Europe of the European Commission was represented by Pavlina Fragkou and Seth Van Hooland.
-Bert Van Nuffelen was the editor of this specification.
+Interoperable Europe of the European Commission was represented by Anastasia Sofou.
+Jakub Klímek and Bert Van Nuffelen were the editors of this specification.
 </p><p>
 
 Past and current contributors are :
@@ -1023,6 +991,9 @@ Past and current contributors are :
 	 	Adina Dragan
 		, 
            
+	 	Guillaume Duffes
+		, 
+           
 	 	Dietmar Gattwinkel
 		, 
            
@@ -1047,7 +1018,13 @@ Past and current contributors are :
 	 	Nataliia Kovalchuk
 		, 
            
+	 	Henrikas Krukauskas
+		, 
+           
 	 	Andreas Kuckartz
+		, 
+           
+	 	Christine Laaboudi
 		, 
            
 	 	Christine Laaboudi-Spoiden
@@ -1083,6 +1060,9 @@ Past and current contributors are :
 	 	Matthias Palmer
 		, 
            
+	 	Marco Pellegrino
+		, 
+           
 	 	Andrea Perego
 		, 
            
@@ -1105,6 +1085,9 @@ Past and current contributors are :
 		, 
            
 	 	Maxime Servais
+		, 
+           
+	 	Dorotėja Sirvydytė-Demidavičienė
 		, 
            
 	 	Sebastian Sklarß

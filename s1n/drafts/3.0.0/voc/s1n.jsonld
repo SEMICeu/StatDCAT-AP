@@ -14,36 +14,30 @@
     {
       "@type": "foaf:Person",
       "affiliation": {
-        "foaf:name": "Digitaal Vlaanderen"
+        "foaf:name": "CUIT"
       },
-      "foaf:firstName": "Bert",
-      "foaf:lastName": "Van Nuffelen"
+      "foaf:firstName": "Jakub",
+      "foaf:lastName": "Klímek",
+      "foaf:mbox": "mailto:jakub@cuit.cz"
     }
   ],
   "editors": [
     {
       "@type": "foaf:Person",
       "affiliation": {
-        "foaf:name": "DIGIT-EXT"
+        "foaf:name": "Digitaal Vlaanderen"
+      },
+      "foaf:firstName": "Bert",
+      "foaf:lastName": "Van Nuffelen",
+      "foaf:mbox": "mailto:bert.vannuffelen@vlaanderen.be"
+    },
+    {
+      "@type": "foaf:Person",
+      "affiliation": {
+        "foaf:name": "EC External"
       },
       "foaf:firstName": "Anastasia",
       "foaf:lastName": "Sofou"
-    },
-    {
-      "@type": "foaf:Person",
-      "affiliation": {
-        "foaf:name": "CUIT"
-      },
-      "foaf:firstName": "Jakub",
-      "foaf:lastName": "Klímek"
-    },
-    {
-      "@type": "foaf:Person",
-      "affiliation": {
-        "foaf:name": "PwC EU Services"
-      },
-      "foaf:firstName": "Jitse",
-      "foaf:lastName": "De Cock"
     }
   ],
   "contributors": [
@@ -129,6 +123,14 @@
     },
     {
       "@type": "foaf:Person",
+      "affiliation": {
+        "foaf:name": "Statistics Lithuania."
+      },
+      "foaf:firstName": "Dorotėja",
+      "foaf:lastName": "Sirvydytė-Demidavičienė"
+    },
+    {
+      "@type": "foaf:Person",
       "foaf:firstName": "Maxime",
       "foaf:lastName": "Servais"
     },
@@ -166,6 +168,11 @@
       "@type": "foaf:Person",
       "foaf:firstName": "Andrea",
       "foaf:lastName": "Perego"
+    },
+    {
+      "@type": "foaf:Person",
+      "foaf:firstName": "Marco",
+      "foaf:lastName": "Pellegrino"
     },
     {
       "@type": "foaf:Person",
@@ -224,8 +231,21 @@
     },
     {
       "@type": "foaf:Person",
+      "foaf:firstName": "Christine",
+      "foaf:lastName": "Laaboudi"
+    },
+    {
+      "@type": "foaf:Person",
       "foaf:firstName": "Andreas",
       "foaf:lastName": "Kuckartz"
+    },
+    {
+      "@type": "foaf:Person",
+      "affiliation": {
+        "foaf:name": "Statistics Lithuania."
+      },
+      "foaf:firstName": "Henrikas",
+      "foaf:lastName": "Krukauskas"
     },
     {
       "@type": "foaf:Person",
@@ -266,6 +286,11 @@
       "@type": "foaf:Person",
       "foaf:firstName": "Dietmar",
       "foaf:lastName": "Gattwinkel"
+    },
+    {
+      "@type": "foaf:Person",
+      "foaf:firstName": "Guillaume",
+      "foaf:lastName": "Duffes"
     },
     {
       "@type": "foaf:Person",
@@ -357,7 +382,7 @@
   "issued": "TODO",
   "navigation": {},
   "publication-state": "https://www.w3.org/2021/Process-20211102/#RecsWD",
-  "publication-date": "2026-04-28",
+  "publication-date": "2026-05-14",
   "classes": [
     {
       "@id": "http://data.europa.eu/s1n/Dataflow",
