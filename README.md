@@ -6,14 +6,12 @@ The StatDCAT Application profile for data portals in Europe (StatDCAT-AP) is an 
 profile for data portals in Europe (DCAT-AP) designed to support to exchange of statistical information between data 
 portals in Europe. 
 
-The specification of the StatDCAT-AP was a joint initiative of Eurostat, the EU Publications Office and the ISA 
-Programme.
+The specification of the StatDCAT-AP is a joint initiative of Eurostat, the EU Publications Office, the SEMIC action of the former ISA Programme now called the Digital Europe Programme (DEP), and DG CONNECT.
 
-The current version of StatDCAT-AP (v1.0.0) can be downloaded from https://joinup.ec.europa.eu/release/statdcat-ap-v100.
+The current version of StatDCAT-AP (v1.0.1) can be downloaded from [SEMIC Support Centre](https://interoperable-europe.ec.europa.eu/collection/semic-support-centre/solution/statdcat-application-profile-data-portals-europe/release/101).
 
 Any problems encountered, or suggestions for new functionalities can be submitted as issues on the StatDCAT-AP 
-repository on GitHub. A short guideline for submitting issues can be found at 
-https://github.com/SEMICeu/StatDCAT-AP/wiki/Submission-guidelines.
+repository on GitHub. A short guideline for submitting issues can be found in the [Submission Guidelines](https://github.com/SEMICeu/StatDCAT-AP/wiki/Submission-guidelines).
 
 ## Structure of the repository
 /StatDCAT-AP: StatDCAT-AP releases (1.00, 2.00 etc), each release might have different distributions.
@@ -34,7 +32,47 @@ The table below shows webinars and events related to **latest version of StatDCA
 <td>  
 <p><strong>Date</strong></p>  
 </td>  
+</tr>
+<tr>  
+<td>  
+<p><a href="https://interoperable-europe.ec.europa.eu/collection/semic-support-centre/event/statdcat-ap-working-group-3-16-april-2026">StatDCAT-AP Working Group 3</a></p>  
+</td>  
+<td>  
+<p>16/04/2026</p>  
+</td>  
 </tr>  
+<tr>  
+<td>  
+<p><a href="https://interoperable-europe.ec.europa.eu/collection/semic-support-centre/event/statdcat-ap-working-group-2-10-march-2026">StatDCAT-AP Working Group 2</a></p>  
+</td>  
+<td>  
+<p>10/03/2026</p>  
+</td>  
+</tr>  
+<tr>  
+<td>  
+<p><a href="https://interoperable-europe.ec.europa.eu/collection/semic-support-centre/event/statdcat-ap-working-group-1-12-february-2026">StatDCAT-AP Working Group 1</a></p>  
+</td>  
+<td>  
+<p>12/02/2026</p>  
+</td>  
+</tr>  
+</tbody>  
+</table>  
+
+The table below shows webinars and events related to **previous versions of StatDCAT-AP**:
+<details closed>
+  <summary>Click to open table</summary>
+<table>  
+<tbody>  
+<tr>  
+<td>  
+<p><strong>Title</strong></p>  
+</td>  
+<td>  
+<p><strong>Date</strong></p>  
+</td>  
+</tr>
 <tr>  
 <td>  
 <p><a href="https://joinup.ec.europa.eu/collection/semic-support-centre/event/statdcat-ap-wg-virtual-meeting-14-november-2016">StatDCAT-AP WG</a></p>  
@@ -85,3 +123,4 @@ The table below shows webinars and events related to **latest version of StatDCA
 </tr>  
 </tbody>  
 </table>  
+</details>
