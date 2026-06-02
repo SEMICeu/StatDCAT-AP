@@ -6,7 +6,7 @@ The StatDCAT Application profile for data portals in Europe (StatDCAT-AP) is an 
 
 The specification of the StatDCAT-AP was a joint initiative of Eurostat, the EU Publications Office and the Interoperable Europe initiative.
 
-The latest released version of StatDCAT-AP (v1.0.1) can be downloaded from https://interoperable-europe.ec.europa.eu/collection/semic-support-centre/solution/statdcat-application-profile-data-portals-europe/release/101.
+The latest released version of StatDCAT-AP (v1.0.1) can be downloaded from [SEMIC Support Centre](https://interoperable-europe.ec.europa.eu/collection/semic-support-centre/solution/statdcat-application-profile-data-portals-europe/release/101).
 
 Work on version 3.0.0 is underway.
 - [StatDCAT-AP 3.0.0 draft Application Profile](https://semiceu.github.io/StatDCAT-AP/drafts/3.0.0/)
@@ -35,6 +35,46 @@ The table below shows webinars and events related to **latest version of StatDCA
 <p><strong>Date</strong></p>  
 </td>  
 </tr>  
+<tr>  
+<td>  
+<p><a href="https://interoperable-europe.ec.europa.eu/collection/semic-support-centre/event/statdcat-ap-working-group-3-16-april-2026">StatDCAT-AP Working Group 3</a></p>  
+</td>  
+<td>  
+<p>16/04/2026</p>  
+</td>  
+</tr>  
+<tr>  
+<td>  
+<p><a href="https://interoperable-europe.ec.europa.eu/collection/semic-support-centre/event/statdcat-ap-working-group-2-10-march-2026">StatDCAT-AP Working Group 2</a></p>  
+</td>  
+<td>  
+<p>10/03/2026</p>  
+</td>  
+</tr>  
+<tr>  
+<td>  
+<p><a href="https://interoperable-europe.ec.europa.eu/collection/semic-support-centre/event/statdcat-ap-working-group-1-12-february-2026">StatDCAT-AP Working Group 1</a></p>  
+</td>  
+<td>  
+<p>12/02/2026</p>  
+</td>  
+</tr>  
+</tbody>  
+</table>  
+
+The table below shows webinars and events related to **previous versions of StatDCAT-AP**:
+<details closed>
+  <summary>Click to open table</summary>
+<table>  
+<tbody>  
+<tr>  
+<td>  
+<p><strong>Title</strong></p>  
+</td>  
+<td>  
+<p><strong>Date</strong></p>  
+</td>  
+</tr>
 <tr>  
 <td>  
 <p><a href="https://joinup.ec.europa.eu/collection/semic-support-centre/event/statdcat-ap-wg-virtual-meeting-14-november-2016">StatDCAT-AP WG</a></p>  
@@ -85,3 +125,4 @@ The table below shows webinars and events related to **latest version of StatDCA
 </tr>  
 </tbody>  
 </table>  
+</details>
