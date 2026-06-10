@@ -10,6 +10,7 @@ This changelog provides an overview of the changes incorporated in StatDCAT-AP 3
 - Removed outdated parts from StatDCAT-AP 1.0.1 - Objectives and roadmap, DCAT and DCAT-AP from Related Work, part of background
 - Removed duplicate section in Scope of application profile
 - Updated stakeholders and acknowledgments
+- Issue [DCAT-AP#482](https://github.com/SEMICeu/DCAT-AP/issues/482), `High Value datasets` changed to `High-Value datasets` 
   
 ## **Data model adaptations**
 - Updated usage note of `statistical unit of measurement` [#9](https://github.com/SEMICeu/StatDCAT-AP/issues/9)
